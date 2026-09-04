@@ -1,0 +1,113 @@
+<!-- SLIDES 2–4 · The hook: Ruth, the cookbook, the grocery store.
+     The three slides share a timeline rail at the bottom. Each carries
+     auto-animate=true, so reveal tweens the marker along the rail (and the
+     year stat between 1936 and 1939) instead of cutting. Matching is pinned
+     with data-id so reveal never has to guess which element is which. -->
+
+## {#ruth auto-animate=true}
+
+```{=html}
+<div class="fill fill--center">
+<div class="img-grid">
+  <figure>
+    <img src="images/ruth-wakefield.webp" alt="Ruth Wakefield">
+    <figcaption>
+      <span class="cap-title">Ruth</span>
+      <span class="cap-sub">A dietitian with a kitchen and an idea</span>
+    </figcaption>
+  </figure>
+  <figure class="fragment">
+    <img src="images/toll-house-inn.webp" alt="The Toll House Inn">
+    <figcaption>
+      <span class="cap-title">The Inn</span>
+      <span class="cap-sub">Whitman, Massachusetts, 1930s</span>
+    </figcaption>
+  </figure>
+  <figure class="fragment">
+    <img src="images/chocolate-chip-cookie.jpg" alt="A plate of chocolate chip cookies">
+    <figcaption>
+      <span class="cap-title">The Cookie</span>
+      <span class="cap-sub">One recipe, made once, for her guests</span>
+    </figcaption>
+  </figure>
+</div>
+</div>
+
+<div class="tl">
+  <div class="tl__track">
+    <div class="tl__fill"   data-id="tl-fill"   style="width:6%; background:var(--soil);"></div>
+    <div class="tl__marker" data-id="tl-marker" style="left:calc(6% - 11px); background:var(--soil);"></div>
+  </div>
+  <div class="tl__labels">
+    <span class="tl__label" data-id="tl-a" style="left:6%;  color:var(--text);">1930s</span>
+    <span class="tl__label" data-id="tl-b" style="left:50%; color:var(--text-faint);">1936</span>
+    <span class="tl__label" data-id="tl-c" style="left:94%; color:var(--text-faint);">1939</span>
+  </div>
+</div>
+```
+
+## {#cookbook auto-animate=true}
+
+```{=html}
+<div class="fill fill--center">
+<div class="hook-split">
+  <div class="hook-split__media hook-split__media--book">
+    <img class="img-book" data-id="media-book" src="images/toll-house-cookbook.jpg" alt="Ruth Wakefield's Toll House Tried and True Recipes cookbook">
+  </div>
+  <div class="hook-split__aside">
+    <div class="card stat-card" data-id="stat-card">
+      <div class="stat" data-id="year" style="color:var(--green);">1936</div>
+      <p class="body" data-id="line-1">The recipe is published in a cookbook.</p>
+      <div class="divider" data-id="rule"></div>
+      <p class="body" data-id="line-2"><span class="emphasis">Reusable by anyone</span> <span class="quiet">who knew how to bake.</span></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="tl">
+  <div class="tl__track">
+    <div class="tl__fill"   data-id="tl-fill"   style="width:50%; background:var(--green);"></div>
+    <div class="tl__marker" data-id="tl-marker" style="left:calc(50% - 11px); background:var(--green);"></div>
+  </div>
+  <div class="tl__labels">
+    <span class="tl__label" data-id="tl-a" style="left:6%;  color:var(--text-faint);">1930s</span>
+    <span class="tl__label" data-id="tl-b" style="left:50%; color:var(--text);">1936</span>
+    <span class="tl__label" data-id="tl-c" style="left:94%; color:var(--text-faint);">1939</span>
+  </div>
+</div>
+```
+
+## {#grocery auto-animate=true}
+
+```{=html}
+<div class="fill fill--center">
+<div class="hook-split">
+  <div class="hook-split__media">
+    <figure class="photo-frame">
+      <img data-id="media-ad" src="images/toll-house-morsels-vintage.jpg" alt="Vintage Nestlé Toll House chocolate morsels advertisement">
+    </figure>
+  </div>
+  <div class="hook-split__aside">
+    <div class="card stat-card" data-id="stat-card">
+      <div class="stat" data-id="year" style="color:var(--clay);">1939</div>
+      <p class="body" data-id="line-1">Pre-packaged morsels hit the grocery store shelf.</p>
+      <div class="divider" data-id="rule"></div>
+      <p class="body" data-id="line-2"><span class="emphasis">Eliminated the friction.</span> <span class="quiet">No ice pick required.</span></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="tl">
+  <div class="tl__track">
+    <div class="tl__fill"   data-id="tl-fill"   style="width:94%; background:var(--clay);"></div>
+    <div class="tl__marker" data-id="tl-marker" style="left:calc(94% - 11px); background:var(--clay);"></div>
+  </div>
+  <div class="tl__labels">
+    <span class="tl__label" data-id="tl-a" style="left:6%;  color:var(--text-faint);">1930s</span>
+    <span class="tl__label" data-id="tl-b" style="left:50%; color:var(--text-faint);">1936</span>
+    <span class="tl__label" data-id="tl-c" style="left:94%; color:var(--text);">1939</span>
+  </div>
+</div>
+```

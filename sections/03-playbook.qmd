@@ -1,0 +1,74 @@
+<!-- BEAT: Playbook (1:00–1:30). The map. Thesis once: impact stops where access stops. Don't explain the layers here. · OWNER: J -->
+<!-- SLIDE 5 · The playbook reveal. Concentric rings, built by fragments.
+     Logic: assets/rings.js · styles: assets/rings.css
+     Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
+
+## The Report Delivery Playbook {#three-levels .slide-dark background-color="#1A1D20" transition="fade" transition-speed="fast" background-transition="fade"}
+
+::: {.lede}
+Matching technical artifacts across the adoption spectrum.
+:::
+
+```{=html}
+<div class="rings-layout">
+  <div class="rings-diagram">
+    <div class="ring-outline ring-outline--core" id="ring-core"></div>
+    <div class="ring-outline" id="ring-2"></div>
+    <div class="ring-outline" id="ring-3"></div>
+  </div>
+
+  <div class="levels">
+    <div class="level" id="level-1">
+      <div class="eyebrow eyebrow--l1">Layer 1 <span class="sub">Template · the recipe</span></div>
+      <div class="heading">You <span class="detail">parameterized Quarto template</span></div>
+    </div>
+    <div class="level" id="level-2">
+      <div class="eyebrow eyebrow--l2">Layer 2 <span class="sub">Package · the cookbook</span></div>
+      <div class="heading">Anyone who codes <span class="detail">{soils} R package</span></div>
+    </div>
+    <div class="level" id="level-3">
+      <div class="eyebrow eyebrow--l3">Layer 3 <span class="sub">App · the store shelf</span></div>
+      <div class="heading">Everyone <span class="detail">Shiny web app</span></div>
+    </div>
+
+    <!-- the takeaway sits under the three layers, so the diagram keeps the full height -->
+    <div class="quote rings-quote">
+      <span class="mark">&ldquo;</span>
+      <p>Impact stops where access stops.</p>
+    </div>
+  </div>
+</div>
+
+<!-- fragment triggers: reveal advances these; rings.js listens and builds the diagram -->
+<span class="fragment rings-trigger" data-stage="1" data-fragment-index="0"></span>
+<span class="fragment rings-trigger" data-stage="2" data-fragment-index="1"></span>
+<span class="fragment rings-trigger" data-stage="3" data-fragment-index="2"></span>
+
+<!-- figures are spawned into this overlay, positioned in 1920×1080 slide px -->
+<div class="rings-stage"></div>
+
+<template id="rings-figure-template">
+  <svg viewBox="0 0 34 52">
+    <line class="part body" x1="17" y1="14" x2="17" y2="34"></line>
+    <line class="part arm-l" x1="17" y1="18" x2="8" y2="28"></line>
+    <line class="part arm-r" x1="17" y1="18" x2="26" y2="28"></line>
+    <line class="part leg-l" x1="17" y1="34" x2="9" y2="50"></line>
+    <line class="part leg-r" x1="17" y1="34" x2="25" y2="50"></line>
+    <circle class="head" cx="17" cy="7" r="6.5"></circle>
+  </svg>
+</template>
+```
+
+::: {.notes}
+*⏱ 1:15 · Jadey, one Tanya interjection*
+
+**Jadey:** It turns out that's exactly the shape of our project.
+
+**[click: Layer 1, the centre figure]** Every piece of analysis starts in one kitchen. One person, one laptop, total control. That's the template. **[click: Layer 2, ring 2]** If you're diligent, it becomes a cookbook, a package, and other people who know how to bake can use it. **[click: Layer 3, ring 3]** And if you actually want it to reach the people who make decisions, it has to end up on a shelf. That's the app.
+
+In our story, I'm Ruth. I made the recipe, I wrote the cookbook.
+
+**Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together we brought Jadey's reports to the shelf with a Shiny app.
+
+**Jadey:** Here's the line we keep coming back to: impact stops where access stops. Every layer removes friction for a specific person who couldn't get to the insight before. That's the whole talk. So let's start in the kitchen.
+:::

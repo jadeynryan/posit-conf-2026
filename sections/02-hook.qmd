@@ -1,0 +1,136 @@
+<!-- BEAT: Hook (1:30). 1930 / 1938 / 1953: warm, narrative, no tech; photo + one line; the pivot is on the last slide. · OWNER: T -->
+<!-- SLIDES 2–4 · The hook: Ruth, the cookbook, the grocery store.
+     A calendar tape scrolls under a fixed cursor at the foot of all three
+     slides (assets/timeline.js, one overlay that persists across slides).
+     Each section names its stop with data-milestone; the tape scrolls there
+     on arrival and the slide's content (.tl-content) is held back until the
+     tape has nearly landed. Slides fade (not cut) so the outgoing content
+     dissolves as the tape starts moving.
+     .tl-static is a plain rail for PDF export, where the tape is hidden.
+     The headings name the slides in navigators (RStudio's, the m menu) and are visually hidden. -->
+
+## The Recipe {#ruth .hook data-milestone="1930-08" transition="fade" transition-speed="fast"}
+
+```{=html}
+<div class="fill fill--center tl-content">
+<!-- the first beat's tag: the recipe → the cookbook → the store shelf (the playbook calls these back) -->
+<div class="beat__eyebrow">The recipe</div>
+<div class="img-grid">
+  <figure>
+    <img src="images/ruth-wakefield.webp" alt="Ruth Wakefield">
+    <figcaption>
+      <span class="cap-title">Ruth</span>
+      <span class="cap-sub">A dietitian with a kitchen and an idea</span>
+    </figcaption>
+  </figure>
+  <figure class="fragment">
+    <img src="images/toll-house-inn.webp" alt="The Toll House Inn">
+    <figcaption>
+      <span class="cap-title">The Inn</span>
+      <span class="cap-sub">Whitman, Massachusetts, 1930</span>
+    </figcaption>
+  </figure>
+  <figure class="fragment">
+    <img src="images/chocolate-chip-cookie.jpg" alt="A plate of chocolate chip cookies">
+    <figcaption>
+      <span class="cap-title">The Cookie</span>
+      <span class="cap-sub">One kitchen, one baker.</span>
+    </figcaption>
+  </figure>
+</div>
+</div>
+
+<div class="tl-static" aria-hidden="true">
+  <div class="tl-static__track">
+    <div class="tl-static__fill" style="width:6%; background:var(--soil);"></div>
+    <div class="tl-static__marker" style="left:calc(6% - 11px); background:var(--soil);"></div>
+  </div>
+  <div class="tl-static__labels">
+    <span style="left:6%;  color:var(--text);">Aug 1930</span>
+    <span style="left:50%; color:var(--text-faint);">Late 1938</span>
+    <span style="left:94%; color:var(--text-faint);">1953</span>
+  </div>
+</div>
+```
+
+::: {.notes}
+*⏱ 0:30 · Tanya*
+
+**Tanya:** Ruth Wakefield ran an inn in Whitman, Massachusetts. **[click: the Inn]** She was a dietitian, she had a kitchen, and one day she had an idea: chop up a chocolate bar and put it in the cookie dough.
+
+**[click: the cookie]** Guests loved it. It was a hit. And it existed in exactly one place: her kitchen. If you wanted the cookie, you drove to the inn.
+:::
+
+## The Cookbook {#cookbook .hook data-milestone="1938-10" transition="fade" transition-speed="fast"}
+
+```{=html}
+<div class="fill fill--center tl-content">
+<div class="hook-split">
+  <div class="hook-split__media">
+    <img class="img-object" src="images/toll-house-cookbook.jpg" alt="Ruth Wakefield's Toll House Tried and True Recipes cookbook">
+  </div>
+  <div class="hook-split__aside beat">
+    <div class="beat__eyebrow">The cookbook</div>
+    <h3 class="beat__headline">The recipe is published.</h3>
+    <p class="beat__consequence fragment">Anyone who can bake.</p>
+  </div>
+</div>
+</div>
+
+<div class="tl-static" aria-hidden="true">
+  <div class="tl-static__track">
+    <div class="tl-static__fill" style="width:50%; background:var(--soil);"></div>
+    <div class="tl-static__marker" style="left:calc(50% - 11px); background:var(--soil);"></div>
+  </div>
+  <div class="tl-static__labels">
+    <span style="left:6%;  color:var(--text-faint);">Aug 1930</span>
+    <span style="left:50%; color:var(--text);">Late 1938</span>
+    <span style="left:94%; color:var(--text-faint);">1953</span>
+  </div>
+</div>
+```
+
+::: {.notes}
+*⏱ 0:30 · Tanya*
+
+**Tanya:** Eight years later she published the recipe. **[click: the consequence]** Now anyone could make it. Anyone who owned an oven, had flour and butter in the house, and knew what "cream the sugar" meant.
+
+Which is a lot of people. It's also not everyone.
+:::
+
+## The Store Shelf {#grocery .hook data-milestone="1953" transition="fade" transition-speed="fast"}
+
+```{=html}
+<div class="fill fill--center tl-content">
+<div class="hook-split">
+  <div class="hook-split__media">
+    <img class="img-object" src="images/toll-house-morsels-vintage.jpg" alt="Vintage Nestlé Toll House chocolate morsels advertisement">
+  </div>
+  <div class="hook-split__aside beat">
+    <div class="beat__eyebrow">The store shelf</div>
+    <h3 class="beat__headline">Nestlé brings it to the shelf.</h3>
+    <p class="beat__consequence fragment">Anyone at all.</p>
+  </div>
+</div>
+</div>
+
+<div class="tl-static" aria-hidden="true">
+  <div class="tl-static__track">
+    <div class="tl-static__fill" style="width:94%; background:var(--soil);"></div>
+    <div class="tl-static__marker" style="left:calc(94% - 11px); background:var(--soil);"></div>
+  </div>
+  <div class="tl-static__labels">
+    <span style="left:6%;  color:var(--text-faint);">Aug 1930</span>
+    <span style="left:50%; color:var(--text-faint);">Late 1938</span>
+    <span style="left:94%; color:var(--text);">1953</span>
+  </div>
+</div>
+```
+
+::: {.notes}
+*⏱ 0:30 · Tanya → Jadey*
+
+**Tanya:** Then Nestlé put it on a shelf. **[click: the consequence]** Open the bag, eat the cookie. No oven, no skill, no recipe. Universal access.
+
+**Jadey (the pivot):** So. What does a cookie have to do with a technical talk at posit::conf?
+:::

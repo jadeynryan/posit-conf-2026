@@ -1,0 +1,121 @@
+<!-- BEAT: Lessons Learned (2:30–3:00). One slide, four beats on three clicks. The diagram is the argument; one line per fragment. · OWNER: T/J -->
+<!-- SLIDE 9 · Lessons learned (the architecture arc). One slide, four states, three clicks, no JS.
+     Three invisible fragment spans precede the SVG; theme/brand.scss uses sibling selectors
+     (.arc-trigger:nth-of-type(n).visible ~ …) to drive the drawing:
+       arrive  →  three dots, no lines
+       click 1 →  the pipeline draws itself left to right; particles flow forward
+       click 2 →  six arcs spawn from the app one after another and draw BACK onto the
+                  other two; the app's glow pulses; particles run the wrong way
+       click 3 →  the tangle retracts into the app, a breath, then two clean loops draw
+                  (above: backward, below: forward); all three glows settle; particles
+                  flow both ways
+     Lines draw with stroke-dashoffset (every path has pathLength="1"); particles ride the
+     same paths with SMIL animateMotion + mpath, so a path is authored once. A path's
+     direction is its flow direction; the tangle is authored from the app outward so it
+     draws backward and retracts INTO the app.
+     Dots keep their level colours throughout (colour = level, everywhere in the deck).
+     The rings crumb (top right) starts with only App lit and lights Template and Package on the
+     refactor click (brand.scss, keyed to the third fragment with :has()). -->
+
+## Lessons Learned {#arc .slide-dark background-color="#1A1D20"}
+
+::: {.lede}
+Expectation vs. reality, and the feedback loop between them.
+:::
+
+{{< rings lit=3 class="rings--crumb" label="App lit; all three light up on the refactor click" >}}
+
+```{=html}
+<div class="fill fill--center arc">
+  <span class="fragment arc-trigger" data-fragment-index="0"></span>
+  <span class="fragment arc-trigger" data-fragment-index="1"></span>
+  <span class="fragment arc-trigger" data-fragment-index="2"></span>
+
+  <svg class="arc-svg" viewBox="0 0 1400 560" aria-hidden="true">
+    <!-- state 1: the straight pipeline -->
+    <g class="pipe">
+      <path id="arc-p1" class="draw" pathLength="1" d="M232,300 L668,300"/>
+      <path id="arc-p2" class="draw" pathLength="1" d="M732,300 L1168,300"/>
+    </g>
+    <g class="pt pt-fwd">
+      <circle r="6"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#arc-p1"/></animateMotion></circle>
+      <circle r="6"><animateMotion dur="2.6s" repeatCount="indefinite" begin="1.3s"><mpath href="#arc-p1"/></animateMotion></circle>
+      <circle r="6"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.65s"><mpath href="#arc-p2"/></animateMotion></circle>
+      <circle r="6"><animateMotion dur="2.6s" repeatCount="indefinite" begin="1.95s"><mpath href="#arc-p2"/></animateMotion></circle>
+    </g>
+
+    <!-- state 2: six arcs from the app, reaching back (authored app → target) -->
+    <g class="tangle">
+      <path id="arc-t1" class="draw" pathLength="1" d="M1196,272 C1150,80 700,60 222,262"/>
+      <path id="arc-t2" class="draw" pathLength="1" d="M1196,272 C1120,160 880,150 732,262"/>
+      <path id="arc-t3" class="draw" pathLength="1" d="M1196,328 C1100,470 800,470 732,338"/>
+      <path id="arc-t4" class="draw" pathLength="1" d="M1196,272 C1180,10 500,-10 216,262"/>
+      <path id="arc-t5" class="draw" pathLength="1" d="M1196,328 C1050,520 450,520 222,338"/>
+      <path id="arc-t6" class="draw" pathLength="1" d="M1196,272 C1000,220 900,120 728,262"/>
+      <circle class="glow glow--l3 glow-app" cx="1200" cy="300" r="46"/>
+    </g>
+    <g class="pt pt-back">
+      <circle r="5"><animateMotion dur="3.2s" repeatCount="indefinite" begin="0s"><mpath href="#arc-t1"/></animateMotion></circle>
+      <circle r="5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0.4s"><mpath href="#arc-t2"/></animateMotion></circle>
+      <circle r="5"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.9s"><mpath href="#arc-t3"/></animateMotion></circle>
+      <circle r="5"><animateMotion dur="3.6s" repeatCount="indefinite" begin="1.3s"><mpath href="#arc-t4"/></animateMotion></circle>
+      <circle r="5"><animateMotion dur="3.4s" repeatCount="indefinite" begin="0.2s"><mpath href="#arc-t5"/></animateMotion></circle>
+      <circle r="5"><animateMotion dur="2.2s" repeatCount="indefinite" begin="1.7s"><mpath href="#arc-t6"/></animateMotion></circle>
+    </g>
+
+    <!-- state 3: two-way loops, in balance (above: backward, below: forward) -->
+    <g class="loops">
+      <path id="arc-l1" class="draw" pathLength="1" d="M1196,264 C1070,160 830,160 704,264"/>
+      <path id="arc-l2" class="draw" pathLength="1" d="M696,264 C570,160 330,160 204,264"/>
+      <path id="arc-l3" class="draw" pathLength="1" d="M204,336 C330,440 570,440 696,336"/>
+      <path id="arc-l4" class="draw" pathLength="1" d="M704,336 C830,440 1070,440 1196,336"/>
+    </g>
+    <g class="glows-all">
+      <circle class="glow glow--l1" cx="200" cy="300" r="46"/>
+      <circle class="glow glow--l2" cx="700" cy="300" r="46"/>
+      <circle class="glow glow--l3" cx="1200" cy="300" r="46"/>
+    </g>
+    <g class="pt pt-loop">
+      <circle r="6"><animateMotion dur="3s" repeatCount="indefinite" begin="0s"><mpath href="#arc-l1"/></animateMotion></circle>
+      <circle r="6"><animateMotion dur="3s" repeatCount="indefinite" begin="1.5s"><mpath href="#arc-l2"/></animateMotion></circle>
+      <circle r="6"><animateMotion dur="3s" repeatCount="indefinite" begin="0.75s"><mpath href="#arc-l3"/></animateMotion></circle>
+      <circle r="6"><animateMotion dur="3s" repeatCount="indefinite" begin="2.25s"><mpath href="#arc-l4"/></animateMotion></circle>
+    </g>
+
+    <!-- the three dots never move and never change colour -->
+    <g class="arc-dots">
+      <circle class="dot dot--l1" cx="200" cy="300" r="26"/>
+      <circle class="dot dot--l2" cx="700" cy="300" r="26"/>
+      <circle class="dot dot--l3" cx="1200" cy="300" r="26"/>
+      <text x="200" y="392">Template</text>
+      <text x="700" y="392">Package</text>
+      <text x="1200" y="392">App</text>
+    </g>
+  </svg>
+
+  <div class="arc-captions">
+    <p class="c0"><span class="emphasis">Three layers.</span> We assumed they'd line up.</p>
+    <p class="c1"><span class="emphasis">Expectation.</span> A neat, linear build: template, then package, then app.</p>
+    <p class="c2"><span class="emphasis">Reality.</span> Shipping fast put workarounds in the app: loud signal about what the lower layers needed.</p>
+    <p class="c3"><span class="emphasis">Refactoring for independence.</span> The hacks move down into <code>{soils}</code>; every tier stands on its own.</p>
+  </div>
+</div>
+```
+
+::: {.notes}
+*⏱ 2:20 · Tanya 1:35 (11–13) / Jadey 0:45 (14)*
+
+**Tanya, three layers (0:20, on arrival: three dots).** So here's the part we didn't plan. When you draw this on a whiteboard it's three tidy boxes.
+
+**Tanya, expectation (0:30). [click: the pipeline draws]** The expectation was a neat, linear build. Template, then package, then app. Each layer finished before the next one starts.
+
+We had a deadline. Field staff needed the app before the season. So we shipped fast, and shipping fast meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn't do yet. Formatting the template should have owned.
+
+**Tanya, reality (0:45). [click: the tangle]** This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of `{soils}`, and every time the package didn't have what I needed, I patched around it in the app, because the season wasn't going to wait.
+
+Those workarounds weren't failures. They were loud signals about what the package was missing. And you can't see them from inside the package.
+
+**Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]** That was the real lesson for me as the maintainer: you do not know what abstractions your package needs until someone tries to build a UI on top of it. Building layer three forced us to rethink layers one and two.
+
+So we went back to the workbench. We pulled the hacks out of Tanya's app and engineered them into `{soils}` as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a field agent can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that's fine. That's the point.
+:::
