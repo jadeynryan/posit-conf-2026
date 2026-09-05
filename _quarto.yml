@@ -1,0 +1,33 @@
+project:
+  type: default
+  render:
+    - index.qmd            # only the deck; the section files are includes, not documents
+  resources:
+    - assets/
+    - images/
+
+format:
+  revealjs:
+    theme: [default, theme/brand.scss]
+    width: 1920
+    height: 1080
+    margin: 0
+    minScale: 0.1
+    maxScale: 2
+    center: false
+    transition: none
+    background-transition: none
+    slide-number: false
+    controls: false
+    progress: false
+    hash: true
+    code-line-numbers: false
+    highlight-style: github      # any style, so Pandoc emits token spans; theme/brand.scss recolours them inside .code-window
+    include-in-header: assets/head.html
+    include-after-body:
+      - assets/rings-symbols.html
+      - assets/rings-init.html
+      - assets/timeline-init.html
+      - assets/deck-footer-init.html
+      - assets/demo-video-init.html
+    title-slide-attributes: {}

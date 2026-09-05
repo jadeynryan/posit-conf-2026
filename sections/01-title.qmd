@@ -1,0 +1,41 @@
+## Title {#title .slide-dark .cover background-color="#1A1D20"}
+
+<!-- BEAT: Title (0:30). Warm, no tech; cookies before soil. · OWNER: T -->
+
+<!-- SLIDE 1 · Title. Hand-built (no `title:` in index.qmd) so the layout and logos are ours.
+     Keep this comment below the header: anything above the first `##` becomes its own (blank) slide.
+     The heading text names the slide in navigators; it is visually hidden (.cover > h2 in brand.scss). -->
+
+```{=html}
+<div class="title-block">
+  <div class="event">posit::conf(2026)</div>
+  <h1 class="hero"><span class="l1">Template</span><span class="chev chev--12">›</span><span class="l2">Package</span><span class="chev chev--23">›</span><span class="l3">App</span></h1>
+  <p class="subtitle">Meeting Users Where They’re At</p>
+  <div class="speakers">
+    <!-- ring colours tease ownership: Jadey = template + package, Tanya = app -->
+    <div class="speaker">
+      <span class="speaker__ring speaker__ring--l12"><img src="images/headshot-jadey.png" alt=""></span>
+      <div><b>Jadey Ryan</b><em>Data Scientist</em><span>WA Dept of Agriculture</span></div>
+    </div>
+    <div class="speaker">
+      <span class="speaker__ring speaker__ring--l3"><img src="images/headshot-tanya.png" alt=""></span>
+      <div><b>Tanya Shapiro</b><em>Founder, Consultant</em><span>IndieVisual</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="rule" aria-hidden="true"></div>
+<div class="logos">
+  <img src="images/logo-wsda.png" alt="Washington State Department of Agriculture">
+  <span class="logos__sep" aria-hidden="true"></span>
+  <img src="images/logo-indievisual.png" alt="IndieVisual">
+</div>
+```
+
+::: {.notes}
+*⏱ 0:30 · Tanya*
+
+**Tanya:** I'm Tanya, this is Jadey, and this is a talk about a Quarto pipeline at the Washington State Department of Agriculture that worked perfectly and almost nobody could use.
+
+We're going to show you how it went from one person's laptop to a web app that field staff run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.
+:::

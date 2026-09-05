@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <rect width="1600" height="900" fill="#2A2E33"/>
+  <rect x="24" y="24" width="1552" height="852" fill="none" stroke="#8A8680" stroke-width="4" stroke-dasharray="18 14" rx="12"/>
+  <text x="800" y="410" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="700" fill="#D9D6D0">posit::conf(2023) slide</text>
+  <text x="800" y="490" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="34" fill="#B8B4AD">placeholder — drop the screenshot in images/ and point slides/03-template.qmd at it</text>
+</svg>

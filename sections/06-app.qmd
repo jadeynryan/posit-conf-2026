@@ -1,0 +1,129 @@
+<!-- BEAT: Layer 3 · App · The Store Shelf (4:00). The payoff: zero friction. Stack intro, recorded demo, then the honest turn on What We Saw. · OWNER: T -->
+<!-- SLIDE 10 · Layer 3: the app as the top of a stack, not a UI. The audience leaves knowing the
+     app is a thin layer over {soils}, so the demo's "that's the package doing the work" and the
+     Lessons feedback loop both land. No screenshot of the app here on purpose: the video on 10b
+     is the first time the interface appears.
+     Everything shows at once, all three bars at full colour (no clicks on this slide). The stack is a
+     shortcode ({{< stack >}}, _extensions/rings/stack.lua) so Lessons can call it back with the arrows
+     reversed: {{< stack highlight=all arrows=up >}}. -->
+
+## Layer 3: App [· The Store Shelf]{.h2-sub} {#app}
+
+{{< rings lit=3 class="rings--crumb" >}}
+
+::: {.lede}
+What's underneath.
+:::
+
+::: {.fill .fill--row .app-stack}
+::: {.app-stack__left}
+{{< stack highlight=all >}}
+:::
+
+::: {.app-stack__right}
+```{=html}
+<!-- CHECK WITH JADEY: do farmers use the app directly, or do extension / technical-assistance
+     staff generate reports for them? This card assumes the latter; add farmers back if not. -->
+<div class="card card--l3">
+  <div class="eyebrow eyebrow--l3">For</div>
+  <p>Extension staff &amp; technical assistance providers who don't code</p>
+</div>
+<p class="body emphasis app-stack__line">No R install. No command line. <span class="quiet">Zero friction.</span></p>
+```
+:::
+:::
+
+::: {.notes}
+*⏱ 0:45 · Tanya*
+
+*[Check with Jadey: farmers directly, or extension / TA staff on their behalf? The FOR card assumes the latter.]*
+
+**Tanya:** This is where I come in as Nestlé. I'm IndieVisual. It's a one-person shop, so when I say IndieVisual built something, I mean I did.
+
+Jadey had a published package. What it didn't have was a way for someone with no R install and no command line to get a report. So I built Dirt Data Reports: a Shiny app that sits on top of `{soils}`, takes a CSV and a few choices, and hands back a finished Quarto report.
+
+No R. No terminal. Zero friction. Here's what it looks like.
+
+**[next slide: the recorded demo]**
+:::
+
+<!-- SLIDE 10b · Layer 3: the recorded demo. One video, with controls, in the deck's browser frame,
+     narrated live by Tanya. The file is not recorded yet: until images/dirt-data-reports.webm
+     (or .mp4) exists the poster shows with a placeholder tag. Drop the recording in and the tag
+     disappears (assets/demo-video.js hides it once the video has a source it can play).
+     ≤ 2:00, ideally ~1:30. Cut to: upload → pick parameters → render → download.
+     Full-bleed alternative: replace the frame with `background-video="images/dirt-data-reports.mp4"`
+     on the header line. -->
+
+## Layer 3: App [· The Store Shelf]{.h2-sub} {#app-demo}
+
+{{< rings lit=3 class="rings--crumb" >}}
+
+::: {.lede}
+Upload → pick parameters → render → download.
+:::
+
+::: {.fill .fill--center}
+```{=html}
+<div class="browser browser--demo">
+  <div class="chrome"><span></span><span></span><span></span><div class="url">dirt-data-reports · recorded demo</div></div>
+  <div class="demo-frame">
+    <video class="demo-video" controls playsinline preload="metadata" poster="images/dirt-data-reports-01.png">
+      <source src="images/dirt-data-reports.webm" type="video/webm">
+      <source src="images/dirt-data-reports.mp4" type="video/mp4">
+    </video>
+    <div class="demo-placeholder placeholder">
+      <div class="placeholder__label">Placeholder · recorded demo</div>
+      <p>Drop the recording in as <code>images/dirt-data-reports.mp4</code> (or <code>.webm</code>) and this tag goes away. ≤ 2:00, cut to upload → parameters → render → download.</p>
+    </div>
+  </div>
+</div>
+```
+:::
+
+::: {.notes}
+*⏱ 1:30–2:00 · Tanya, narrating over the recording*
+
+**[press space or click the video to play; the deck's arrow keys still work while it plays. Cut: upload → parameters → render → download.]**
+
+**Tanya (over the video):** Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That's `{soils}` doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That's the whole workflow for a field agent.
+
+The important thing isn't that this is a Shiny app. It's that the person using it never has to know there's a package, a template, or Quarto underneath. They open the bag and eat the cookie.
+
+**[hand-off to Jadey on the next slide]**
+:::
+
+<!-- SLIDE 10c · Post-demo · "What we saw". Jadey's 1:00 reaction beat between the demo and Lessons
+     Learned. Content still to come from Jadey: one real user quote OR a photo of an extension / TA user
+     with the app OR a screenshot of a real session. The seed line at the foot bridges into Lessons. -->
+
+## What We Saw {#app-aftermath}
+
+{{< rings lit=3 class="rings--crumb" >}}
+
+::: {.lede}
+The store shelf, in the field.
+:::
+
+::: {.fill .fill--center}
+```{=html}
+<div class="placeholder placeholder--wide">
+  <div class="placeholder__label">Placeholder · user quote / photo · ask Jadey</div>
+  <p>One real user quote, <em>or</em> a photo of an extension / technical-assistance user with the app, <em>or</em> a screenshot of a real session. One of the three, not all.</p>
+</div>
+```
+
+::: {.body .bridge style="margin-top:72px;"}
+[The app worked.]{.emphasis} [It also showed us where the package was thin.]{.muted}
+:::
+:::
+
+::: {.notes}
+*⏱ 1:00 · Jadey*
+
+`PLACEHOLDER · USER QUOTE / PHOTO`: one real user, one sentence, or a photo of an extension / technical-assistance user with the app.
+
+**Jadey:** Watching people use the app for the first time was the most useful hour of the project. Not because it went smoothly. Because of where it didn't. As the package maintainer, every place a user got stuck was a place `{soils}` had a gap I couldn't see from inside my own kitchen.
+
+**Jadey (land on the line):** The app worked. It also showed us exactly where the package was thin. **[→ Lessons Learned]**
+:::

@@ -1,0 +1,23 @@
+---
+# No `title:` on purpose: the title slide is hand-built in sections/01-title.qmd
+# so we control the soil-strata graphic and the logos.
+# pagetitle sets the browser tab / PDF name without generating a title slide (title: would)
+pagetitle: "Template › Package › App"
+format: revealjs
+---
+
+{{< include sections/01-title.qmd >}}
+
+{{< include sections/02-hook.qmd >}}
+
+{{< include sections/03-playbook.qmd >}}
+
+{{< include sections/04-template.qmd >}}
+
+{{< include sections/05-package.qmd >}}
+
+{{< include sections/06-app.qmd >}}
+
+{{< include sections/07-lessons.qmd >}}
+
+{{< include sections/08-close.qmd >}}

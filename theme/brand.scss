@@ -1,0 +1,540 @@
+/*-- scss:defaults --*/
+// Template, Package, App: reveal.js theme translated from brand.css (1920×1080 canvas)
+
+$bg-light: #F9F8F6;
+$bg-dark: #1A1D20;
+$surface-light: #FFFFFF;
+$surface-dark: #2A2E33;
+$surface-dark-2: #3A3E44;
+$border-light: #E6E2DA;
+$border-dark: #3A3E44;
+
+$green: #2C5E3B;
+$green-soft: #7FBF93;
+$green-pale: #B8D8C0;
+$ochre: #E09F3E;
+$clay: #C86D51;
+$soil: #5A4632;
+
+$text: #222222;
+$text-muted: #666666;
+$text-faint: #8A8680;
+$text-on-dark: #F9F8F6;
+$text-on-dark-2: #D9D6D0;
+$text-on-dark-muted: #B8B4AD;
+
+// reveal.js hooks
+$body-bg: $bg-light;
+$body-color: $text;
+$font-family-sans-serif: 'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+$font-family-monospace: 'SF Mono', Menlo, Consolas, monospace;
+$presentation-font-size-root: 34px;          // --type-body
+$presentation-line-height: 1.4;
+$presentation-heading-font: $font-family-sans-serif;
+$presentation-heading-font-weight: 800;
+$presentation-heading-letter-spacing: -0.02em;
+$presentation-heading-line-height: 1.05;
+$presentation-h1-font-size: 96px;             // hero
+$presentation-h2-font-size: 72px;             // slide titles
+$presentation-h3-font-size: 44px;
+$presentation-heading-color: $text;
+$link-color: $green;
+$code-block-bg: $bg-dark;
+$code-block-font-size: 30px;
+
+/*-- scss:rules --*/
+
+:root {
+  --bg-light: #{$bg-light}; --bg-dark: #{$bg-dark};
+  --surface-light: #{$surface-light}; --surface-dark: #{$surface-dark}; --surface-dark-2: #{$surface-dark-2};
+  --border-light: #{$border-light}; --border-dark: #{$border-dark};
+  --green: #{$green}; --green-soft: #{$green-soft}; --green-pale: #{$green-pale};
+  --ochre: #{$ochre}; --clay: #{$clay}; --soil: #{$soil};
+  --text: #{$text}; --text-muted: #{$text-muted}; --text-faint: #{$text-faint};
+  --text-on-dark: #{$text-on-dark}; --text-on-dark-2: #{$text-on-dark-2}; --text-on-dark-muted: #{$text-on-dark-muted};
+  --type-stat: 120px; --type-label: 52px; --type-subtitle: 44px; --type-body: 34px; --type-code: 30px; --type-small: 26px;
+  --pad-top: 64px; --pad-bottom: 64px; --pad-x: 120px;    // titles sit ~6% from the top; the header block was eating a third of the slide
+  --gap-col: 100px; --gap-grid: 48px; --gap-stack: 40px; --gap-item: 28px;
+  --radius-card: 16px; --radius-img: 12px;
+  --shadow-img: 0 30px 60px rgba(34,34,34,0.18);
+  --shadow-book: 0 30px 60px rgba(34,34,34,0.22), 0 8px 18px rgba(34,34,34,0.12);
+}
+
+/* ---------- slide frame ---------- */
+.reveal .slides section {
+  padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
+  box-sizing: border-box;
+  height: 1080px;
+  text-align: left;
+  flex-direction: column;
+}
+// reveal sets display:block on the current slide; we want a flex column
+.reveal .slides > section.present:not(.stack),
+.reveal .slides > section > section.present { display: flex !important; }
+.reveal .slides section > h2 { margin: 0 0 var(--gap-stack) 0; }
+/* the cookie name after a layer title: "Layer 1: Template · The Recipe" (slides 6–10; matches the playbook's labels) */
+.reveal .slides section > h2 .h2-sub { font-weight: 400; color: $text-muted; margin-left: 0.2em; }
+.reveal .slides section.slide-dark > h2 .h2-sub { color: $text-on-dark-muted; }
+/* one line under a slide title (slides 5–11); tucks up under the h2 and takes over its gap */
+.reveal .slides section > .lede { margin: calc(-1 * var(--gap-stack) + 8px) 0 28px 0; font-size: 36px; line-height: 1.35; color: $text-muted; text-wrap: pretty; max-width: 64ch;
+  p { margin: 0; } code { font-size: 0.92em; background: transparent; color: inherit; } }
+.reveal .slides section.slide-dark > .lede { color: $text-on-dark-muted; }
+.reveal .slides section > h2:empty { display: none; }
+/* slides whose heading is only a name (title, hook beats): keep it for navigators and screen
+   readers, take it out of sight and out of the layout */
+.reveal .slides section.cover > h2,
+.reveal .slides section.hook > h2 { position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+.reveal .slides section > p:last-child { margin-bottom: 0; }
+
+.reveal .slides section.slide-dark {
+  color: $text-on-dark;
+  h1, h2, h3 { color: $text-on-dark; }
+  .caption { color: $text-on-dark-muted; }
+}
+
+/* hook slides (01-hook.qmd): reserve a band at the foot for the timeline tape, and
+   hold the content invisible (.tl-hold, set by assets/timeline.js) until the tape lands.
+   The content block gets an explicit height so it lays out identically whether reveal
+   shows the section as flex (.present) or block (fading out), so there is no jump at the start of
+   the crossfade. */
+.reveal .slides section.hook { padding-bottom: 220px; }
+.reveal .slides section.hook .tl-content { height: 100%; transition: opacity 600ms ease; }
+.reveal .slides section.hook.tl-hold .tl-content { opacity: 0; transition: none; }
+
+/* fill: the content area below the title grows to the bottom */
+.reveal .fill { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.reveal .fill--center { justify-content: center; }
+.reveal .fill--row { flex-direction: row; align-items: center; gap: var(--gap-col); }
+
+/* ---------- type ---------- */
+.reveal .hero { font-size: 96px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; margin: 0; }
+.reveal .stat { font-size: var(--type-stat); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+.reveal .subtitle { font-size: var(--type-subtitle); line-height: 1.3; }
+.reveal .body { font-size: var(--type-body); line-height: 1.4; text-wrap: pretty; }
+.reveal .caption { font-size: var(--type-small); color: $text-muted; }
+.reveal .eyebrow { font-size: var(--type-small); font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+.reveal .eyebrow--l1 { color: $green; }  .reveal .slide-dark .eyebrow--l1 { color: $green-soft; }
+.reveal .eyebrow--l2 { color: $ochre; }
+.reveal .eyebrow--l3 { color: $clay; }
+.reveal .emphasis { font-weight: 600; }
+.reveal .quiet { font-weight: 400; color: $text-muted; }
+.reveal .slide-dark .quiet { color: $text-on-dark-muted; }
+.reveal .muted { color: $text-muted; }
+.reveal .measure { max-width: 22ch; }
+.reveal p { margin: 0 0 var(--gap-item) 0; }
+.reveal ul { margin: 0; padding-left: 1em; }
+.reveal li { margin-bottom: 12px; }
+
+/* ---------- cards ---------- */
+.reveal .card {
+  background: $surface-light; border: 1px solid $border-light; border-radius: var(--radius-card);
+  padding: 44px 48px; display: flex; flex-direction: column; gap: 20px;
+  p { margin: 0; }
+  .divider { height: 1px; background: $border-light; }
+}
+.reveal .slide-dark .card { background: $surface-dark; border-color: $border-dark; .divider { background: $border-dark; } }
+.reveal .card--l1 { border-left: 8px solid $green; }
+.reveal .card--l2 { border-left: 8px solid $ochre; }
+.reveal .card--l3 { border-left: 8px solid $clay; }
+
+.reveal .quote {
+  display: flex; align-items: center; gap: 32px;
+  background: $surface-dark; border: 1px solid $border-dark; border-radius: var(--radius-card); padding: 32px 48px;
+  color: $text-on-dark; font-size: var(--type-body);
+  p { margin: 0; }
+  .mark { font-size: 96px; line-height: 0.6; font-weight: 800; color: $ochre; font-family: Georgia, serif; flex: 0 0 auto; }
+}
+
+/* ---------- images ---------- */
+.reveal .img-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--gap-grid); align-items: start;
+  figure { margin: 0; }
+  img {
+    width: 100%; height: 540px; object-fit: cover; display: block;   // room for the tag above and the tape below
+    border-radius: var(--radius-img); filter: sepia(0.25); box-shadow: var(--shadow-img);
+  }
+  figcaption { margin-top: 28px; }
+  .cap-title { display: block; font-size: 40px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; }
+  .cap-sub { display: block; margin-top: 10px; font-size: var(--type-small); color: $text-muted; line-height: 1.35; text-wrap: pretty; }
+}
+.reveal .slide-dark .img-grid .cap-sub { color: $text-on-dark-muted; }
+.reveal img { max-width: 100%; height: auto; }
+.reveal .reveal-figure { margin: 0; }
+
+/* ---------- hook slides: object on the left, the story beat on the right ----------
+   The text column starts at x=960 - the timeline cursor's x - so the beat hangs off the
+   "now" marker on the tape. Content box is 120..1800, so media = 840px minus the gutter. */
+.reveal .hook-split { display: flex; align-items: center; flex: 1 1 auto; min-height: 0; width: 100%; }
+.reveal .hook-split__media { flex: 0 0 760px; margin-right: 80px; display: flex; justify-content: center; align-items: center; }
+.reveal .hook-split__aside { flex: 1 1 0; min-width: 0; }
+
+/* the artefact shown whole: no crop, no mat, the deck's soft shadow */
+.reveal .img-object { display: block; width: auto; max-width: 100%; height: auto; max-height: 700px; border-radius: var(--radius-img); box-shadow: var(--shadow-book); }
+
+/* eyebrow names the artefact, headline names the change, consequence lands on click */
+.reveal .beat__eyebrow { font-size: var(--type-small); font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: $text-faint; margin-bottom: 28px; }
+.reveal .beat__headline { font-size: 64px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 32px 0; max-width: 14ch; text-wrap: balance; }
+.reveal .beat__consequence { font-size: 38px; line-height: 1.35; color: $text-muted; margin: 0; max-width: 22ch; text-wrap: pretty; }
+
+/* ---------- static timeline rail (PDF export only) ----------
+   The live tape (assets/timeline.js) is hidden when printing; each hook slide carries
+   this plain rail instead. Hidden on screen. Positions match the slide's inline styles:
+   Aug 1930 6% · late 1938 50% · Mar 1939 94%. */
+.reveal .tl-static { display: none; position: absolute; left: var(--pad-x); right: var(--pad-x); bottom: 60px; }
+html.print-pdf .reveal .tl-static { display: block; }
+@media print { .reveal .tl-static { display: block; } }
+
+.reveal .tl-static__track { position: relative; height: 2px; background: $border-light; }
+.reveal .tl-static__fill { position: absolute; left: 0; top: 0; height: 2px; }
+.reveal .tl-static__marker { position: absolute; top: -10px; width: 22px; height: 22px; border-radius: 50%; }
+.reveal .tl-static__labels { position: relative; height: 36px; margin-top: 26px; }
+.reveal .tl-static__labels span {
+  position: absolute; top: 0; width: 220px; margin-left: -110px; text-align: center;
+  font-size: var(--type-small); font-weight: 500; letter-spacing: 0.08em;
+}
+
+/* ---------- code window ---------- */
+.reveal .code-window {
+  background: $bg-dark; border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-img); width: 100%;
+  .chrome {
+    display: flex; align-items: center; gap: 12px; padding: 22px 28px;
+    background: $surface-dark; border-bottom: 1px solid $border-dark;
+    span { width: 16px; height: 16px; border-radius: 50%; display: inline-block; }
+    .r { background: $clay; } .y { background: $ochre; } .g { background: $green-soft; }
+    .filename { width: auto; height: auto; margin-left: 20px; font-size: 24px; color: $text-on-dark-muted; font-family: $font-family-monospace; }
+  }
+  div.sourceCode { margin: 0; border: 0; border-radius: 0; background: transparent; }
+  pre { margin: 0; padding: 40px 44px; background: transparent; font-size: var(--type-code); line-height: 1.6; box-shadow: none; }
+  code { color: $text-on-dark-2; font-family: $font-family-monospace; background: transparent; }
+  // Pandoc YAML token classes (highlight-style is `none`, so we color them here)
+  code span.fu { color: $green-soft; }        // keys
+  code span.st { color: $ochre; }             // strings
+  code span.an, code span.co { color: $text-muted; }  // --- delimiters, comments
+  code span.dt, code span.dv { color: $text-on-dark; }
+}
+
+/* ---------- placeholder block (slides still to be written) ---------- */
+.reveal .placeholder { border: 3px dashed $text-faint; border-radius: var(--radius-card); padding: 56px 64px; max-width: 1200px; color: $text-muted;
+  &.placeholder--wide { max-width: none; width: 100%; box-sizing: border-box; }
+  .placeholder__label { font-size: var(--type-small); font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: $text-faint; margin-bottom: 20px; }
+  p { margin: 0; font-size: var(--type-subtitle); line-height: 1.35; text-wrap: pretty; } code { background: transparent; color: inherit; } }
+
+/* ---------- act breadcrumb (unused since the rings took over; kept for the markup's sake) ---------- */
+// sits above the slide title (the section is a flex column, so order pulls it up past the h2)
+// above the title, inside the top margin, so every titled slide's h2 sits at the same y
+.reveal .crumbs { position: absolute; top: 20px; left: var(--pad-x); display: flex; align-items: center; gap: 20px; font-size: 24px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: $text-faint; }
+.reveal .crumbs .sep { color: $text-faint; opacity: 0.7; letter-spacing: 0; font-size: 1.25em; line-height: 1; position: relative; top: -0.05em; }
+.reveal .crumbs .crumb--l1.is-active { color: $green; }
+.reveal .crumbs .crumb--l2.is-active { color: $ochre; }
+.reveal .crumbs .crumb--l3.is-active { color: $clay; }
+.reveal .slide-dark .crumbs { color: $text-on-dark-muted; }
+.reveal .slide-dark .crumbs .crumb--l1.is-active { color: $green-soft; }
+.reveal .crumbs .crumb { transition: color 600ms ease; }
+// Lessons Learned: the rings crumb has only App lit on arrival (where the lesson started); on the
+// refactor click the other two light up too - every tier stands on its own. Keyed to the third fragment.
+.reveal section#arc .rings .ring-1, .reveal section#arc .rings .ring-2 { color: $text-on-dark-muted; opacity: 0.45; }
+.reveal section#arc:has(.arc-trigger:nth-of-type(3).visible) .rings .ring-1 { color: $green-soft; opacity: 1; }
+.reveal section#arc:has(.arc-trigger:nth-of-type(3).visible) .rings .ring-2 { color: $ochre; opacity: 1; }
+
+/* ---------- output slide (6): the report large, the stat beside it ---------- */
+.reveal .report-card .placeholder--fill { aspect-ratio: 4 / 3; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; width: 100%; max-width: none; }
+.reveal .output-aside .stat { color: $green; }
+.reveal .output-aside .stat__plus { font-size: 0.6em; vertical-align: 0.35em; margin-left: 0.05em; }
+.reveal .output-aside .stat__caption { margin: 8px 0 0; font-size: var(--type-subtitle); color: $text-muted; line-height: 1.3; }
+
+/* ---------- boundary slide (7): big rings, centre lit, one line ---------- */
+.reveal .boundary { justify-content: center; gap: 140px; }
+.reveal .boundary .rings { margin-left: 40px; }
+.reveal .boundary__line { max-width: 760px; font-size: var(--type-label); line-height: 1.2; letter-spacing: -0.02em;
+  p { margin: 0; } .emphasis { font-weight: 800; display: block; } .muted { display: block; margin-top: 12px; font-weight: 400; } }
+
+/* ---------- 'then' card (template slide: the 2023 callback) ---------- */
+.reveal .then-card {
+  margin: 0;
+  img { display: block; width: 100%; height: auto; border-radius: var(--radius-card); box-shadow: var(--shadow-img); }
+  figcaption { margin-top: 22px; font-size: var(--type-small); color: $text-muted; }
+  .then-card__tag { font-family: $font-family-monospace; font-weight: 500; letter-spacing: 0.08em; color: $text; margin-right: 12px; }
+}
+
+/* ---------- architecture arc (slide 9) ----------
+   Four states, three invisible fragment spans before the SVG. Sibling selectors switch the
+   layers; later rules win, so each state's rules sit below the previous state's.
+   Lines draw/retract with stroke-dashoffset (paths carry pathLength="1", so 1 = hidden,
+   0 = fully drawn). Particles are SMIL <animateMotion> in the SVG; here we only fade the
+   groups. Reduced motion and PDF export skip the animations and show each state's end. */
+@keyframes arc-draw   { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes arc-undraw { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 1; } }
+@keyframes arc-in     { from { opacity: 0; } to { opacity: 1; } }
+@keyframes arc-pulse  { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 0.85; transform: scale(1.14); } }
+
+$arc-ease: cubic-bezier(.4, 0, .2, 1);
+$t1: ".reveal .arc-trigger:nth-of-type(1).visible ~";
+$t2: ".reveal .arc-trigger:nth-of-type(2).visible ~";
+$t3: ".reveal .arc-trigger:nth-of-type(3).visible ~";
+
+.reveal .arc { align-items: center; }
+.reveal .arc-trigger { display: inline-block; width: 0; height: 0; overflow: hidden; }
+.reveal .arc-svg { width: 1150px; max-width: 100%; height: auto; overflow: visible; display: block;
+  .draw { fill: none; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .pipe .draw   { stroke: $text-on-dark-2; stroke-width: 4; }
+  .tangle .draw { stroke: $text-on-dark-muted; stroke-width: 3; }
+  .loops .draw  { stroke: $text-on-dark-2; stroke-width: 4; }
+  .pt circle { fill: $text-on-dark; }
+  .pt-back circle { fill: $text-on-dark-muted; }
+  .glow { fill: none; stroke-width: 3; opacity: 0.45; transform-box: fill-box; transform-origin: center; }
+  .glow--l1 { stroke: $green-soft; } .glow--l2 { stroke: $ochre; } .glow--l3 { stroke: $clay; }
+  .dot { stroke: $bg-dark; stroke-width: 6; }
+  .dot--l1 { fill: $green-soft; } .dot--l2 { fill: $ochre; } .dot--l3 { fill: $clay; }
+  text { fill: $text-on-dark; font-size: 34px; font-weight: 700; text-anchor: middle; letter-spacing: -0.01em; }
+  // everything but the dots starts hidden
+  .pipe, .tangle, .loops, .glows-all, .pt { opacity: 0; }
+}
+.reveal .arc-captions { position: relative; width: 1150px; max-width: 100%; height: 110px; margin-top: 24px;
+  p { position: absolute; left: 0; right: 0; top: 0; margin: 0; font-size: var(--type-subtitle); line-height: 1.35; color: $text-on-dark-2; opacity: 0; transition: opacity 500ms ease; text-wrap: pretty; }
+  .emphasis { color: $text-on-dark; }
+  code { font-size: 0.9em; color: $ochre; background: transparent; }
+  .c0 { opacity: 1; }
+}
+
+/* state 1: the pipeline draws, particles flow forward */
+#{$t1} .arc-svg .pipe { opacity: 1; }
+#{$t1} .arc-svg .pipe .draw { animation: arc-draw 800ms $arc-ease forwards; }
+#{$t1} .arc-svg .pipe .draw:nth-of-type(2) { animation-delay: 450ms; }
+#{$t1} .arc-svg .pt-fwd { animation: arc-in 400ms 1300ms forwards; }
+#{$t1} .arc-captions .c0 { opacity: 0; }
+#{$t1} .arc-captions .c1 { opacity: 1; }
+
+/* state 2: six arcs spawn from the app one after another; glow pulses; particles run backward */
+#{$t2} .arc-svg .pt-fwd { animation: none; opacity: 0; }
+#{$t2} .arc-svg .tangle { opacity: 1; }
+@for $i from 1 through 6 {
+  #{$t2} .arc-svg .tangle .draw:nth-of-type(#{$i}) { animation: arc-draw 700ms $arc-ease #{($i - 1) * 250}ms forwards; }
+}
+#{$t2} .arc-svg .glow-app { animation: arc-pulse 1400ms ease-in-out 600ms infinite; }
+#{$t2} .arc-svg .pt-back { animation: arc-in 400ms 1700ms forwards; }
+#{$t2} .arc-captions .c1 { opacity: 0; }
+#{$t2} .arc-captions .c2 { opacity: 1; }
+
+/* state 3: the tangle retracts into the app (600ms), a breath (400ms), then the loops draw */
+@for $i from 1 through 6 {
+  #{$t3} .arc-svg .tangle .draw:nth-of-type(#{$i}) { animation: arc-undraw 600ms cubic-bezier(.4, 0, .6, 1) 0ms forwards; }
+}
+#{$t3} .arc-svg .tangle { opacity: 0; transition: opacity 0s linear 620ms; }   // gone once retracted
+#{$t3} .arc-svg .pt-back { animation: none; opacity: 0; }
+#{$t3} .arc-svg .glow-app { animation: none; }
+#{$t3} .arc-svg .loops { opacity: 1; }
+#{$t3} .arc-svg .loops .draw { animation: arc-draw 800ms $arc-ease 1000ms forwards; }
+#{$t3} .arc-svg .loops .draw:nth-of-type(3),
+#{$t3} .arc-svg .loops .draw:nth-of-type(4) { animation-delay: 1300ms; }
+#{$t3} .arc-svg .glows-all { animation: arc-in 500ms 1900ms forwards; }
+#{$t3} .arc-svg .pt-loop { animation: arc-in 400ms 2200ms forwards; }
+#{$t3} .arc-captions .c2 { opacity: 0; }
+#{$t3} .arc-captions .c3 { opacity: 1; }
+
+/* no motion: every visible layer sits at its end state */
+@media (prefers-reduced-motion: reduce) {
+  .reveal .arc-svg .draw { animation: none !important; stroke-dashoffset: 0; }
+  .reveal .arc-svg .glow-app { animation: none !important; }
+  #{$t1} .arc-svg .pt-fwd, #{$t2} .arc-svg .pt-back, #{$t3} .arc-svg .pt-loop, #{$t3} .arc-svg .glows-all { animation: none !important; opacity: 1; }
+  #{$t2} .arc-svg .pt-fwd, #{$t3} .arc-svg .pt-back { opacity: 0; }
+}
+html.print-pdf .reveal .arc-svg .draw { animation: none !important; stroke-dashoffset: 0; }
+html.print-pdf #{$t3} .arc-svg .glows-all { opacity: 1; }
+
+/* ---------- app slide: the screencast loop inside the browser frame ---------- */
+/* height-driven frame: it stretches to the row's height, the video keeps 16:10 and derives its
+   width from that, so the frame always fits under title + breadcrumb + lede whatever their size */
+.reveal .browser--fit { display: block; align-self: stretch; flex: 0 0 auto; width: auto; box-sizing: border-box;
+  // a fixed-height chrome bar makes the video's height definite, so its width derives from 16:10
+  .chrome { height: 80px; box-sizing: border-box; }
+}
+// max-width/height: none, because reveal caps every img/video at 95%, which would clip the derived width
+.reveal .browser .app-video { display: block; height: calc(100% - 80px); width: auto; max-width: none; max-height: none; aspect-ratio: 16 / 10; object-fit: cover; background: $bg-light; }
+.reveal .browser--fit + .callouts { flex: 1 1 auto; width: auto; min-width: 0; }
+
+/* ---------- the three-layer stack ({{< stack >}}, slide 10; Lessons callback with arrows=up) ---------- */
+.reveal .app-stack { align-items: center; }
+.reveal .app-stack__left { flex: 0 0 60%; min-width: 0; }
+.reveal .app-stack__right { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
+.reveal .app-stack__right .card { padding: 32px 36px; gap: 10px; }
+.reveal .app-stack__right .card .eyebrow { font-size: 22px; }
+.reveal .app-stack__right .card p { font-size: 30px; }
+.reveal .app-stack__line { margin: 8px 0 0; }
+
+.reveal .stack { display: flex; flex-direction: column; align-items: stretch; }
+.reveal .stack__row { transition: opacity 500ms ease; }
+.reveal .stack__bar { padding: 32px 40px; gap: 10px; border-radius: 2px; transition: opacity 500ms ease; }
+.reveal .stack__head { display: flex; align-items: baseline; gap: 18px; }
+.reveal .stack__label { font-size: var(--type-code); font-weight: 700; background: transparent; padding: 0; }
+.reveal .stack__row--app .stack__label { color: $clay; }
+.reveal .stack__row--package .stack__label { color: $ochre; }
+.reveal .stack__row--template .stack__label { color: $green; }
+.reveal .stack__kind { font-size: var(--type-small); color: $text-muted; }
+.reveal .stack__desc { margin: 0; font-size: 30px; color: $text-muted; }
+// the connector: a short arrow between bars; reads "sits on top of", not a list
+.reveal .stack__link { height: 56px; display: flex; justify-content: center; align-items: center; transition: opacity 500ms ease; }
+.reveal .stack__link svg { height: 40px; width: 24px; fill: none; stroke: $text-faint; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.reveal .stack[data-arrows="up"] .stack__link svg { transform: rotate(180deg); }
+// highlight: the named bar at full colour, the others dimmed (the "thin layer" moment)
+.reveal .stack[data-highlight="app"] .stack__row--package .stack__bar,
+.reveal .stack[data-highlight="app"] .stack__row--template .stack__bar,
+.reveal .stack[data-highlight="package"] .stack__row--app .stack__bar,
+.reveal .stack[data-highlight="package"] .stack__row--template .stack__bar,
+.reveal .stack[data-highlight="template"] .stack__row--app .stack__bar,
+.reveal .stack[data-highlight="template"] .stack__row--package .stack__bar { opacity: 0.4; }
+// dark slides (the Lessons callback)
+.reveal .slide-dark .stack__row--template .stack__label { color: $green-soft; }
+.reveal .slide-dark .stack__kind, .reveal .slide-dark .stack__desc { color: $text-on-dark-muted; }
+.reveal .slide-dark .stack__link svg { stroke: $text-on-dark-muted; }
+
+/* ---------- demo slide (10b): the recording, with controls, in the browser frame ---------- */
+/* height-driven like .browser--fit: the frame fills the content area's height, the video keeps
+   16:10 and derives its width from that, so it fits under the title whatever the lede's size */
+.reveal .browser--demo { display: block; align-self: center; height: 100%; width: auto; box-sizing: border-box;
+  .chrome { height: 80px; box-sizing: border-box; }
+}
+.reveal .browser--demo .demo-frame { position: relative; height: calc(100% - 80px); background: $bg-light; }
+.reveal .browser--demo .demo-video { display: block; height: 100%; width: auto; max-width: none; max-height: none; aspect-ratio: 16 / 10; object-fit: cover; background: $bg-light; }
+// the placeholder tag floats over the poster until a recording exists (assets/demo-video.js removes it)
+.reveal .browser--demo .demo-placeholder { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 72%; max-width: none; padding: 40px 48px; background: rgba(249,248,246,0.94); pointer-events: none;
+  p { font-size: var(--type-body); } }
+.reveal .browser--demo.has-video .demo-placeholder { display: none; }
+
+/* ---------- flow diagram (package slide) ---------- */
+.reveal .flow { display: flex; align-items: stretch; gap: 0; width: 100%; }
+.reveal .flow .node { flex: 1 1 0; }
+.reveal .flow .node code { font-size: 40px; font-weight: 700; color: $text; background: none; padding: 0; }
+.reveal .flow .arrow { flex: 0 0 96px; display: flex; align-items: center; justify-content: center; color: $text-faint; font-size: 56px; }
+
+/* ---------- browser frame (app slide) ---------- */
+.reveal .browser {
+  border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-img); background: $surface-light; border: 1px solid $border-light;
+  .chrome { display: flex; align-items: center; gap: 12px; padding: 18px 24px; background: $bg-light; border-bottom: 1px solid $border-light;
+    span { width: 14px; height: 14px; border-radius: 50%; display: inline-block; background: $border-light; }
+    .url { margin-left: 16px; flex: 1; background: $surface-light; border: 1px solid $border-light; border-radius: 8px; padding: 6px 16px; font-size: 22px; color: $text-muted; }
+  }
+  img { display: block; width: 100%; height: auto; }
+}
+.reveal .callouts { display: flex; flex-direction: column; gap: 24px; width: 420px; flex: 0 0 auto; }
+.reveal .callouts .card { padding: 28px 32px; gap: 8px; }
+.reveal .callouts .card .eyebrow { font-size: 22px; }
+.reveal .callouts .card p { font-size: 28px; }
+
+/* ---------- matrix table ---------- */
+.reveal table.matrix {
+  border-collapse: separate; border-spacing: 0; width: 100%; font-size: 32px;
+  th, td { padding: 28px 32px; text-align: left; border-bottom: 1px solid $border-light; vertical-align: top; }
+  table-layout: fixed;
+  th:nth-child(1) { width: 15%; } th:nth-child(2) { width: 27%; } th:nth-child(3) { width: 31%; } th:nth-child(4) { width: 27%; }
+  td:nth-child(3), td:nth-child(4) { white-space: nowrap; }
+  .who, td { vertical-align: middle; }
+  th { font-size: var(--type-small); font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: $text-muted; border-bottom: 2px solid $text; }
+  td:first-child { font-weight: 700; }
+  tr.l1 td:first-child { color: $green; }
+  tr.l2 td:first-child { color: $ochre; }
+  tr.l3 td:first-child { color: $clay; }
+  .who { font-weight: 600; } .who .quiet { font-weight: 400; color: $text-muted; }
+  .who { white-space: nowrap; }
+  .who .rings--cell { display: inline-block; vertical-align: middle; margin-right: 24px; }
+  .who .who__label { display: inline-block; vertical-align: middle; }
+  // friction is ordinal, so it gets a hue-free meter: the row's level colour stays the only hue in the row
+  .friction { display: inline-flex; align-items: center; gap: 6px; margin-right: 14px; vertical-align: middle;
+    // spans, not <i>/<b>: Pandoc rewrites those to <em>/<strong> and merges adjacent empty ones
+    .dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid $text-faint; box-sizing: border-box; }
+    .dot.on { background: $text-muted; border-color: $text-muted; }
+    .word { margin-left: 8px; font-size: 26px; font-weight: 600; color: $text; }
+  }
+}
+
+/* ---------- title + closing ---------- */
+/* Title: left-aligned block centred on the slide; a hairline above the logos is the only foot. */
+.reveal .cover { position: relative; justify-content: center; align-items: flex-start; text-align: left; }
+.reveal .cover .title-block { position: relative; z-index: 1; }
+.reveal .cover .rule { position: absolute; left: var(--pad-x); right: var(--pad-x); bottom: 164px; height: 1px; background: $border-dark; }
+.reveal .cover .event { font-size: var(--type-small); font-weight: 500; letter-spacing: 0.18em; color: $text-on-dark-muted; font-family: $font-family-monospace; margin-bottom: 36px; }
+// the three words take the level colours used on the rings slide (soft green on dark, as there)
+.reveal .cover .hero { font-size: 120px; margin: 0 0 20px 0; }
+.reveal .cover .hero .l1 { color: $green-soft; }
+.reveal .cover .hero .l2 { color: $ochre; }
+.reveal .cover .hero .l3 { color: $clay; }
+// chevrons blend the colour of the word before into the word after; a step smaller and lighter
+// than the words so the nouns stay the subject
+.reveal .cover .hero .chev {
+  font-size: 0.8em; font-weight: 600; margin: 0 0.14em; position: relative; top: -0.04em;
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+}
+.reveal .cover .hero .chev--12 { background-image: linear-gradient(90deg, $green-soft, $ochre); }
+.reveal .cover .hero .chev--23 { background-image: linear-gradient(90deg, $ochre, $clay); }
+.reveal .cover .subtitle { color: $text-on-dark-2; margin: 0 0 80px 0; }
+.reveal .cover .speakers { display: flex; gap: 96px; }
+.reveal .cover .speaker {
+  display: flex; align-items: center; gap: 34px;
+  // the ring is the wrapper's background showing through a 2px pad; the photo's own dark pad
+  // keeps a gap between ring and face. Ring colours = the levels each speaker owns.
+  // explicit square: the theme gives every slide img a vertical margin, which would otherwise
+  // stretch the wrapper to 160×184 and turn the ring into an ellipse
+  .speaker__ring { display: inline-flex; width: 200px; height: 200px; padding: 5px; border-radius: 50%; flex: 0 0 auto; box-sizing: border-box; }
+  .speaker__ring--l12 { background: linear-gradient(90deg, $green-soft, $ochre); }
+  .speaker__ring--l3 { background: $clay; }
+  // monochrome with the deck's warm tint, so two different photos read as a pair
+  img {
+    // reveal's img rule also sets max-height: 95%, which bites once the wrapper has a fixed height
+    display: block; width: 190px; height: 190px; max-width: none; max-height: none; margin: 0; border-radius: 50%; object-fit: cover;
+    padding: 8px; background: $bg-dark; box-sizing: border-box;
+    // monochrome, lifted: the faces need to separate from the dark ground
+    filter: grayscale(1) sepia(0.25) contrast(1.18) brightness(1.08);
+  }
+  b { display: block; font-size: 40px; font-weight: 600; color: $text-on-dark; line-height: 1.2; }
+  em { display: block; font-style: normal; font-size: 28px; color: $text-on-dark-2; margin-top: 8px; }
+  span { display: block; font-size: var(--type-small); color: $text-on-dark-muted; margin-top: 4px; }
+}
+// one lockup, WSDA first, in the terminal corner
+.reveal .logos { position: absolute; left: var(--pad-x); right: var(--pad-x); bottom: 56px; display: flex; justify-content: flex-end; align-items: center; gap: 32px; z-index: 1; }
+.reveal .logos img { height: 52px; width: auto; filter: grayscale(1) brightness(0) invert(1) opacity(0.75); }
+.reveal .logos__sep { width: 1px; height: 44px; background: $text-on-dark-muted; opacity: 0.5; }
+
+// title at the top like every other titled slide; the names / QR / credit block anchors to the foot
+.reveal .closing { justify-content: flex-start; }
+.reveal .closing .quote { margin: 0 auto; max-width: 1400px; }
+.reveal .closing .thesis { font-size: 72px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin: 72px 0 0; max-width: 1400px; text-wrap: balance; }
+.reveal .closing .result { display: flex; align-items: center; gap: 36px; margin-top: 48px; }
+.reveal .closing .result .stat { color: $clay; }
+.reveal .closing .result__caption { display: flex; flex-direction: column; gap: 6px; max-width: 900px; }
+.reveal .closing .result__line { font-size: var(--type-subtitle); line-height: 1.3; }
+.reveal .closing .result .quiet { font-size: var(--type-small); }
+.reveal .footer-split .who--rings { display: flex; align-items: center; gap: 28px; }
+.reveal .footer-split { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; margin-top: auto; gap: 60px; }
+.reveal .footer-split .who { font-size: var(--type-body); }
+.reveal .footer-split .who b { font-weight: 600; display: block; }
+.reveal .footer-split .who span { color: $text-on-dark-muted; }
+.reveal .footer-split .who--r { text-align: right; }
+.reveal .footer-split .qr { text-align: center; }
+.reveal .footer-split .qr img { width: 220px; height: 220px; border-radius: 12px; background: #fff; padding: 12px; display: block; margin: 0 auto 16px; }
+.reveal .footer-split .qr .caption { color: $text-on-dark-muted; }
+.reveal .closing .credit { margin: 48px 0 44px 0; font-size: var(--type-small); color: $text-on-dark-muted; text-align: center; text-wrap: pretty; }   // clears the logo lockup below
+
+/* ---------- deck footer: one logo lockup, bottom-right, on every slide (assets/deck-footer.js) ----------
+   WSDA | IndieVisual, monochrome, tinted to the slide: dark on light slides, light on dark ones.
+   Sits slightly inboard of the corner so a recording's corner bug would not clip it.
+   The title slide has its own larger lockup, so the shared footer hides there. */
+.reveal .slides .deck-footer {
+  position: absolute; right: var(--pad-x); bottom: 30px; height: 32px;
+  display: flex; align-items: center; gap: 20px; z-index: 6; pointer-events: none;
+  img { height: 32px; width: auto; max-width: none; max-height: none; margin: 0; filter: grayscale(1) brightness(0) opacity(0.5); transition: filter 300ms ease; }
+  .deck-footer__sep { width: 1px; height: 26px; background: $text; opacity: 0.25; transition: background 300ms ease; }
+}
+.reveal .slides:has(> section.present.slide-dark) .deck-footer img { filter: grayscale(1) brightness(0) invert(1) opacity(0.65); }
+.reveal .slides:has(> section.present.slide-dark) .deck-footer .deck-footer__sep { background: $text-on-dark; }
+.reveal .slides:has(> section.present.cover) .deck-footer { display: none; }
+.reveal.overview .deck-footer, html.print-pdf .deck-footer { display: none !important; }
+@media print { .deck-footer { display: none !important; } }
+
+/* ---------- reveal chrome ---------- */
+// the menu's open button sat over every slide (title strata, the timeline tape, the closing logos);
+// the menu itself still opens with `m`
+.reveal .slide-menu-button { display: none !important; }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

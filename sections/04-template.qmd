@@ -1,0 +1,75 @@
+<!-- BEAT: Layer 1 · Template · The Recipe (2:30). First person, 2023 callback. Output before mechanism; end on the boundary, one kitchen. · OWNER: J -->
+<!-- SLIDE 6 · Layer 1: the OUTPUT slide. Placeholder content for Jadey to revise: a real farmer
+     report page LARGE (HTML or PDF screenshot), the posit::conf(2023) badge small underneath, the
+     stat and two output lines on the right. The audience needs to see what farmers got before
+     they care who couldn't make it. The YAML snippet is gone on purpose: mechanism comes after output. -->
+
+## Layer 1: Template [· The Recipe]{.h2-sub} {#template}
+
+{{< rings lit=1 class="rings--crumb" >}}
+
+::: {.lede}
+One report for every farmer in the survey.
+:::
+
+::: {.fill .fill--row}
+```{=html}
+<figure class="then-card report-card" style="flex:1.4 1 0; min-width:0;">
+  <div class="placeholder placeholder--fill">
+    <div class="placeholder__label">Placeholder · farmer report page · ask Jadey</div>
+    <p>A real report page, large: the interactive HTML with maps and plots, or the printable PDF. This is what farmers got.</p>
+  </div>
+  <figcaption><span class="then-card__tag">posit::conf(2023)</span> where the template was first shown</figcaption>
+</figure>
+```
+
+::: {.output-aside style="flex:1 1 0; min-width:0;"}
+```{=html}
+<div class="stat stat--l1">300<span class="stat__plus">+</span></div>
+<p class="stat__caption">farmers with their own report since 2020 <span class="quiet">(placeholder, confirm with Jadey)</span></p>
+<p class="body" style="margin-top:40px;"><span class="emphasis">Interactive HTML</span> <span class="muted">with maps and plots.</span><br><span class="emphasis">Printable PDF</span> <span class="muted">for the folks who wanted paper.</span></p>
+<p class="body emphasis" style="margin-top:40px;">Not a data dump. A decision support tool.</p>
+```
+:::
+:::
+
+::: {.notes}
+*⏱ 2:00 · Jadey*
+
+*[Jadey: this slide is placeholder content. Rebuild as the output slide: a real farmer report page, large; the 2023 badge small; the stat if it holds up.]*
+
+**Jadey:** Some of you might remember me from the very last session of posit::conf 2023. Quick version: I went from scooping water samples out of streams to building 86 custom farmer reports in one week, and that skills test got me a data science job at WSDA.
+
+By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every one of the farmers in it, more than 300 since 2020, got their own report. Interactive HTML with maps and plots. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.
+
+**Jadey (stakes, ~10 s):** `PLACEHOLDER · STAKES: one real farmer decision (ask Jadey)`. *Example shape: "One grower looked at their organic matter trend against the county and moved two fields to cover crop that fall."*
+
+The mechanism was parameterized Quarto: treat the report as a function, shape your data so it's subsettable, make it interpretable, make it accessible. The 2023 slides are still up if you want the code.
+:::
+
+<!-- SLIDE 7 · Layer 1: the BOUNDARY beat (Jadey). The rings, large, with only the centre lit,
+     and one line. This is where "one kitchen" lands: slide 6 shows the output, this slide shows
+     who could make it. Keep it to the one line; the stakes sentence on slide 6 is what gives it weight. -->
+
+## Layer 1: Template [· The Recipe]{.h2-sub} {#template-output}
+
+::: {.lede}
+One Quarto project. One laptop. One person.
+:::
+
+::: {.fill .fill--row .boundary}
+{{< rings lit=1 size=520 label="One person at the centre; no one else lit" >}}
+
+::: {.boundary__line}
+[The template solved the reports problem.]{.emphasis}
+[It did not solve the people problem.]{.muted}
+:::
+:::
+
+::: {.notes}
+*⏱ 0:30 · Jadey*
+
+**Jadey:** That was the recipe. And like Ruth's cookie, it lived in exactly one kitchen. One Quarto project, one laptop, my head. Every new year of data, every new partner, every colleague who wanted a report meant *me* running the pipeline.
+
+The template solved the reports problem. It did not solve the people problem. So the next step was getting the recipe out of my kitchen.
+:::
