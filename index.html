@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>Template › Package › App</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,10 +19,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +100,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-1ddc82b53701dca4a9f51a2613a843d2.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-815193b3199a7593ec1f2dd6b31c098a.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -190,17 +193,11 @@
     }
   </style>
   <!-- Inter from Google Fonts. To self-host instead, put woff2 files in fonts/ and replace this with @font-face rules in theme/brand.scss. -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="assets/rings.css">
-
   <link rel="stylesheet" href="assets/timeline.css">
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -1009,9 +1006,9 @@ no code at all</td>
 <p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi
 </p><aside class="notes">
 <p><em>⏱ 0:45 · Jadey → Tanya</em></p>
-<p><strong>Jadey:</strong> For us, it was growers. <code>[if stat: This season, N reports went out to people who've never opened RStudio.]</code> They used to wait on me. Now they get their answers the week the samples come back, and I get to spend that time making the reports better instead of running them.</p>
+<p><strong>Jadey:</strong> For us, it was growers. They used to wait on me. Now they get their answers the week the samples come back, and I get to spend that time making the reports better instead of running them.</p>
 <p><strong>Tanya:</strong> Answer that question first. Then build for them. Thank you.</p>
-<p><em>Point to the QR (<code>{soils}</code> documentation and the app demo repository). Open Q&amp;A.</em></p>
+<p><em>Point to the QR - for repo with links to the slides and tools. Open Q&amp;A.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1246,129 +1243,67 @@ no code at all</td>
       });
     </script>
     <!-- The rings graphic, as reusable SVG symbols, one per layer, for the  shortcode
-
          (_extensions/rings/rings.lua). Generated. Three evenly spaced rings echoing the animated playbook diagram
-
          (assets/rings.js; r=80, 180, 280 in a 600 box); each person is a dot so it
-
          stays crisp at any size: centre 1, ring 2 12, ring 3 24. Colours come from the CSS `color` on
-
          each <use class="ring-N"> in assets/rings.css, via currentColor; unlit rings are grey there.
-
          Loaded once via include-after-body (_quarto.yml); <use href="#rings-lN"> works anywhere in the document. -->
-
     <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-
       <symbol id="rings-l1" viewbox="0 0 600 600">
-
         <circle cx="300" cy="300" r="80" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-opacity="0.8" stroke-width="10"></circle>
-
         <g fill="currentColor"><circle cx="300.0" cy="300.0" r="24"></circle></g>
-
       </symbol>
-
       <symbol id="rings-l2" viewbox="0 0 600 600">
-
         <circle cx="300" cy="300" r="180" fill="none" stroke="currentColor" stroke-opacity="0.8" stroke-width="10"></circle>
-
         <g fill="currentColor">
-
           <circle cx="300.0" cy="120.0" r="18"></circle>
-
           <circle cx="390.0" cy="144.1" r="18"></circle>
-
           <circle cx="455.9" cy="210.0" r="18"></circle>
-
           <circle cx="480.0" cy="300.0" r="18"></circle>
-
           <circle cx="455.9" cy="390.0" r="18"></circle>
-
           <circle cx="390.0" cy="455.9" r="18"></circle>
-
           <circle cx="300.0" cy="480.0" r="18"></circle>
-
           <circle cx="210.0" cy="455.9" r="18"></circle>
-
           <circle cx="144.1" cy="390.0" r="18"></circle>
-
           <circle cx="120.0" cy="300.0" r="18"></circle>
-
           <circle cx="144.1" cy="210.0" r="18"></circle>
-
           <circle cx="210.0" cy="144.1" r="18"></circle>
-
         </g>
-
       </symbol>
-
       <symbol id="rings-l3" viewbox="0 0 600 600">
-
         <circle cx="300" cy="300" r="280" fill="none" stroke="currentColor" stroke-opacity="0.8" stroke-width="10"></circle>
-
         <g fill="currentColor">
-
           <circle cx="336.5" cy="22.4" r="18"></circle>
-
           <circle cx="407.2" cy="41.3" r="18"></circle>
-
           <circle cx="470.5" cy="77.9" r="18"></circle>
-
           <circle cx="522.1" cy="129.5" r="18"></circle>
-
           <circle cx="558.7" cy="192.8" r="18"></circle>
-
           <circle cx="577.6" cy="263.5" r="18"></circle>
-
           <circle cx="577.6" cy="336.5" r="18"></circle>
-
           <circle cx="558.7" cy="407.2" r="18"></circle>
-
           <circle cx="522.1" cy="470.5" r="18"></circle>
-
           <circle cx="470.5" cy="522.1" r="18"></circle>
-
           <circle cx="407.2" cy="558.7" r="18"></circle>
-
           <circle cx="336.5" cy="577.6" r="18"></circle>
-
           <circle cx="263.5" cy="577.6" r="18"></circle>
-
           <circle cx="192.8" cy="558.7" r="18"></circle>
-
           <circle cx="129.5" cy="522.1" r="18"></circle>
-
           <circle cx="77.9" cy="470.5" r="18"></circle>
-
           <circle cx="41.3" cy="407.2" r="18"></circle>
-
           <circle cx="22.4" cy="336.5" r="18"></circle>
-
           <circle cx="22.4" cy="263.5" r="18"></circle>
-
           <circle cx="41.3" cy="192.8" r="18"></circle>
-
           <circle cx="77.9" cy="129.5" r="18"></circle>
-
           <circle cx="129.5" cy="77.9" r="18"></circle>
-
           <circle cx="192.8" cy="41.3" r="18"></circle>
-
           <circle cx="263.5" cy="22.4" r="18"></circle>
-
         </g>
-
       </symbol>
-
     </svg>
-
     <script src="assets/rings.js"></script>
-
     <script src="assets/timeline.js"></script>
-
     <script src="assets/deck-footer.js"></script>
-
     <script src="assets/demo-video.js"></script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
