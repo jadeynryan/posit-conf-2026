@@ -6,6 +6,9 @@ project:
     - assets/
     - images/
 
+execute:
+  freeze: auto
+
 format:
   revealjs:
     theme: [default, theme/brand.scss]

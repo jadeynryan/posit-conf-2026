@@ -23,7 +23,9 @@ What's underneath.
 ::: {.app-stack__right}
 ```{=html}
 <!-- CHECK WITH JADEY: do farmers use the app directly, or do extension / technical-assistance
-     staff generate reports for them? This card assumes the latter; add farmers back if not. -->
+     staff generate reports for them? This card assumes the latter; add farmers back if not.
+     
+     This is correct! Farmers don't create the reports themselves. - Jadey -->
 <div class="card card--l3">
   <div class="eyebrow eyebrow--l3">For</div>
   <p>Extension staff &amp; technical assistance providers who don't code</p>

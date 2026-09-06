@@ -8,7 +8,7 @@
 {{< rings lit=2 class="rings--crumb" >}}
 
 ::: {.lede}
-A published R package for anyone running a soil survey. [WSDA + WSU]{.quiet}
+`{soils}`: An R package for anyone running a soil sampling project.
 :::
 
 ::: {.fill .fill--center}
@@ -16,29 +16,31 @@ A published R package for anyone running a soil survey. [WSDA + WSU]{.quiet}
 ```{=html}
 <div class="flow">
   <div class="node card card--l2">
-    <code>R/</code>
-    <p class="emphasis">Functions</p>
-    <p class="muted">Data processing &amp; validation</p>
+    <code>roxygen2 & pkgdown</code>
+    <p class="emphasis">Documentation</p>
+    <p class="muted">Learn how to use the functions and package</p>
   </div>
-  <div class="arrow">&#8594;</div>
+  <div class="arrow">&plus;</div>
   <div class="node card card--l2">
-    <code>inst/quarto/</code>
-    <p class="emphasis">Modular templates</p>
-    <p class="muted">Report pieces the functions feed</p>
+    <code>.R</code>
+    <p class="emphasis"><br>Functions & Scripts</p>
+    <p class="muted">Validate, process, and visualize data; render reports</p>
   </div>
-  <div class="arrow">&#8594;</div>
+  <div class="arrow">&plus;</div>
   <div class="node card card--l2">
-    <code>example data</code>
-    <p class="emphasis">Placeholders + guidance</p>
-    <p class="muted">WA content swapped out so anyone can drop in their own &middot; docs on pkgdown</p>
+    <code>.qmd</code>
+    <p class="emphasis"><br>Modular Quarto files</p>
+    <p class="muted">Customize report content</p>
   </div>
 </div>
 ```
 
-<!-- the bridge to Layer 3, not a takeaway (the "decouple before Shiny" lesson belongs to Lessons Learned) -->
-::: {.body .bridge style="margin-top:72px;"}
-[Anyone comfortable in R can run their own soil survey reports.]{.emphasis} [Not everyone is.]{.muted}
 :::
+
+. . .
+
+::: {.body .bridge}
+[Everything you need to adapt the workflow to your own data.]{.emphasis}
 :::
 
 ::: {.notes}
@@ -48,9 +50,6 @@ A published R package for anyone running a soil survey. [WSDA + WSU]{.quiet}
 
 So the cookbook wasn't for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers. Anyone comfortable in R could create a `{soils}` project, drop in their data, edit the content, and generate reports for every participant in their survey.
 
-**Jadey (land on the line):** Anyone comfortable in R. Not everyone is.
-
-*[If time needs cutting later, this slide goes before slide 9.]*
 :::
 
 <!-- SLIDE 9 · Layer 2: what a developer actually runs (Jadey to build; see the note below).
@@ -62,24 +61,59 @@ So the cookbook wasn't for my team. It was for a conservation district in Oregon
 {{< rings lit=2 class="rings--crumb" >}}
 
 ::: {.lede}
-What another developer actually runs.
+How technical assistance providers unlock access to the reports.
 :::
 
-::: {.fill .fill--center}
+:::: {.columns}
+::: {.column width="40%"}
 ```{=html}
-<div class="placeholder">
-  <div class="placeholder__label">Placeholder · Jadey</div>
-  <p><code>library(soils)</code> and the one call a user actually makes, in a code window (Jadey: the real function; the name is still open). Optionally a pkgdown screenshot beside it. Not the folder tree; that is slide 8.</p>
+<figure class="then-card">
+  <img src="images/soils-pkgdown.png" alt="Screenshot of pkgdown site showing how to initiate a {soils} project with RStudio">
+</figure>
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+```{=html}
+<p class="body" style="margin-top:20px;"><span class="emphasis">After importing their data and customizing report content...</span></p>
+```
+
+```{=html}
+<div class="code-window">
+<div class="chrome"><span class="r"></span><span class="y"></span><span class="g"></span><span class="filename">render-reports.R</span></div>
+```
+```r
+# Render the reports
+report_df |> 
+  purrr::pwalk(
+    quarto::quarto_render,
+    input = "farmer-report.qmd"
+  )
+```
+```{=html}
 </div>
 ```
+:::
+
+::::
+
+. . .
+
+<!-- the bridge to Layer 3, not a takeaway (the "decouple before Shiny" lesson belongs to Lessons Learned) -->
+::: {.body .bridge style="margin-top:72px;"}
+[Anyone comfortable in R can run their own soil survey reports.]{.emphasis} [Not everyone is.]{.muted}
 :::
 
 ::: {.notes}
 *⏱ 1:00 · Jadey*
 
-*[Jadey: TODO. Show the call a user actually makes (the real `{soils}` API; the placeholder on the slide is a guess). A pkgdown screenshot is optional. Not the folder tree; that is slide 8.]*
-
 **Jadey:** This is what a user actually types. One call, a data frame, an output path. They don't write a helper function. They don't copy a script from my repo and change the file paths. They install the cookbook and follow the recipe.
+
+**[click]**
+Now we're reaching anyone comfortable in R. But not everyone who would like to run these reports is.
 
 For anyone with R, this was the unlock. For the technical assistance providers and extension staff who don't code, the people who are actually in the field with farmers, nothing had changed. They still had to find someone like me.
 

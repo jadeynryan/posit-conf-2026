@@ -1,13 +1,10 @@
 # Template → Package → App: Meeting Users Where They're At
 
-TODO: deploy slides on github pages and link here [**Slide
-Deck**](https://jadeynryan.github.io/2023_posit-parameterized-quarto/#/title-slide)
+[**Slide Deck**](https://jadeynryan.github.io/posit-conf-2026/#/title)
 
-[**{soils}: R
-Package**](https://wa-department-of-agriculture.github.io/soils/)
+[**{soils}: R Package**](https://wa-department-of-agriculture.github.io/soils/)
 
-[**Dirt Data Reports: Shiny
-App**](https://wsda.shinyapps.io/dirt-data-reports/)
+[**Dirt Data Reports: Shiny App**](https://wsda.shinyapps.io/dirt-data-reports/)
 
 Tue, September 15, 2026 | Houston, TX
 

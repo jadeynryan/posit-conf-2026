@@ -30,8 +30,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-5459c44b2812fda79f2b7eab5329b967.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-1ddc82b53701dca4a9f51a2613a843d2.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -171,9 +237,10 @@
   <img src="images/logo-indievisual.png" alt="IndieVisual">
 </div>
 <aside class="notes">
-<p><em>⏱ 0:30 · Tanya</em></p>
-<p><strong>Tanya:</strong> I’m Tanya, this is Jadey, and this is a talk about a Quarto pipeline at the Washington State Department of Agriculture that worked perfectly and almost nobody could use.</p>
-<p>We’re going to show you how it went from one person’s laptop to a web app that field staff run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.</p>
+<p><em>⏱ 0:30 · Tanya → Jadey → Tanya</em></p>
+<p><strong>Tanya:</strong> I’m Tanya.</p>
+<p><strong>Jadey:</strong> and I’m Jadey, and this is a talk about a Quarto pipeline that worked perfectly for generating hundreds of soil health reports… but only I could use it.</p>
+<p><strong>Tanya:</strong> We’re going to show you how it went from one person’s laptop to a web app that field staff run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -342,9 +409,9 @@
      Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
 </section>
 <section id="three-levels" class="slide level2 slide-dark" data-background-color="#1A1D20" data-transition="fade" data-transition-speed="fast" data-background-transition="fade">
-<h2>The Report Delivery Playbook</h2>
+<h2>The Report Generation Playbook</h2>
 <div class="lede">
-<p>Matching technical artifacts across the adoption spectrum.</p>
+<p>Expanding access by matching the tool to the user.</p>
 </div>
 <div class="rings-layout">
   <div class="rings-diagram">
@@ -396,7 +463,7 @@
 <aside class="notes">
 <p><em>⏱ 1:15 · Jadey, one Tanya interjection</em></p>
 <p><strong>Jadey:</strong> It turns out that’s exactly the shape of our project.</p>
-<p><strong>[click: Layer 1, the centre figure]</strong> Every piece of analysis starts in one kitchen. One person, one laptop, total control. That’s the template. <strong>[click: Layer 2, ring 2]</strong> If you’re diligent, it becomes a cookbook, a package, and other people who know how to bake can use it. <strong>[click: Layer 3, ring 3]</strong> And if you actually want it to reach the people who make decisions, it has to end up on a shelf. That’s the app.</p>
+<p><strong>[click: Layer 1, the center figure]</strong> Every piece of analysis starts in one kitchen. One person, one laptop, total control. That’s the template. <strong>[click: Layer 2, ring 2]</strong> If you’re diligent, it becomes a cookbook, a package, and other people who know how to bake can use it. <strong>[click: Layer 3, ring 3]</strong> And if you actually want it to reach the people who make decisions, it has to end up on a shelf. That’s the app.</p>
 <p>In our story, I’m Ruth. I made the recipe, I wrote the cookbook.</p>
 <p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together we brought Jadey’s reports to the shelf with a Shiny app.</p>
 <p><strong>Jadey:</strong> Here’s the line we keep coming back to: impact stops where access stops. Every layer removes friction for a specific person who couldn’t get to the insight before. That’s the whole talk. So let’s start in the kitchen.</p>
@@ -424,26 +491,23 @@
 <p>One report for every farmer in the survey.</p>
 </div>
 <div class="fill fill--row">
-<figure class="then-card report-card" style="flex:1.4 1 0; min-width:0;">
-  <div class="placeholder placeholder--fill">
-    <div class="placeholder__label">Placeholder · farmer report page · ask Jadey</div>
-    <p>A real report page, large: the interactive HTML with maps and plots, or the printable PDF. This is what farmers got.</p>
-  </div>
-  <figcaption><span class="then-card__tag">posit::conf(2023)</span> where the template was first shown</figcaption>
-</figure>
+<div class="then-card report-card" style="flex:1.4 1 0; min-width:0;">
+  <img src="images/report-html.png" alt="Example HTML report">
+  <figcaption><span class="then-card__tag">posit::conf(2023)</span> where the template was first shown
+  </figcaption>
+</div>
 <div class="output-aside" style="flex:1 1 0; min-width:0;">
-<div class="stat stat--l1">300<span class="stat__plus">+</span></div>
-<p class="stat__caption">farmers with their own report since 2020 <span class="quiet">(placeholder, confirm with Jadey)</span></p>
-<p class="body" style="margin-top:40px;"><span class="emphasis">Interactive HTML</span> <span class="muted">with maps and plots.</span><br><span class="emphasis">Printable PDF</span> <span class="muted">for the folks who wanted paper.</span></p>
-<p class="body emphasis" style="margin-top:40px;">Not a data dump. A decision support tool.</p>
+<div class="stat stat--l1">350<span class="stat__plus">+</span></div>
+<p class="stat__caption">farmers with their own report</p>
+<p class="body" style="margin-top:40px;"><span class="emphasis">Interactive HTML</span> <span class="muted"><br>for increased engagement.</span><br><span class="emphasis">Printable PDF</span> <span class="muted"><br>for the folks who wanted paper.</span></p>
+<p class="quote" style="margin-top:40px;background:#2c5e3b"><span class="mark" style="color:#d8dfd7">“</span>I was able to see a direct connection between my soil management decisions and the health of the soil I manage.</p>
 </div>
 </div>
 <aside class="notes">
 <p><em>⏱ 2:00 · Jadey</em></p>
-<p><em>[Jadey: this slide is placeholder content. Rebuild as the output slide: a real farmer report page, large; the 2023 badge small; the stat if it holds up.]</em></p>
 <p><strong>Jadey:</strong> Some of you might remember me from the very last session of posit::conf 2023. Quick version: I went from scooping water samples out of streams to building 86 custom farmer reports in one week, and that skills test got me a data science job at WSDA.</p>
 <p>By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every one of the farmers in it, more than 300 since 2020, got their own report. Interactive HTML with maps and plots. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.</p>
-<p><strong>Jadey (stakes, ~10 s):</strong> <code>PLACEHOLDER · STAKES: one real farmer decision (ask Jadey)</code>. <em>Example shape: “One grower looked at their organic matter trend against the county and moved two fields to cover crop that fall.”</em></p>
+<p>One farmer said, <em>“I was able to see a direct connection between my soil management decisions and the health of the soil I manage.”</em></p>
 <p>The mechanism was parameterized Quarto: treat the report as a function, shape your data so it’s subsettable, make it interpretable, make it accessible. The 2023 slides are still up if you want the code.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -495,39 +559,37 @@
 <h2>Layer 2: Package <span class="h2-sub">· The Cookbook</span></h2>
 <svg class="rings rings--crumb" data-lit="2" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 2 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
 <div class="lede">
-<p>A published R package for anyone running a soil survey. <span class="quiet">WSDA + WSU</span></p>
+<p><code>{soils}</code>: An R package for anyone running a soil sampling project.</p>
 </div>
 <div class="fill fill--center">
 <div class="flow">
   <div class="node card card--l2">
-    <code>R/</code>
-    <p class="emphasis">Functions</p>
-    <p class="muted">Data processing &amp; validation</p>
+    <code>roxygen2 &amp; pkgdown</code>
+    <p class="emphasis">Documentation</p>
+    <p class="muted">Learn how to use the functions and package</p>
   </div>
-  <div class="arrow">→</div>
+  <div class="arrow">+</div>
   <div class="node card card--l2">
-    <code>inst/quarto/</code>
-    <p class="emphasis">Modular templates</p>
-    <p class="muted">Report pieces the functions feed</p>
+    <code>.R</code>
+    <p class="emphasis"><br>Functions &amp; Scripts</p>
+    <p class="muted">Validate, process, and visualize data; render reports</p>
   </div>
-  <div class="arrow">→</div>
+  <div class="arrow">+</div>
   <div class="node card card--l2">
-    <code>example data</code>
-    <p class="emphasis">Placeholders + guidance</p>
-    <p class="muted">WA content swapped out so anyone can drop in their own · docs on pkgdown</p>
+    <code>.qmd</code>
+    <p class="emphasis"><br>Modular Quarto files</p>
+    <p class="muted">Customize report content</p>
   </div>
 </div>
-<!-- the bridge to Layer 3, not a takeaway (the "decouple before Shiny" lesson belongs to Lessons Learned) -->
-<div class="body bridge" style="margin-top:72px;">
-<p><span class="emphasis">Anyone comfortable in R can run their own soil survey reports.</span> <span class="muted">Not everyone is.</span></p>
 </div>
+<div class="fragment">
+<div class="body bridge">
+<p><span class="emphasis">Everything you need to adapt the workflow to your own data.</span></p>
 </div>
 <aside class="notes">
 <p><em>⏱ 1:00 · Jadey</em></p>
 <p><strong>Jadey:</strong> We pulled everything that wasn’t Washington-specific out of the template and into an R package: <code>{soils}</code>. The validation, the calculations, the styling, the Quarto pieces every report shares. Then we took our data out, put placeholder examples and guidance in, and published it, with WSU, for anyone running a soil survey.</p>
 <p>So the cookbook wasn’t for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers. Anyone comfortable in R could create a <code>{soils}</code> project, drop in their data, edit the content, and generate reports for every participant in their survey.</p>
-<p><strong>Jadey (land on the line):</strong> Anyone comfortable in R. Not everyone is.</p>
-<p><em>[If time needs cutting later, this slide goes before slide 9.]</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -542,23 +604,42 @@
 <!-- SLIDE 9 · Layer 2: what a developer actually runs (Jadey to build; see the note below).
      Target: `library(soils)` plus the one call a user makes (real API still open), optionally a
      pkgdown screenshot beside it. Not the folder tree; that is slide 8. -->
+</div>
 </section>
 <section id="package-usage" class="slide level2">
 <h2>Layer 2: Package <span class="h2-sub">· The Cookbook</span></h2>
 <svg class="rings rings--crumb" data-lit="2" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 2 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
 <div class="lede">
-<p>What another developer actually runs.</p>
+<p>How technical assistance providers unlock access to the reports.</p>
 </div>
-<div class="fill fill--center">
-<div class="placeholder">
-  <div class="placeholder__label">Placeholder · Jadey</div>
-  <p><code>library(soils)</code> and the one call a user actually makes, in a code window (Jadey: the real function; the name is still open). Optionally a pkgdown screenshot beside it. Not the folder tree; that is slide 8.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<figure class="then-card">
+  <img src="images/soils-pkgdown.png" alt="Screenshot of pkgdown site showing how to initiate a {soils} project with RStudio">
+</figure>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<p class="body" style="margin-top:20px;"><span class="emphasis">After importing their data and customizing report content...</span></p>
+<div class="code-window">
+<div class="chrome"><span class="r"></span><span class="y"></span><span class="g"></span><span class="filename">render-reports.R</span></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Render the reports</span></span>
+<span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a>report_df <span class="sc">|&gt;</span> </span>
+<span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">pwalk</span>(</span>
+<span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a>    quarto<span class="sc">::</span>quarto_render,</span>
+<span id="cb1-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">input =</span> <span class="st">"farmer-report.qmd"</span></span>
+<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div></div>
+<div class="fragment">
+<!-- the bridge to Layer 3, not a takeaway (the "decouple before Shiny" lesson belongs to Lessons Learned) -->
+<div class="body bridge" style="margin-top:72px;">
+<p><span class="emphasis">Anyone comfortable in R can run their own soil survey reports.</span> <span class="muted">Not everyone is.</span></p>
 </div>
 <aside class="notes">
 <p><em>⏱ 1:00 · Jadey</em></p>
-<p><em>[Jadey: TODO. Show the call a user actually makes (the real <code>{soils}</code> API; the placeholder on the slide is a guess). A pkgdown screenshot is optional. Not the folder tree; that is slide 8.]</em></p>
 <p><strong>Jadey:</strong> This is what a user actually types. One call, a data frame, an output path. They don’t write a helper function. They don’t copy a script from my repo and change the file paths. They install the cookbook and follow the recipe.</p>
+<p><strong>[click]</strong> Now we’re reaching anyone comfortable in R. But not everyone who would like to run these reports is.</p>
 <p>For anyone with R, this was the unlock. For the technical assistance providers and extension staff who don’t code, the people who are actually in the field with farmers, nothing had changed. They still had to find someone like me.</p>
 <p><strong>[hand-off: “they still had to find someone like me” → Tanya, “this is where I come in”]</strong></p>
 <style type="text/css">
@@ -580,6 +661,7 @@
      Everything shows at once, all three bars at full colour (no clicks on this slide). The stack is a
      shortcode (, _extensions/rings/stack.lua) so Lessons can call it back with the arrows
      reversed: . -->
+</div>
 </section>
 <section id="app" class="slide level2">
 <h2>Layer 3: App <span class="h2-sub">· The Store Shelf</span></h2>
@@ -599,7 +681,9 @@
 </div>
 <div class="app-stack__right">
 <!-- CHECK WITH JADEY: do farmers use the app directly, or do extension / technical-assistance
-     staff generate reports for them? This card assumes the latter; add farmers back if not. -->
+     staff generate reports for them? This card assumes the latter; add farmers back if not.
+     
+     This is correct! Farmers don't create the reports themselves. - Jadey -->
 <div class="card card--l3">
   <div class="eyebrow eyebrow--l3">For</div>
   <p>Extension staff &amp; technical assistance providers who don't code</p>
@@ -858,7 +942,8 @@
 <use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use>
 </svg>
 <span class="who__label">You</span></td>
-<td>Your analysis, your way</td>
+<td>Your analysis,<br>
+your way</td>
 <td><span class="friction"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="word">Edit and render</span></span></td>
 </tr>
 <tr class="l2 even">
@@ -867,7 +952,8 @@
 <use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use>
 </svg>
 <span class="who__label">Anyone who codes</span></td>
-<td>The same analysis, on their data</td>
+<td>The same analysis,<br>
+on their data</td>
 <td><span class="friction"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="word">Install, call a function</span></span></td>
 </tr>
 <tr class="l3 odd">
@@ -876,7 +962,8 @@
 <use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use>
 </svg>
 <span class="who__label">Everyone</span></td>
-<td>The output, no code at all</td>
+<td>The output,<br>
+no code at all</td>
 <td><span class="friction"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="word">Upload, download</span></span></td>
 </tr>
 </tbody>
@@ -908,32 +995,23 @@
 </div>
 <p class="thesis">Impact stops where access stops.</p>
 
-<!-- optional: the result. Delete this block if there is no stat; the talk track covers the outcome in Jadey's line. -->
-<div class="result">
-  <div class="stat stat--l3">N</div>
-  <div class="result__caption">
-    <span class="result__line">reports generated by people who have never opened RStudio</span>
-    <span class="quiet">PLACEHOLDER · STAT · ask Jadey (optional; remove the block if there is no number)</span>
-  </div>
-</div>
-
 <div class="footer-split">
   <div class="who who--rings">
     <svg class="rings" data-lit="3" viewbox="0 0 600 600" width="120" height="120" role="img" aria-label="All three layers, lit"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
     <div><b>Jadey Ryan</b><span>WA Dept of Agriculture</span></div>
   </div>
   <div class="qr">
-    <img src="images/qr-soils-demo.png" alt="QR code">
-    <div class="caption">Scan for the {soils} package &amp; Shiny app demo</div>
+    <img src="images/qr.png" alt="QR code">
+    <div class="caption">Scan for the slides and tools</div>
   </div>
   <div class="who who--r"><b>Tanya Shapiro</b><span>IndieVisual</span></div>
 </div>
-<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi <span class="quiet">· PLACEHOLDER: WSU collaborators on {soils}, ask Jadey</span></p>
-<aside class="notes">
+<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi
+</p><aside class="notes">
 <p><em>⏱ 0:45 · Jadey → Tanya</em></p>
-<p><strong>Jadey:</strong> For us, it was growers. <code>[if stat: This season, N reports went out to people who've never opened RStudio.]</code> They used to wait on me. Now they get their answers the week the samples come back, and I get to spend that time making the reports better instead of running them.</p>
+<p><strong>Jadey:</strong> For us, it was growers. They used to wait on me. Now they get their answers the week the samples come back, and I get to spend that time making the reports better instead of running them.</p>
 <p><strong>Tanya:</strong> Answer that question first. Then build for them. Thank you.</p>
-<p><em>Point to the QR (<code>{soils}</code> documentation and the app demo repository). Open Q&amp;A.</em></p>
+<p><em>Point to the QR - for repo with links to the slides and tools. Open Q&amp;A.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

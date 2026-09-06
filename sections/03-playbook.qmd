@@ -3,10 +3,10 @@
      Logic: assets/rings.js · styles: assets/rings.css
      Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
 
-## The Report Delivery Playbook {#three-levels .slide-dark background-color="#1A1D20" transition="fade" transition-speed="fast" background-transition="fade"}
+## The Report Generation Playbook {#three-levels .slide-dark background-color="#1A1D20" transition="fade" transition-speed="fast" background-transition="fade"}
 
 ::: {.lede}
-Matching technical artifacts across the adoption spectrum.
+Expanding access by matching the tool to the user.
 :::
 
 ```{=html}
@@ -64,7 +64,7 @@ Matching technical artifacts across the adoption spectrum.
 
 **Jadey:** It turns out that's exactly the shape of our project.
 
-**[click: Layer 1, the centre figure]** Every piece of analysis starts in one kitchen. One person, one laptop, total control. That's the template. **[click: Layer 2, ring 2]** If you're diligent, it becomes a cookbook, a package, and other people who know how to bake can use it. **[click: Layer 3, ring 3]** And if you actually want it to reach the people who make decisions, it has to end up on a shelf. That's the app.
+**[click: Layer 1, the center figure]** Every piece of analysis starts in one kitchen. One person, one laptop, total control. That's the template. **[click: Layer 2, ring 2]** If you're diligent, it becomes a cookbook, a package, and other people who know how to bake can use it. **[click: Layer 3, ring 3]** And if you actually want it to reach the people who make decisions, it has to end up on a shelf. That's the app.
 
 In our story, I'm Ruth. I made the recipe, I wrote the cookbook.
 

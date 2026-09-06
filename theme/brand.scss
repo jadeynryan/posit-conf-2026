@@ -209,8 +209,12 @@ html.print-pdf .reveal .tl-static { display: block; }
   // Pandoc YAML token classes (highlight-style is `none`, so we color them here)
   code span.fu { color: $green-soft; }        // keys
   code span.st { color: $ochre; }             // strings
-  code span.an, code span.co { color: $text-muted; }  // --- delimiters, comments
-  code span.dt, code span.dv { color: $text-on-dark; }
+  code span.an { color: $text-muted; }  // --- delimiters
+  code span.dt, code span.dv, code span.co { color: $text-on-dark-muted; }
+}
+
+pre > code.sourceCode > span {
+    color: $text-on-dark;
 }
 
 /* ---------- placeholder block (slides still to be written) ---------- */

@@ -14,21 +14,19 @@ One report for every farmer in the survey.
 
 ::: {.fill .fill--row}
 ```{=html}
-<figure class="then-card report-card" style="flex:1.4 1 0; min-width:0;">
-  <div class="placeholder placeholder--fill">
-    <div class="placeholder__label">Placeholder · farmer report page · ask Jadey</div>
-    <p>A real report page, large: the interactive HTML with maps and plots, or the printable PDF. This is what farmers got.</p>
-  </div>
-  <figcaption><span class="then-card__tag">posit::conf(2023)</span> where the template was first shown</figcaption>
-</figure>
+<div class="then-card report-card" style="flex:1.4 1 0; min-width:0;">
+  <img src="images/report-html.png" alt="Example HTML report">
+  <figcaption><span class="then-card__tag">posit::conf(2023)</span> where the template was first shown
+  </figcaption>
+</div>
 ```
 
 ::: {.output-aside style="flex:1 1 0; min-width:0;"}
 ```{=html}
-<div class="stat stat--l1">300<span class="stat__plus">+</span></div>
-<p class="stat__caption">farmers with their own report since 2020 <span class="quiet">(placeholder, confirm with Jadey)</span></p>
-<p class="body" style="margin-top:40px;"><span class="emphasis">Interactive HTML</span> <span class="muted">with maps and plots.</span><br><span class="emphasis">Printable PDF</span> <span class="muted">for the folks who wanted paper.</span></p>
-<p class="body emphasis" style="margin-top:40px;">Not a data dump. A decision support tool.</p>
+<div class="stat stat--l1">350<span class="stat__plus">+</span></div>
+<p class="stat__caption">farmers with their own report</p>
+<p class="body" style="margin-top:40px;"><span class="emphasis">Interactive HTML</span> <span class="muted"><br>for increased engagement.</span><br><span class="emphasis">Printable PDF</span> <span class="muted"><br>for the folks who wanted paper.</span></p>
+<p class="quote" style="margin-top:40px;background:#2c5e3b"><span class="mark" style="color:#d8dfd7">&ldquo;</span>I was able to see a direct connection between my soil management decisions and the health of the soil I manage.</p>
 ```
 :::
 :::
@@ -36,13 +34,11 @@ One report for every farmer in the survey.
 ::: {.notes}
 *⏱ 2:00 · Jadey*
 
-*[Jadey: this slide is placeholder content. Rebuild as the output slide: a real farmer report page, large; the 2023 badge small; the stat if it holds up.]*
-
 **Jadey:** Some of you might remember me from the very last session of posit::conf 2023. Quick version: I went from scooping water samples out of streams to building 86 custom farmer reports in one week, and that skills test got me a data science job at WSDA.
 
 By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every one of the farmers in it, more than 300 since 2020, got their own report. Interactive HTML with maps and plots. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.
 
-**Jadey (stakes, ~10 s):** `PLACEHOLDER · STAKES: one real farmer decision (ask Jadey)`. *Example shape: "One grower looked at their organic matter trend against the county and moved two fields to cover crop that fall."*
+One farmer said, *"I was able to see a direct connection between my soil management decisions and the health of the soil I manage."*
 
 The mechanism was parameterized Quarto: treat the report as a function, shape your data so it's subsettable, make it interpretable, make it accessible. The 2023 slides are still up if you want the code.
 :::

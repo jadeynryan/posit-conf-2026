@@ -33,9 +33,11 @@
 ```
 
 ::: {.notes}
-*⏱ 0:30 · Tanya*
+*⏱ 0:30 · Tanya → Jadey → Tanya* 
 
-**Tanya:** I'm Tanya, this is Jadey, and this is a talk about a Quarto pipeline at the Washington State Department of Agriculture that worked perfectly and almost nobody could use.
+**Tanya:** I'm Tanya.
 
-We're going to show you how it went from one person's laptop to a web app that field staff run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.
+**Jadey:** and I’m Jadey, and this is a talk about a Quarto pipeline that worked perfectly for generating hundreds of soil health reports... but only I could use it.
+
+**Tanya:** We're going to show you how it went from one person's laptop to a web app that field staff run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.
 :::
