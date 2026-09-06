@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <title>Template › Package › App</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-1ddc82b53701dca4a9f51a2613a843d2.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <!-- Inter from Google Fonts. To self-host instead, put woff2 files in fonts/ and replace this with @font-face rules in theme/brand.scss. -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/rings.css">
+
+  <link rel="stylesheet" href="assets/timeline.css">
+
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="title" class="slide level2 slide-dark cover" data-background-color="#1A1D20">
+<h2>Title</h2>
+<!-- BEAT: Title (0:30). Warm, no tech; cookies before soil. · OWNER: T -->
+<!-- SLIDE 1 · Title. Hand-built (no `title:` in index.qmd) so the layout and logos are ours.
+     Keep this comment below the header: anything above the first `##` becomes its own (blank) slide.
+     The heading text names the slide in navigators; it is visually hidden (.cover > h2 in brand.scss). -->
+<div class="title-block">
+  <div class="event">posit::conf(2026)</div>
+  <h1 class="hero"><span class="l1">Template</span><span class="chev chev--12">›</span><span class="l2">Package</span><span class="chev chev--23">›</span><span class="l3">App</span></h1>
+  <p class="subtitle">Meeting Users Where They’re At</p>
+  <div class="speakers">
+    <!-- ring colours tease ownership: Jadey = template + package, Tanya = app -->
+    <div class="speaker">
+      <span class="speaker__ring speaker__ring--l12"><img src="images/headshot-jadey.png" alt=""></span>
+      <div><b>Jadey Ryan</b><em>Data Scientist</em><span>WA Dept of Agriculture</span></div>
+    </div>
+    <div class="speaker">
+      <span class="speaker__ring speaker__ring--l3"><img src="images/headshot-tanya.png" alt=""></span>
+      <div><b>Tanya Shapiro</b><em>Founder, Consultant</em><span>IndieVisual</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="rule" aria-hidden="true"></div>
+<div class="logos">
+  <img src="images/logo-wsda.png" alt="Washington State Department of Agriculture">
+  <span class="logos__sep" aria-hidden="true"></span>
+  <img src="images/logo-indievisual.png" alt="IndieVisual">
+</div>
+<aside class="notes">
+<p><em>⏱ 0:30 · Tanya → Jadey → Tanya</em></p>
+<p><strong>Tanya:</strong> I’m Tanya.</p>
+<p><strong>Jadey:</strong> and I’m Jadey, and this is a talk about a Quarto pipeline that worked perfectly for generating hundreds of soil health reports… but only I could use it.</p>
+<p><strong>Tanya:</strong> We’re going to show you how it went from one person’s laptop to a web app that field staff run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- BEAT: Hook (1:30). 1930 / 1938 / 1953: warm, narrative, no tech; photo + one line; the pivot is on the last slide. · OWNER: T -->
+<!-- SLIDES 2–4 · The hook: Ruth, the cookbook, the grocery store.
+     A calendar tape scrolls under a fixed cursor at the foot of all three
+     slides (assets/timeline.js, one overlay that persists across slides).
+     Each section names its stop with data-milestone; the tape scrolls there
+     on arrival and the slide's content (.tl-content) is held back until the
+     tape has nearly landed. Slides fade (not cut) so the outgoing content
+     dissolves as the tape starts moving.
+     .tl-static is a plain rail for PDF export, where the tape is hidden.
+     The headings name the slides in navigators (RStudio's, the m menu) and are visually hidden. -->
+</section>
+<section id="ruth" class="slide level2 hook" data-milestone="1930-08" data-transition="fade" data-transition-speed="fast">
+<h2>The Recipe</h2>
+<div class="fill fill--center tl-content">
+<!-- the first beat's tag: the recipe → the cookbook → the store shelf (the playbook calls these back) -->
+<div class="beat__eyebrow">The recipe</div>
+<div class="img-grid">
+  <figure>
+    <img src="images/ruth-wakefield.webp" alt="Ruth Wakefield">
+    <figcaption>
+      <span class="cap-title">Ruth</span>
+      <span class="cap-sub">A dietitian with a kitchen and an idea</span>
+    </figcaption>
+  </figure>
+  <figure class="fragment">
+    <img src="images/toll-house-inn.webp" alt="The Toll House Inn">
+    <figcaption>
+      <span class="cap-title">The Inn</span>
+      <span class="cap-sub">Whitman, Massachusetts, 1930</span>
+    </figcaption>
+  </figure>
+  <figure class="fragment">
+    <img src="images/chocolate-chip-cookie.jpg" alt="A plate of chocolate chip cookies">
+    <figcaption>
+      <span class="cap-title">The Cookie</span>
+      <span class="cap-sub">One kitchen, one baker.</span>
+    </figcaption>
+  </figure>
+</div>
+</div>
+
+<div class="tl-static" aria-hidden="true">
+  <div class="tl-static__track">
+    <div class="tl-static__fill" style="width:6%; background:var(--soil);"></div>
+    <div class="tl-static__marker" style="left:calc(6% - 11px); background:var(--soil);"></div>
+  </div>
+  <div class="tl-static__labels">
+    <span style="left:6%;  color:var(--text);">Aug 1930</span>
+    <span style="left:50%; color:var(--text-faint);">Late 1938</span>
+    <span style="left:94%; color:var(--text-faint);">1953</span>
+  </div>
+</div>
+<aside class="notes">
+<p><em>⏱ 0:30 · Tanya</em></p>
+<p><strong>Tanya:</strong> Ruth Wakefield ran an inn in Whitman, Massachusetts. <strong>[click: the Inn]</strong> She was a dietitian, she had a kitchen, and one day she had an idea: chop up a chocolate bar and put it in the cookie dough.</p>
+<p><strong>[click: the cookie]</strong> Guests loved it. It was a hit. And it existed in exactly one place: her kitchen. If you wanted the cookie, you drove to the inn.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cookbook" class="slide level2 hook" data-milestone="1938-10" data-transition="fade" data-transition-speed="fast">
+<h2>The Cookbook</h2>
+<div class="fill fill--center tl-content">
+<div class="hook-split">
+  <div class="hook-split__media">
+    <img class="img-object" src="images/toll-house-cookbook.jpg" alt="Ruth Wakefield's Toll House Tried and True Recipes cookbook">
+  </div>
+  <div class="hook-split__aside beat">
+    <div class="beat__eyebrow">The cookbook</div>
+    <h3 class="beat__headline">The recipe is published.</h3>
+    <p class="beat__consequence fragment">Anyone who can bake.</p>
+  </div>
+</div>
+</div>
+
+<div class="tl-static" aria-hidden="true">
+  <div class="tl-static__track">
+    <div class="tl-static__fill" style="width:50%; background:var(--soil);"></div>
+    <div class="tl-static__marker" style="left:calc(50% - 11px); background:var(--soil);"></div>
+  </div>
+  <div class="tl-static__labels">
+    <span style="left:6%;  color:var(--text-faint);">Aug 1930</span>
+    <span style="left:50%; color:var(--text);">Late 1938</span>
+    <span style="left:94%; color:var(--text-faint);">1953</span>
+  </div>
+</div>
+<aside class="notes">
+<p><em>⏱ 0:30 · Tanya</em></p>
+<p><strong>Tanya:</strong> Eight years later she published the recipe. <strong>[click: the consequence]</strong> Now anyone could make it. Anyone who owned an oven, had flour and butter in the house, and knew what “cream the sugar” meant.</p>
+<p>Which is a lot of people. It’s also not everyone.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="grocery" class="slide level2 hook" data-milestone="1953" data-transition="fade" data-transition-speed="fast">
+<h2>The Store Shelf</h2>
+<div class="fill fill--center tl-content">
+<div class="hook-split">
+  <div class="hook-split__media">
+    <img class="img-object" src="images/toll-house-morsels-vintage.jpg" alt="Vintage Nestlé Toll House chocolate morsels advertisement">
+  </div>
+  <div class="hook-split__aside beat">
+    <div class="beat__eyebrow">The store shelf</div>
+    <h3 class="beat__headline">Nestlé brings it to the shelf.</h3>
+    <p class="beat__consequence fragment">Anyone at all.</p>
+  </div>
+</div>
+</div>
+
+<div class="tl-static" aria-hidden="true">
+  <div class="tl-static__track">
+    <div class="tl-static__fill" style="width:94%; background:var(--soil);"></div>
+    <div class="tl-static__marker" style="left:calc(94% - 11px); background:var(--soil);"></div>
+  </div>
+  <div class="tl-static__labels">
+    <span style="left:6%;  color:var(--text-faint);">Aug 1930</span>
+    <span style="left:50%; color:var(--text-faint);">Late 1938</span>
+    <span style="left:94%; color:var(--text);">1953</span>
+  </div>
+</div>
+<aside class="notes">
+<p><em>⏱ 0:30 · Tanya → Jadey</em></p>
+<p><strong>Tanya:</strong> Then Nestlé put it on a shelf. <strong>[click: the consequence]</strong> Open the bag, eat the cookie. No oven, no skill, no recipe. Universal access.</p>
+<p><strong>Jadey (the pivot):</strong> So. What does a cookie have to do with a technical talk at posit::conf?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- BEAT: Playbook (1:00–1:30). The map. Thesis once: impact stops where access stops. Don't explain the layers here. · OWNER: J -->
+<!-- SLIDE 5 · The playbook reveal. Concentric rings, built by fragments.
+     Logic: assets/rings.js · styles: assets/rings.css
+     Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
+</section>
+<section id="three-levels" class="slide level2 slide-dark" data-background-color="#1A1D20" data-transition="fade" data-transition-speed="fast" data-background-transition="fade">
+<h2>The Report Generation Playbook</h2>
+<div class="lede">
+<p>Expanding access by matching the tool to the user.</p>
+</div>
+<div class="rings-layout">
+  <div class="rings-diagram">
+    <div class="ring-outline ring-outline--core" id="ring-core"></div>
+    <div class="ring-outline" id="ring-2"></div>
+    <div class="ring-outline" id="ring-3"></div>
+  </div>
+
+  <div class="levels">
+    <div class="level" id="level-1">
+      <div class="eyebrow eyebrow--l1">Layer 1 <span class="sub">Template · the recipe</span></div>
+      <div class="heading">You <span class="detail">parameterized Quarto template</span></div>
+    </div>
+    <div class="level" id="level-2">
+      <div class="eyebrow eyebrow--l2">Layer 2 <span class="sub">Package · the cookbook</span></div>
+      <div class="heading">Anyone who codes <span class="detail">{soils} R package</span></div>
+    </div>
+    <div class="level" id="level-3">
+      <div class="eyebrow eyebrow--l3">Layer 3 <span class="sub">App · the store shelf</span></div>
+      <div class="heading">Everyone <span class="detail">Shiny web app</span></div>
+    </div>
+
+    <!-- the takeaway sits under the three layers, so the diagram keeps the full height -->
+    <div class="quote rings-quote">
+      <span class="mark">“</span>
+      <p>Impact stops where access stops.</p>
+    </div>
+  </div>
+</div>
+
+<!-- fragment triggers: reveal advances these; rings.js listens and builds the diagram -->
+<span class="fragment rings-trigger" data-stage="1" data-fragment-index="0"></span>
+<span class="fragment rings-trigger" data-stage="2" data-fragment-index="1"></span>
+<span class="fragment rings-trigger" data-stage="3" data-fragment-index="2"></span>
+
+<!-- figures are spawned into this overlay, positioned in 1920×1080 slide px -->
+<div class="rings-stage"></div>
+
+<template id="rings-figure-template">
+  <svg viewbox="0 0 34 52">
+    <line class="part body" x1="17" y1="14" x2="17" y2="34"></line>
+    <line class="part arm-l" x1="17" y1="18" x2="8" y2="28"></line>
+    <line class="part arm-r" x1="17" y1="18" x2="26" y2="28"></line>
+    <line class="part leg-l" x1="17" y1="34" x2="9" y2="50"></line>
+    <line class="part leg-r" x1="17" y1="34" x2="25" y2="50"></line>
+    <circle class="head" cx="17" cy="7" r="6.5"></circle>
+  </svg>
+</template>
+<aside class="notes">
+<p><em>⏱ 1:15 · Jadey, one Tanya interjection</em></p>
+<p><strong>Jadey:</strong> It turns out that’s exactly the shape of our project.</p>
+<p><strong>[click: Layer 1, the center figure]</strong> Every piece of analysis starts in one kitchen. One person, one laptop, total control. That’s the template. <strong>[click: Layer 2, ring 2]</strong> If you’re diligent, it becomes a cookbook, a package, and other people who know how to bake can use it. <strong>[click: Layer 3, ring 3]</strong> And if you actually want it to reach the people who make decisions, it has to end up on a shelf. That’s the app.</p>
+<p>In our story, I’m Ruth. I made the recipe, I wrote the cookbook.</p>
+<p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together we brought Jadey’s reports to the shelf with a Shiny app.</p>
+<p><strong>Jadey:</strong> Here’s the line we keep coming back to: impact stops where access stops. Every layer removes friction for a specific person who couldn’t get to the insight before. That’s the whole talk. So let’s start in the kitchen.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- BEAT: Layer 1 · Template · The Recipe (2:30). First person, 2023 callback. Output before mechanism; end on the boundary, one kitchen. · OWNER: J -->
+<!-- SLIDE 6 · Layer 1: the OUTPUT slide. Placeholder content for Jadey to revise: a real farmer
+     report page LARGE (HTML or PDF screenshot), the posit::conf(2023) badge small underneath, the
+     stat and two output lines on the right. The audience needs to see what farmers got before
+     they care who couldn't make it. The YAML snippet is gone on purpose: mechanism comes after output. -->
+</section>
+<section id="template" class="slide level2">
+<h2>Layer 1: Template <span class="h2-sub">· The Recipe</span></h2>
+<svg class="rings rings--crumb" data-lit="1" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 1 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+<div class="lede">
+<p>One report for every farmer in the survey.</p>
+</div>
+<div class="fill fill--row">
+<div class="then-card report-card" style="flex:1.4 1 0; min-width:0;">
+  <img src="images/report-html.png" alt="Example HTML report">
+  <figcaption><span class="then-card__tag">posit::conf(2023)</span> where the template was first shown
+  </figcaption>
+</div>
+<div class="output-aside" style="flex:1 1 0; min-width:0;">
+<div class="stat stat--l1">350<span class="stat__plus">+</span></div>
+<p class="stat__caption">farmers with their own report</p>
+<p class="body" style="margin-top:40px;"><span class="emphasis">Interactive HTML</span> <span class="muted"><br>for increased engagement.</span><br><span class="emphasis">Printable PDF</span> <span class="muted"><br>for the folks who wanted paper.</span></p>
+<p class="quote" style="margin-top:40px;background:#2c5e3b"><span class="mark" style="color:#d8dfd7">“</span>I was able to see a direct connection between my soil management decisions and the health of the soil I manage.</p>
+</div>
+</div>
+<aside class="notes">
+<p><em>⏱ 2:00 · Jadey</em></p>
+<p><strong>Jadey:</strong> Some of you might remember me from the very last session of posit::conf 2023. Quick version: I went from scooping water samples out of streams to building 86 custom farmer reports in one week, and that skills test got me a data science job at WSDA.</p>
+<p>By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every one of the farmers in it, more than 300 since 2020, got their own report. Interactive HTML with maps and plots. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.</p>
+<p>One farmer said, <em>“I was able to see a direct connection between my soil management decisions and the health of the soil I manage.”</em></p>
+<p>The mechanism was parameterized Quarto: treat the report as a function, shape your data so it’s subsettable, make it interpretable, make it accessible. The 2023 slides are still up if you want the code.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- SLIDE 7 · Layer 1: the BOUNDARY beat (Jadey). The rings, large, with only the centre lit,
+     and one line. This is where "one kitchen" lands: slide 6 shows the output, this slide shows
+     who could make it. Keep it to the one line; the stakes sentence on slide 6 is what gives it weight. -->
+</section>
+<section id="template-output" class="slide level2">
+<h2>Layer 1: Template <span class="h2-sub">· The Recipe</span></h2>
+<div class="lede">
+<p>One Quarto project. One laptop. One person.</p>
+</div>
+<div class="fill fill--row boundary">
+<svg class="rings " data-lit="1" viewbox="0 0 600 600" width="520" height="520" role="img" aria-label="One person at the centre; no one else lit"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+<div class="boundary__line">
+<p><span class="emphasis">The template solved the reports problem.</span> <span class="muted">It did not solve the people problem.</span></p>
+</div>
+</div>
+<aside class="notes">
+<p><em>⏱ 0:30 · Jadey</em></p>
+<p><strong>Jadey:</strong> That was the recipe. And like Ruth’s cookie, it lived in exactly one kitchen. One Quarto project, one laptop, my head. Every new year of data, every new partner, every colleague who wanted a report meant <em>me</em> running the pipeline.</p>
+<p>The template solved the reports problem. It did not solve the people problem. So the next step was getting the recipe out of my kitchen.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- BEAT: Layer 2 · Package · The Cookbook (2:00). Plain, practical. A published cookbook for anyone with R; end on 'not everyone is'. · OWNER: J -->
+<!-- SLIDE 8 · Layer 2: the {soils} package. Published by WSDA + WSU for the public (WA data swapped
+     for placeholders), not for an internal team. The WSU credit is text for now; confirm with Jadey,
+     swap in a logo if she has one. -->
+</section>
+<section id="package" class="slide level2">
+<h2>Layer 2: Package <span class="h2-sub">· The Cookbook</span></h2>
+<svg class="rings rings--crumb" data-lit="2" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 2 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+<div class="lede">
+<p><code>{soils}</code>: An R package for anyone running a soil sampling project.</p>
+</div>
+<div class="fill fill--center">
+<div class="flow">
+  <div class="node card card--l2">
+    <code>roxygen2 &amp; pkgdown</code>
+    <p class="emphasis">Documentation</p>
+    <p class="muted">Learn how to use the functions and package</p>
+  </div>
+  <div class="arrow">+</div>
+  <div class="node card card--l2">
+    <code>.R</code>
+    <p class="emphasis"><br>Functions &amp; Scripts</p>
+    <p class="muted">Validate, process, and visualize data; render reports</p>
+  </div>
+  <div class="arrow">+</div>
+  <div class="node card card--l2">
+    <code>.qmd</code>
+    <p class="emphasis"><br>Modular Quarto files</p>
+    <p class="muted">Customize report content</p>
+  </div>
+</div>
+</div>
+<div class="fragment">
+<div class="body bridge">
+<p><span class="emphasis">Everything you need to adapt the workflow to your own data.</span></p>
+</div>
+<aside class="notes">
+<p><em>⏱ 1:00 · Jadey</em></p>
+<p><strong>Jadey:</strong> We pulled everything that wasn’t Washington-specific out of the template and into an R package: <code>{soils}</code>. The validation, the calculations, the styling, the Quarto pieces every report shares. Then we took our data out, put placeholder examples and guidance in, and published it, with WSU, for anyone running a soil survey.</p>
+<p>So the cookbook wasn’t for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers. Anyone comfortable in R could create a <code>{soils}</code> project, drop in their data, edit the content, and generate reports for every participant in their survey.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- SLIDE 9 · Layer 2: what a developer actually runs (Jadey to build; see the note below).
+     Target: `library(soils)` plus the one call a user makes (real API still open), optionally a
+     pkgdown screenshot beside it. Not the folder tree; that is slide 8. -->
+</div>
+</section>
+<section id="package-usage" class="slide level2">
+<h2>Layer 2: Package <span class="h2-sub">· The Cookbook</span></h2>
+<svg class="rings rings--crumb" data-lit="2" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 2 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+<div class="lede">
+<p>How technical assistance providers unlock access to the reports.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:40%;">
+<figure class="then-card">
+  <img src="images/soils-pkgdown.png" alt="Screenshot of pkgdown site showing how to initiate a {soils} project with RStudio">
+</figure>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<p class="body" style="margin-top:20px;"><span class="emphasis">After importing their data and customizing report content...</span></p>
+<div class="code-window">
+<div class="chrome"><span class="r"></span><span class="y"></span><span class="g"></span><span class="filename">render-reports.R</span></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Render the reports</span></span>
+<span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a>report_df <span class="sc">|&gt;</span> </span>
+<span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">pwalk</span>(</span>
+<span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a>    quarto<span class="sc">::</span>quarto_render,</span>
+<span id="cb1-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">input =</span> <span class="st">"farmer-report.qmd"</span></span>
+<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div></div>
+<div class="fragment">
+<!-- the bridge to Layer 3, not a takeaway (the "decouple before Shiny" lesson belongs to Lessons Learned) -->
+<div class="body bridge" style="margin-top:72px;">
+<p><span class="emphasis">Anyone comfortable in R can run their own soil survey reports.</span> <span class="muted">Not everyone is.</span></p>
+</div>
+<aside class="notes">
+<p><em>⏱ 1:00 · Jadey</em></p>
+<p><strong>Jadey:</strong> This is what a user actually types. One call, a data frame, an output path. They don’t write a helper function. They don’t copy a script from my repo and change the file paths. They install the cookbook and follow the recipe.</p>
+<p><strong>[click]</strong> Now we’re reaching anyone comfortable in R. But not everyone who would like to run these reports is.</p>
+<p>For anyone with R, this was the unlock. For the technical assistance providers and extension staff who don’t code, the people who are actually in the field with farmers, nothing had changed. They still had to find someone like me.</p>
+<p><strong>[hand-off: “they still had to find someone like me” → Tanya, “this is where I come in”]</strong></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- BEAT: Layer 3 · App · The Store Shelf (4:00). The payoff: zero friction. Stack intro, recorded demo, then the honest turn on What We Saw. · OWNER: T -->
+<!-- SLIDE 10 · Layer 3: the app as the top of a stack, not a UI. The audience leaves knowing the
+     app is a thin layer over {soils}, so the demo's "that's the package doing the work" and the
+     Lessons feedback loop both land. No screenshot of the app here on purpose: the video on 10b
+     is the first time the interface appears.
+     Everything shows at once, all three bars at full colour (no clicks on this slide). The stack is a
+     shortcode (, _extensions/rings/stack.lua) so Lessons can call it back with the arrows
+     reversed: . -->
+</div>
+</section>
+<section id="app" class="slide level2">
+<h2>Layer 3: App <span class="h2-sub">· The Store Shelf</span></h2>
+<svg class="rings rings--crumb" data-lit="3" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 3 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+<div class="lede">
+<p>What’s underneath.</p>
+</div>
+<div class="fill fill--row app-stack">
+<div class="app-stack__left">
+<div class="stack " data-highlight="all" data-arrows="down">
+<div class="stack__row stack__row--app"><div class="card card--l3 stack__bar"><div class="stack__head"><code class="stack__label">Dirt Data Reports</code><span class="stack__kind">Shiny</span></div><p class="stack__desc">Upload, choose, download. No R.</p></div></div>
+<div class="stack__link" aria-hidden="true"><svg viewbox="0 0 24 40"><path d="M12 3v28"></path><path d="M4 24l8 10 8-10"></path></svg></div>
+<div class="stack__row stack__row--package"><div class="card card--l2 stack__bar"><div class="stack__head"><code class="stack__label">{soils}</code><span class="stack__kind">R package</span></div><p class="stack__desc">Validation, calculations, templates, styling.</p></div></div>
+<div class="stack__link" aria-hidden="true"><svg viewbox="0 0 24 40"><path d="M12 3v28"></path><path d="M4 24l8 10 8-10"></path></svg></div>
+<div class="stack__row stack__row--template"><div class="card card--l1 stack__bar"><div class="stack__head"><code class="stack__label">Quarto template</code></div><p class="stack__desc">The report itself.</p></div></div>
+</div>
+</div>
+<div class="app-stack__right">
+<!-- CHECK WITH JADEY: do farmers use the app directly, or do extension / technical-assistance
+     staff generate reports for them? This card assumes the latter; add farmers back if not.
+     
+     This is correct! Farmers don't create the reports themselves. - Jadey -->
+<div class="card card--l3">
+  <div class="eyebrow eyebrow--l3">For</div>
+  <p>Extension staff &amp; technical assistance providers who don't code</p>
+</div>
+<p class="body emphasis app-stack__line">No R install. No command line. <span class="quiet">Zero friction.</span></p>
+</div>
+</div>
+<aside class="notes">
+<p><em>⏱ 0:45 · Tanya</em></p>
+<p><em>[Check with Jadey: farmers directly, or extension / TA staff on their behalf? The FOR card assumes the latter.]</em></p>
+<p><strong>Tanya:</strong> This is where I come in as Nestlé. I’m IndieVisual. It’s a one-person shop, so when I say IndieVisual built something, I mean I did.</p>
+<p>Jadey had a published package. What it didn’t have was a way for someone with no R install and no command line to get a report. So I built Dirt Data Reports: a Shiny app that sits on top of <code>{soils}</code>, takes a CSV and a few choices, and hands back a finished Quarto report.</p>
+<p>No R. No terminal. Zero friction. Here’s what it looks like.</p>
+<p><strong>[next slide: the recorded demo]</strong></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- SLIDE 10b · Layer 3: the recorded demo. One video, with controls, in the deck's browser frame,
+     narrated live by Tanya. The file is not recorded yet: until images/dirt-data-reports.webm
+     (or .mp4) exists the poster shows with a placeholder tag. Drop the recording in and the tag
+     disappears (assets/demo-video.js hides it once the video has a source it can play).
+     ≤ 2:00, ideally ~1:30. Cut to: upload → pick parameters → render → download.
+     Full-bleed alternative: replace the frame with `background-video="images/dirt-data-reports.mp4"`
+     on the header line. -->
+</section>
+<section id="app-demo" class="slide level2">
+<h2>Layer 3: App <span class="h2-sub">· The Store Shelf</span></h2>
+<svg class="rings rings--crumb" data-lit="3" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 3 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+<div class="lede">
+<p>Upload → pick parameters → render → download.</p>
+</div>
+<div class="fill fill--center">
+<div class="browser browser--demo">
+  <div class="chrome"><span></span><span></span><span></span><div class="url">dirt-data-reports · recorded demo</div></div>
+  <div class="demo-frame">
+    <video class="demo-video" controls="" playsinline="" preload="metadata" poster="images/dirt-data-reports-01.png">
+      <source src="images/dirt-data-reports.mp4" type="video/mp4">
+      <source src="images/dirt-data-reports.webm" type="video/webm">
+    </video>
+    <div class="demo-placeholder placeholder">
+      <div class="placeholder__label">Placeholder · recorded demo</div>
+      <p>Drop the recording in as <code>images/dirt-data-reports.mp4</code> (or <code>.webm</code>) and this tag goes away. ≤ 2:00, cut to upload → parameters → render → download.</p>
+    </div>
+  </div>
+</div>
+</div>
+<aside class="notes">
+<p><em>⏱ 1:30–2:00 · Tanya, narrating over the recording</em></p>
+<p><strong>[press space or click the video to play; the deck’s arrow keys still work while it plays. Cut: upload → parameters → render → download.]</strong></p>
+<p><strong>Tanya (over the video):</strong> Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That’s <code>{soils}</code> doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That’s the whole workflow for a field agent.</p>
+<p>The important thing isn’t that this is a Shiny app. It’s that the person using it never has to know there’s a package, a template, or Quarto underneath. They open the bag and eat the cookie.</p>
+<p><strong>[hand-off to Jadey on the next slide]</strong></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- SLIDE 10c · Post-demo · "What we saw". Jadey's 1:00 reaction beat between the demo and Lessons
+     Learned. Content still to come from Jadey: one real user quote OR a photo of an extension / TA user
+     with the app OR a screenshot of a real session. The seed line at the foot bridges into Lessons. -->
+</section>
+<section id="app-aftermath" class="slide level2">
+<h2>What We Saw</h2>
+<svg class="rings rings--crumb" data-lit="3" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 3 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+<div class="lede">
+<p>The store shelf, in the field.</p>
+</div>
+<div class="fill fill--center">
+<div class="placeholder placeholder--wide">
+  <div class="placeholder__label">Placeholder · user quote / photo · ask Jadey</div>
+  <p>One real user quote, <em>or</em> a photo of an extension / technical-assistance user with the app, <em>or</em> a screenshot of a real session. One of the three, not all.</p>
+</div>
+<div class="body bridge" style="margin-top:72px;">
+<p><span class="emphasis">The app worked.</span> <span class="muted">It also showed us where the package was thin.</span></p>
+</div>
+</div>
+<aside class="notes">
+<p><em>⏱ 1:00 · Jadey</em></p>
+<p><code>PLACEHOLDER · USER QUOTE / PHOTO</code>: one real user, one sentence, or a photo of an extension / technical-assistance user with the app.</p>
+<p><strong>Jadey:</strong> Watching people use the app for the first time was the most useful hour of the project. Not because it went smoothly. Because of where it didn’t. As the package maintainer, every place a user got stuck was a place <code>{soils}</code> had a gap I couldn’t see from inside my own kitchen.</p>
+<p><strong>Jadey (land on the line):</strong> The app worked. It also showed us exactly where the package was thin. <strong>[→ Lessons Learned]</strong></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- BEAT: Lessons Learned (2:30–3:00). One slide, four beats on three clicks. The diagram is the argument; one line per fragment. · OWNER: T/J -->
+<!-- SLIDE 9 · Lessons learned (the architecture arc). One slide, four states, three clicks, no JS.
+     Three invisible fragment spans precede the SVG; theme/brand.scss uses sibling selectors
+     (.arc-trigger:nth-of-type(n).visible ~ …) to drive the drawing:
+       arrive  →  three dots, no lines
+       click 1 →  the pipeline draws itself left to right; particles flow forward
+       click 2 →  six arcs spawn from the app one after another and draw BACK onto the
+                  other two; the app's glow pulses; particles run the wrong way
+       click 3 →  the tangle retracts into the app, a breath, then two clean loops draw
+                  (above: backward, below: forward); all three glows settle; particles
+                  flow both ways
+     Lines draw with stroke-dashoffset (every path has pathLength="1"); particles ride the
+     same paths with SMIL animateMotion + mpath, so a path is authored once. A path's
+     direction is its flow direction; the tangle is authored from the app outward so it
+     draws backward and retracts INTO the app.
+     Dots keep their level colours throughout (colour = level, everywhere in the deck).
+     The rings crumb (top right) starts with only App lit and lights Template and Package on the
+     refactor click (brand.scss, keyed to the third fragment with :has()). -->
+</section>
+<section id="arc" class="slide level2 slide-dark" data-background-color="#1A1D20">
+<h2>Lessons Learned</h2>
+<div class="lede">
+<p>Expectation vs.&nbsp;reality, and the feedback loop between them.</p>
+</div>
+<svg class="rings rings--crumb" data-lit="3" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="App lit; all three light up on the refactor click"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+<div class="fill fill--center arc">
+  <span class="fragment arc-trigger" data-fragment-index="0"></span>
+  <span class="fragment arc-trigger" data-fragment-index="1"></span>
+  <span class="fragment arc-trigger" data-fragment-index="2"></span>
+
+  <svg class="arc-svg" viewbox="0 0 1400 560" aria-hidden="true">
+    <!-- state 1: the straight pipeline -->
+    <g class="pipe">
+      <path id="arc-p1" class="draw" pathlength="1" d="M232,300 L668,300"></path>
+      <path id="arc-p2" class="draw" pathlength="1" d="M732,300 L1168,300"></path>
+    </g>
+    <g class="pt pt-fwd">
+      <circle r="6"><animatemotion dur="2.6s" repeatcount="indefinite" begin="0s"><mpath href="#arc-p1"></mpath></animatemotion></circle>
+      <circle r="6"><animatemotion dur="2.6s" repeatcount="indefinite" begin="1.3s"><mpath href="#arc-p1"></mpath></animatemotion></circle>
+      <circle r="6"><animatemotion dur="2.6s" repeatcount="indefinite" begin="0.65s"><mpath href="#arc-p2"></mpath></animatemotion></circle>
+      <circle r="6"><animatemotion dur="2.6s" repeatcount="indefinite" begin="1.95s"><mpath href="#arc-p2"></mpath></animatemotion></circle>
+    </g>
+
+    <!-- state 2: six arcs from the app, reaching back (authored app → target) -->
+    <g class="tangle">
+      <path id="arc-t1" class="draw" pathlength="1" d="M1196,272 C1150,80 700,60 222,262"></path>
+      <path id="arc-t2" class="draw" pathlength="1" d="M1196,272 C1120,160 880,150 732,262"></path>
+      <path id="arc-t3" class="draw" pathlength="1" d="M1196,328 C1100,470 800,470 732,338"></path>
+      <path id="arc-t4" class="draw" pathlength="1" d="M1196,272 C1180,10 500,-10 216,262"></path>
+      <path id="arc-t5" class="draw" pathlength="1" d="M1196,328 C1050,520 450,520 222,338"></path>
+      <path id="arc-t6" class="draw" pathlength="1" d="M1196,272 C1000,220 900,120 728,262"></path>
+      <circle class="glow glow--l3 glow-app" cx="1200" cy="300" r="46"></circle>
+    </g>
+    <g class="pt pt-back">
+      <circle r="5"><animatemotion dur="3.2s" repeatcount="indefinite" begin="0s"><mpath href="#arc-t1"></mpath></animatemotion></circle>
+      <circle r="5"><animatemotion dur="2.4s" repeatcount="indefinite" begin="0.4s"><mpath href="#arc-t2"></mpath></animatemotion></circle>
+      <circle r="5"><animatemotion dur="2.6s" repeatcount="indefinite" begin="0.9s"><mpath href="#arc-t3"></mpath></animatemotion></circle>
+      <circle r="5"><animatemotion dur="3.6s" repeatcount="indefinite" begin="1.3s"><mpath href="#arc-t4"></mpath></animatemotion></circle>
+      <circle r="5"><animatemotion dur="3.4s" repeatcount="indefinite" begin="0.2s"><mpath href="#arc-t5"></mpath></animatemotion></circle>
+      <circle r="5"><animatemotion dur="2.2s" repeatcount="indefinite" begin="1.7s"><mpath href="#arc-t6"></mpath></animatemotion></circle>
+    </g>
+
+    <!-- state 3: two-way loops, in balance (above: backward, below: forward) -->
+    <g class="loops">
+      <path id="arc-l1" class="draw" pathlength="1" d="M1196,264 C1070,160 830,160 704,264"></path>
+      <path id="arc-l2" class="draw" pathlength="1" d="M696,264 C570,160 330,160 204,264"></path>
+      <path id="arc-l3" class="draw" pathlength="1" d="M204,336 C330,440 570,440 696,336"></path>
+      <path id="arc-l4" class="draw" pathlength="1" d="M704,336 C830,440 1070,440 1196,336"></path>
+    </g>
+    <g class="glows-all">
+      <circle class="glow glow--l1" cx="200" cy="300" r="46"></circle>
+      <circle class="glow glow--l2" cx="700" cy="300" r="46"></circle>
+      <circle class="glow glow--l3" cx="1200" cy="300" r="46"></circle>
+    </g>
+    <g class="pt pt-loop">
+      <circle r="6"><animatemotion dur="3s" repeatcount="indefinite" begin="0s"><mpath href="#arc-l1"></mpath></animatemotion></circle>
+      <circle r="6"><animatemotion dur="3s" repeatcount="indefinite" begin="1.5s"><mpath href="#arc-l2"></mpath></animatemotion></circle>
+      <circle r="6"><animatemotion dur="3s" repeatcount="indefinite" begin="0.75s"><mpath href="#arc-l3"></mpath></animatemotion></circle>
+      <circle r="6"><animatemotion dur="3s" repeatcount="indefinite" begin="2.25s"><mpath href="#arc-l4"></mpath></animatemotion></circle>
+    </g>
+
+    <!-- the three dots never move and never change colour -->
+    <g class="arc-dots">
+      <circle class="dot dot--l1" cx="200" cy="300" r="26"></circle>
+      <circle class="dot dot--l2" cx="700" cy="300" r="26"></circle>
+      <circle class="dot dot--l3" cx="1200" cy="300" r="26"></circle>
+      <text x="200" y="392">Template</text>
+      <text x="700" y="392">Package</text>
+      <text x="1200" y="392">App</text>
+    </g>
+  </svg>
+
+  <div class="arc-captions">
+    <p class="c0"><span class="emphasis">Three layers.</span> We assumed they'd line up.</p>
+    <p class="c1"><span class="emphasis">Expectation.</span> A neat, linear build: template, then package, then app.</p>
+    <p class="c2"><span class="emphasis">Reality.</span> Shipping fast put workarounds in the app: loud signal about what the lower layers needed.</p>
+    <p class="c3"><span class="emphasis">Refactoring for independence.</span> The hacks move down into <code>{soils}</code>; every tier stands on its own.</p>
+  </div>
+</div>
+<aside class="notes">
+<p><em>⏱ 2:20 · Tanya 1:35 (11–13) / Jadey 0:45 (14)</em></p>
+<p><strong>Tanya, three layers (0:20, on arrival: three dots).</strong> So here’s the part we didn’t plan. When you draw this on a whiteboard it’s three tidy boxes.</p>
+<p><strong>Tanya, expectation (0:30). [click: the pipeline draws]</strong> The expectation was a neat, linear build. Template, then package, then app. Each layer finished before the next one starts.</p>
+<p>We had a deadline. Field staff needed the app before the season. So we shipped fast, and shipping fast meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn’t do yet. Formatting the template should have owned.</p>
+<p><strong>Tanya, reality (0:45). [click: the tangle]</strong> This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of <code>{soils}</code>, and every time the package didn’t have what I needed, I patched around it in the app, because the season wasn’t going to wait.</p>
+<p>Those workarounds weren’t failures. They were loud signals about what the package was missing. And you can’t see them from inside the package.</p>
+<p><strong>Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]</strong> That was the real lesson for me as the maintainer: you do not know what abstractions your package needs until someone tries to build a UI on top of it. Building layer three forced us to rethink layers one and two.</p>
+<p>So we went back to the workbench. We pulled the hacks out of Tanya’s app and engineered them into <code>{soils}</code> as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a field agent can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that’s fine. That’s the point.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- BEAT: Three Layers, Three Audiences + Close (1:30). Plain-language recap, then the thesis and who took the cookie off the shelf. · OWNER: T -->
+<!-- SLIDE 15 · Three layers, three audiences. Row colour = level; the rings in the Who column show the
+     layer's lit state (same markup the  shortcode emits; inline here because the table is raw HTML).
+     Friction is the hue-free meter so the two never argue. -->
+</section>
+<section id="matrix" class="slide level2" data-background-color="#FFFFFF">
+<h2>Three Layers, Three Audiences</h2>
+<div class="lede">
+<p>Meeting users where they’re at.</p>
+</div>
+<div class="fill fill--center">
+<table class="matrix caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Layer</th>
+<th data-quarto-table-cell-role="th">Who</th>
+<th data-quarto-table-cell-role="th">What it’s for</th>
+<th data-quarto-table-cell-role="th">What it takes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="l1 odd">
+<td>Template</td>
+<td class="who"><svg class="rings rings--cell" data-lit="1" viewbox="0 0 600 600" width="88" height="88" role="img" aria-label="Layer 1: you, at the centre">
+<use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use>
+</svg>
+<span class="who__label">You</span></td>
+<td>Your analysis,<br>
+your way</td>
+<td><span class="friction"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="word">Edit and render</span></span></td>
+</tr>
+<tr class="l2 even">
+<td>Package</td>
+<td class="who"><svg class="rings rings--cell" data-lit="2" viewbox="0 0 600 600" width="88" height="88" role="img" aria-label="Layer 2: anyone who codes">
+<use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use>
+</svg>
+<span class="who__label">Anyone who codes</span></td>
+<td>The same analysis,<br>
+on their data</td>
+<td><span class="friction"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="word">Install, call a function</span></span></td>
+</tr>
+<tr class="l3 odd">
+<td>App</td>
+<td class="who"><svg class="rings rings--cell" data-lit="3" viewbox="0 0 600 600" width="88" height="88" role="img" aria-label="Layer 3: everyone">
+<use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use>
+</svg>
+<span class="who__label">Everyone</span></td>
+<td>The output,<br>
+no code at all</td>
+<td><span class="friction"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="word">Upload, download</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<aside class="notes">
+<p><em>⏱ 0:45 · Tanya</em></p>
+<p><strong>Tanya:</strong> There’s no one layer to rule them all. Most of us start at the first: we build something to make our own lives easier. Some of us go to the second, because someone on the team asked for it. Some of us go all the way to the third, because the person who needs the answer is never going to open an IDE.</p>
+<p>Each of those is the right layer for someone. What decides which one you need isn’t the tool, or the team, or how far you can take the code. It’s one question, asked before you build: who is this for?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- SLIDE 16 · Close. Answers the hook: the talk opens on Nestlé putting cookies on a shelf; this
+     slide says who took one off. Thesis line (same as slide 5) → result stat (optional; delete the
+     .result block if there is no number) → names, rings, QR. The Q&A cue lives in the note. -->
+</section>
+<section id="closing" class="slide level2 slide-dark closing" data-background-color="#1A1D20">
+<h2>Building the Bridge</h2>
+<div class="lede">
+<p>Meeting Users Where They’re At</p>
+</div>
+<p class="thesis">Impact stops where access stops.</p>
+
+<div class="footer-split">
+  <div class="who who--rings">
+    <svg class="rings" data-lit="3" viewbox="0 0 600 600" width="120" height="120" role="img" aria-label="All three layers, lit"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+    <div><b>Jadey Ryan</b><span>WA Dept of Agriculture</span></div>
+  </div>
+  <div class="qr">
+    <img src="images/qr.png" alt="QR code">
+    <div class="caption">Scan for the slides and tools</div>
+  </div>
+  <div class="who who--r"><b>Tanya Shapiro</b><span>IndieVisual</span></div>
+</div>
+<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi
+</p><aside class="notes">
+<p><em>⏱ 0:45 · Jadey → Tanya</em></p>
+<p><strong>Jadey:</strong> For us, it was growers. <code>[if stat: This season, N reports went out to people who've never opened RStudio.]</code> They used to wait on me. Now they get their answers the week the samples come back, and I get to spend that time making the reports better instead of running them.</p>
+<p><strong>Tanya:</strong> Answer that question first. Then build for them. Thank you.</p>
+<p><em>Point to the QR (<code>{soils}</code> documentation and the app demo repository). Open Q&amp;A.</em></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1920,
+
+        height: 1080,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.1,
+
+        maxScale: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <!-- The rings graphic, as reusable SVG symbols, one per layer, for the  shortcode
+
+         (_extensions/rings/rings.lua). Generated. Three evenly spaced rings echoing the animated playbook diagram
+
+         (assets/rings.js; r=80, 180, 280 in a 600 box); each person is a dot so it
+
+         stays crisp at any size: centre 1, ring 2 12, ring 3 24. Colours come from the CSS `color` on
+
+         each <use class="ring-N"> in assets/rings.css, via currentColor; unlit rings are grey there.
+
+         Loaded once via include-after-body (_quarto.yml); <use href="#rings-lN"> works anywhere in the document. -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+
+      <symbol id="rings-l1" viewbox="0 0 600 600">
+
+        <circle cx="300" cy="300" r="80" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-opacity="0.8" stroke-width="10"></circle>
+
+        <g fill="currentColor"><circle cx="300.0" cy="300.0" r="24"></circle></g>
+
+      </symbol>
+
+      <symbol id="rings-l2" viewbox="0 0 600 600">
+
+        <circle cx="300" cy="300" r="180" fill="none" stroke="currentColor" stroke-opacity="0.8" stroke-width="10"></circle>
+
+        <g fill="currentColor">
+
+          <circle cx="300.0" cy="120.0" r="18"></circle>
+
+          <circle cx="390.0" cy="144.1" r="18"></circle>
+
+          <circle cx="455.9" cy="210.0" r="18"></circle>
+
+          <circle cx="480.0" cy="300.0" r="18"></circle>
+
+          <circle cx="455.9" cy="390.0" r="18"></circle>
+
+          <circle cx="390.0" cy="455.9" r="18"></circle>
+
+          <circle cx="300.0" cy="480.0" r="18"></circle>
+
+          <circle cx="210.0" cy="455.9" r="18"></circle>
+
+          <circle cx="144.1" cy="390.0" r="18"></circle>
+
+          <circle cx="120.0" cy="300.0" r="18"></circle>
+
+          <circle cx="144.1" cy="210.0" r="18"></circle>
+
+          <circle cx="210.0" cy="144.1" r="18"></circle>
+
+        </g>
+
+      </symbol>
+
+      <symbol id="rings-l3" viewbox="0 0 600 600">
+
+        <circle cx="300" cy="300" r="280" fill="none" stroke="currentColor" stroke-opacity="0.8" stroke-width="10"></circle>
+
+        <g fill="currentColor">
+
+          <circle cx="336.5" cy="22.4" r="18"></circle>
+
+          <circle cx="407.2" cy="41.3" r="18"></circle>
+
+          <circle cx="470.5" cy="77.9" r="18"></circle>
+
+          <circle cx="522.1" cy="129.5" r="18"></circle>
+
+          <circle cx="558.7" cy="192.8" r="18"></circle>
+
+          <circle cx="577.6" cy="263.5" r="18"></circle>
+
+          <circle cx="577.6" cy="336.5" r="18"></circle>
+
+          <circle cx="558.7" cy="407.2" r="18"></circle>
+
+          <circle cx="522.1" cy="470.5" r="18"></circle>
+
+          <circle cx="470.5" cy="522.1" r="18"></circle>
+
+          <circle cx="407.2" cy="558.7" r="18"></circle>
+
+          <circle cx="336.5" cy="577.6" r="18"></circle>
+
+          <circle cx="263.5" cy="577.6" r="18"></circle>
+
+          <circle cx="192.8" cy="558.7" r="18"></circle>
+
+          <circle cx="129.5" cy="522.1" r="18"></circle>
+
+          <circle cx="77.9" cy="470.5" r="18"></circle>
+
+          <circle cx="41.3" cy="407.2" r="18"></circle>
+
+          <circle cx="22.4" cy="336.5" r="18"></circle>
+
+          <circle cx="22.4" cy="263.5" r="18"></circle>
+
+          <circle cx="41.3" cy="192.8" r="18"></circle>
+
+          <circle cx="77.9" cy="129.5" r="18"></circle>
+
+          <circle cx="129.5" cy="77.9" r="18"></circle>
+
+          <circle cx="192.8" cy="41.3" r="18"></circle>
+
+          <circle cx="263.5" cy="22.4" r="18"></circle>
+
+        </g>
+
+      </symbol>
+
+    </svg>
+
+    <script src="assets/rings.js"></script>
+
+    <script src="assets/timeline.js"></script>
+
+    <script src="assets/deck-footer.js"></script>
+
+    <script src="assets/demo-video.js"></script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

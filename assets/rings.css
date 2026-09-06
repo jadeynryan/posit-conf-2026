@@ -1,0 +1,81 @@
+/* Three Levels of Adoption: concentric-rings slide (sections/03-playbook.qmd)
+   Colors come from the :root vars defined in theme/brand.scss. */
+
+.reveal section#three-levels { overflow: visible; }
+
+.reveal .rings-layout { display: flex; align-items: center; gap: var(--gap-col); flex: 1; min-height: 0; }
+
+.reveal .rings-diagram {
+  position: relative; width: 600px; height: 600px; flex: 0 0 auto; overflow: visible;
+}
+.reveal .ring-outline {
+  position: absolute; top: 50%; left: 50%; border-radius: 50%;
+  border: 2px solid rgba(249,248,246,0.16); background: rgba(249,248,246,0.05);
+  transform: translate(-50%,-50%) scale(0.9); opacity: 0; pointer-events: none;
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(.22,.8,.24,1);
+}
+.reveal .ring-outline.show { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+.reveal .ring-outline--core { background: rgba(127,191,147,0.10); border-color: rgba(127,191,147,0.35); }
+
+/* overlay covering the whole slide; figures are positioned in slide px (1920×1080) */
+.reveal .rings-stage { position: absolute; inset: 0; pointer-events: none; overflow: visible; z-index: 5; }
+
+.reveal .figure { position: absolute; width: 34px; height: 52px; transform: translate(-50%,-50%); pointer-events: none; }
+.reveal .figure svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.reveal .figure .part { stroke-width: 3; stroke-linecap: round; fill: none; transform-box: fill-box; }
+.reveal .figure .head { stroke: none; }
+.reveal .figure.l1 .part { stroke: var(--green-soft); }  .reveal .figure.l1 .head { fill: var(--green-soft); }
+.reveal .figure.l2 .part { stroke: var(--ochre); }       .reveal .figure.l2 .head { fill: var(--ochre); }
+.reveal .figure.l3 .part { stroke: var(--clay); }        .reveal .figure.l3 .head { fill: var(--clay); }
+.reveal .figure.flip { transform: translate(-50%,-50%) scaleX(-1); }
+
+.reveal .figure.walking .leg-l { transform-origin: 50% 0%; animation: rings-legL 480ms linear infinite; }
+.reveal .figure.walking .leg-r { transform-origin: 50% 0%; animation: rings-legR 480ms linear infinite; }
+.reveal .figure.walking .arm-l { transform-origin: 50% 0%; animation: rings-legR 480ms linear infinite; }
+.reveal .figure.walking .arm-r { transform-origin: 50% 0%; animation: rings-legL 480ms linear infinite; }
+.reveal .figure.walking .body,
+.reveal .figure.walking .head { animation: rings-bob 240ms ease-in-out infinite; }
+@keyframes rings-legL { 0%{transform:rotate(-24deg)} 50%{transform:rotate(24deg)} 100%{transform:rotate(-24deg)} }
+@keyframes rings-legR { 0%{transform:rotate(24deg)} 50%{transform:rotate(-24deg)} 100%{transform:rotate(24deg)} }
+@keyframes rings-bob  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-1.5px)} }
+
+/* right-hand level list */
+.reveal .levels { flex: 1 1 auto; display: flex; flex-direction: column; gap: 56px; min-width: 0; }
+/* a level is invisible until its stage is called, then rises in */
+.reveal .level { opacity: 0; transform: translateY(10px); transition: opacity 500ms ease, transform 500ms cubic-bezier(.2,.8,.2,1); }
+.reveal .level.active { opacity: 1; transform: none; }
+.reveal .level .eyebrow { margin-bottom: 10px; }
+.reveal .level .eyebrow .sub { color: var(--text-on-dark-muted); font-weight: 400; letter-spacing: 0; text-transform: none; margin-left: 18px; }
+.reveal .level .heading { font-size: var(--type-label); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.reveal .level .heading .detail { font-size: var(--type-subtitle); font-weight: 400; color: var(--text-on-dark-muted); margin-left: 18px; letter-spacing: 0; }
+
+/* quote appears with stage 3; it sits in the right column under the three layers */
+.reveal .rings-quote { margin-top: 24px; padding: 28px 40px; opacity: 0; transform: translateY(12px); transition: opacity 600ms ease, transform 600ms cubic-bezier(.2,.8,.2,1); }
+.reveal .rings-quote.show { opacity: 1; transform: translateY(0); }
+
+/* the fragment triggers are invisible; reveal just needs them to exist */
+.reveal .rings-trigger { display: inline-block; width: 0; height: 0; overflow: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .figure.walking * { animation: none !important; }
+}
+
+/* ---------- the rings as a reusable graphic ({{< rings >}} shortcode, _extensions/rings) ----------
+   <svg class="rings" data-lit="N"> holds one <use> per ring; colour = level, as everywhere in the deck.
+   Rings above the lit level go grey, so the lit state says which layer a slide is on. */
+.reveal .rings { display: block; flex: 0 0 auto; overflow: visible; }
+.reveal .rings .ring { transition: opacity 600ms ease, color 600ms ease; }
+.reveal .rings .ring-1 { color: var(--green); }
+.reveal .rings .ring-2 { color: var(--ochre); }
+.reveal .rings .ring-3 { color: var(--clay); }
+.reveal .slide-dark .rings .ring-1 { color: var(--green-soft); }
+/* unlit rings: neutral grey, not a faded tint. Lit = colour, unlit = grey: two cues rather than one */
+.reveal .rings[data-lit="0"] .ring-1,
+.reveal .rings[data-lit="0"] .ring-2, .reveal .rings[data-lit="1"] .ring-2,
+.reveal .rings[data-lit="0"] .ring-3, .reveal .rings[data-lit="1"] .ring-3, .reveal .rings[data-lit="2"] .ring-3 { color: var(--text-faint); opacity: 0.45; }
+.reveal .slide-dark .rings[data-lit="0"] .ring-1,
+.reveal .slide-dark .rings[data-lit="0"] .ring-2, .reveal .slide-dark .rings[data-lit="1"] .ring-2,
+.reveal .slide-dark .rings[data-lit="0"] .ring-3, .reveal .slide-dark .rings[data-lit="1"] .ring-3, .reveal .slide-dark .rings[data-lit="2"] .ring-3 { color: var(--text-on-dark-muted); }
+
+/* the breadcrumb: top-right of a layer slide, centred on the title line, flush with the content margin */
+.reveal .rings--crumb { position: absolute; top: calc(var(--pad-top) + 38px - 65px); right: var(--pad-x); width: 130px; height: 130px; }
