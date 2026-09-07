@@ -429,7 +429,7 @@ html.print-pdf #{$t3} .arc-svg .glows-all { opacity: 1; }
   border-collapse: separate; border-spacing: 0; width: 100%; font-size: 32px;
   th, td { padding: 28px 32px; text-align: left; border-bottom: 1px solid $border-light; vertical-align: top; }
   table-layout: fixed;
-  th:nth-child(1) { width: 15%; } th:nth-child(2) { width: 27%; } th:nth-child(3) { width: 31%; } th:nth-child(4) { width: 27%; }
+  th:nth-child(1) { width: 5%; } th:nth-child(2) { width: 35%; } th:nth-child(3) { width: 30%; } th:nth-child(4) { width: 30%; }
   td:nth-child(3), td:nth-child(4) { white-space: nowrap; }
   .who, td { vertical-align: middle; }
   th { font-size: var(--type-small); font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: $text-muted; border-bottom: 2px solid $text; }
