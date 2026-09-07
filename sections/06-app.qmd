@@ -104,28 +104,42 @@ The important thing isn't that this is a Shiny app. It's that the person using i
 {{< rings lit=3 class="rings--crumb" >}}
 
 ::: {.lede}
-The store shelf, in the field.
+Real users showed us what worked, and what didn't.
 :::
 
 ::: {.fill .fill--center}
 ```{=html}
-<div class="placeholder placeholder--wide">
-  <div class="placeholder__label">Placeholder · user quote / photo · ask Jadey</div>
-  <p>One real user quote, <em>or</em> a photo of an extension / technical-assistance user with the app, <em>or</em> a screenshot of a real session. One of the three, not all.</p>
+<div class="flow">
+  <div class="node card card--l3">
+    <p class="emphasis">&plus; Positive signal</p>
+    <p class="muted">People used the app for their own projects.</p>
+  </div>
+  <div class="arrow"> </div>
+  <div class="node card card--l3">
+    <p class="emphasis">&minus; Negative signal</p>
+    <p class="muted">Different projects surfaced new needs.</p>
+  </div>
 </div>
 ```
+:::
+
+::: {.notes}
+*⏱ 0:45 · Jadey*
+
+**Jadey:** We started getting some really useful signals from the people actually using the app. 
+
+**The positive signal** was pretty clear - organizations were adapting the app for their own projects. They were saving real time and effort by using our app to automate their reports.
+
+**But there was also a negative signal** - once people started using it for different projects, they started pushing beyond the assumptions we'd built around the original workflow. We needed more robust data validation and flexibility.
+:::
+
+. . .
 
 ::: {.body .bridge style="margin-top:72px;"}
 [The app worked.]{.emphasis} [It also showed us where the package was thin.]{.muted}
 :::
-:::
 
 ::: {.notes}
-*⏱ 1:00 · Jadey*
-
-`PLACEHOLDER · USER QUOTE / PHOTO`: one real user, one sentence, or a photo of an extension / technical-assistance user with the app.
-
-**Jadey:** Watching people use the app for the first time was the most useful hour of the project. Not because it went smoothly. Because of where it didn't. As the package maintainer, every place a user got stuck was a place `{soils}` had a gap I couldn't see from inside my own kitchen.
-
+*⏱ 0:15 · Jadey*
 **Jadey (land on the line):** The app worked. It also showed us exactly where the package was thin. **[→ Lessons Learned]**
 :::

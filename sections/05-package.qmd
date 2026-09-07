@@ -18,19 +18,19 @@
   <div class="node card card--l2">
     <code>roxygen2 & pkgdown</code>
     <p class="emphasis">Documentation</p>
-    <p class="muted">Learn how to use the functions and package</p>
-  </div>
-  <div class="arrow">&plus;</div>
-  <div class="node card card--l2">
-    <code>.R</code>
-    <p class="emphasis"><br>Functions & Scripts</p>
-    <p class="muted">Validate, process, and visualize data; render reports</p>
+    <p class="muted">Learn how to use the functions and package.</p>
   </div>
   <div class="arrow">&plus;</div>
   <div class="node card card--l2">
     <code>.qmd</code>
     <p class="emphasis"><br>Modular Quarto files</p>
-    <p class="muted">Customize report content</p>
+    <p class="muted">Customize report content.</p>
+  </div>
+  <div class="arrow">&plus;</div>
+  <div class="node card card--l2">
+    <code>.R</code>
+    <p class="emphasis"><br>Functions & Scripts</p>
+    <p class="muted">Validate, process, and visualize data; render reports.</p>
   </div>
 </div>
 ```
