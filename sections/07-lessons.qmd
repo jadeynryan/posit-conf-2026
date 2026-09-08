@@ -96,7 +96,7 @@ Expectation vs. reality, and the feedback loop between them.
   <div class="arc-captions">
     <p class="c0"><span class="emphasis">Three layers.</span> We assumed they'd line up.</p>
     <p class="c1"><span class="emphasis">Expectation.</span> A neat, linear build: template, then package, then app.</p>
-    <p class="c2"><span class="emphasis">Reality.</span> Shipping fast put workarounds in the app: loud signal about what the lower layers needed.</p>
+    <p class="c2"><span class="emphasis">Reality.</span> Real-world use exposed workarounds in the app, signaling what the lower layers needed.</p>
     <p class="c3"><span class="emphasis">Refactoring for independence.</span> The hacks move down into <code>{soils}</code>; every tier stands on its own.</p>
   </div>
 </div>
@@ -109,9 +109,9 @@ Expectation vs. reality, and the feedback loop between them.
 
 **Tanya, expectation (0:30). [click: the pipeline draws]** The expectation was a neat, linear build. Template, then package, then app. Each layer finished before the next one starts.
 
-We had a deadline. Field staff needed the app before the season. So we shipped fast, and shipping fast meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn't do yet. Formatting the template should have owned.
+But once people started using the app in their own projects, they surfaced gaps. When these needs came up, the app became the place where we worked around what the package couldn't do yet. This meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn't do yet. Formatting the template should have owned.
 
-**Tanya, reality (0:45). [click: the tangle]** This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of `{soils}`, and every time the package didn't have what I needed, I patched around it in the app, because the season wasn't going to wait.
+**Tanya, reality (0:45). [click: the tangle]** This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of `{soils}`, and every time the package didn't have what I needed, I patched around it in the app.
 
 Those workarounds weren't failures. They were loud signals about what the package was missing. And you can't see them from inside the package.
 

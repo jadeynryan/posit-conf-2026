@@ -768,19 +768,21 @@
 <div class="fill fill--center">
 <div class="flow">
   <div class="node card card--l3">
-    <p class="emphasis">+ Positive signals</p>
+    <p class="emphasis">+ Positive signal</p>
     <p class="muted">People used the app for their own projects.</p>
   </div>
   <div class="arrow"> </div>
   <div class="node card card--l3">
-    <p class="emphasis">− Negative signals</p>
+    <p class="emphasis">− Negative signal</p>
     <p class="muted">Different projects surfaced new needs.</p>
   </div>
 </div>
 </div>
 <aside class="notes">
 <p><em>⏱ 0:45 · Jadey</em></p>
-<p><strong>Jadey:</strong> Watching people use the app for the first time was the most useful hour of the project. Not because it went smoothly. Because of where it didn’t. As the package maintainer, every place a user got stuck was a place <code>{soils}</code> had a gap I couldn’t see from inside my own kitchen.</p>
+<p><strong>Jadey:</strong> We started getting some really useful signals from the people actually using the app.</p>
+<p><strong>The positive signal</strong> was pretty clear - organizations were adapting the app for their own projects. They were saving real time and effort by using our app to automate their reports.</p>
+<p><strong>But there was also a negative signal</strong> - once people started using it for different projects, they started pushing beyond the assumptions we’d built around the original workflow. We needed more robust data validation and flexibility.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -905,7 +907,7 @@
   <div class="arc-captions">
     <p class="c0"><span class="emphasis">Three layers.</span> We assumed they'd line up.</p>
     <p class="c1"><span class="emphasis">Expectation.</span> A neat, linear build: template, then package, then app.</p>
-    <p class="c2"><span class="emphasis">Reality.</span> Shipping fast put workarounds in the app: loud signal about what the lower layers needed.</p>
+    <p class="c2"><span class="emphasis">Reality.</span> Real-world use exposed workarounds in the app, signaling what the lower layers needed.</p>
     <p class="c3"><span class="emphasis">Refactoring for independence.</span> The hacks move down into <code>{soils}</code>; every tier stands on its own.</p>
   </div>
 </div>
@@ -914,7 +916,7 @@
 <p><strong>Tanya, three layers (0:20, on arrival: three dots).</strong> So here’s the part we didn’t plan. When you draw this on a whiteboard it’s three tidy boxes.</p>
 <p><strong>Tanya, expectation (0:30). [click: the pipeline draws]</strong> The expectation was a neat, linear build. Template, then package, then app. Each layer finished before the next one starts.</p>
 <p>We had a deadline. Field staff needed the app before the season. So we shipped fast, and shipping fast meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn’t do yet. Formatting the template should have owned.</p>
-<p><strong>Tanya, reality (0:45). [click: the tangle]</strong> This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of <code>{soils}</code>, and every time the package didn’t have what I needed, I patched around it in the app, because the season wasn’t going to wait.</p>
+<p><strong>Tanya, reality (0:45). [click: the tangle]</strong> This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of <code>{soils}</code>, and every time the package didn’t have what I needed, I patched around it in the app.</p>
 <p>Those workarounds weren’t failures. They were loud signals about what the package was missing. And you can’t see them from inside the package.</p>
 <p><strong>Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]</strong> That was the real lesson for me as the maintainer: you do not know what abstractions your package needs until someone tries to build a UI on top of it. Building layer three forced us to rethink layers one and two.</p>
 <p>So we went back to the workbench. We pulled the hacks out of Tanya’s app and engineered them into <code>{soils}</code> as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a field agent can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that’s fine. That’s the point.</p>
