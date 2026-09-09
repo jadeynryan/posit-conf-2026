@@ -70,14 +70,10 @@ Upload → pick parameters → render → download.
 <div class="browser browser--demo">
   <div class="chrome"><span></span><span></span><span></span><div class="url">dirt-data-reports · recorded demo</div></div>
   <div class="demo-frame">
-    <video class="demo-video" controls playsinline preload="metadata" poster="images/dirt-data-reports-01.png">
+    <video class="demo-video" controls playsinline preload="metadata">
       <source src="images/dirt-data-reports.mp4" type="video/mp4">
       <source src="images/dirt-data-reports.webm" type="video/webm">
     </video>
-    <div class="demo-placeholder placeholder">
-      <div class="placeholder__label">Placeholder · recorded demo</div>
-      <p>Drop the recording in as <code>images/dirt-data-reports.mp4</code> (or <code>.webm</code>) and this tag goes away. ≤ 2:00, cut to upload → parameters → render → download.</p>
-    </div>
   </div>
 </div>
 ```
