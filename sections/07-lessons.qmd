@@ -117,5 +117,5 @@ Those workarounds weren't failures. They were loud signals about what the packag
 
 **Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]** That was the real lesson for me as the maintainer: you do not know what abstractions your package needs until someone tries to build a UI on top of it. Building layer three forced us to rethink layers one and two.
 
-So we went back to the workbench. We pulled the hacks out of Tanya's app and engineered them into `{soils}` as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a field agent can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that's fine. That's the point.
+So we went back to the workbench. We pulled the hacks out of Tanya's app and engineered them into `{soils}` as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a farm advisor can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that's fine. That's the point.
 :::

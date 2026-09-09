@@ -88,7 +88,7 @@ Upload → pick parameters → render → download.
 
 **[press space or click the video to play; the deck's arrow keys still work while it plays. Cut: upload → parameters → render → download.]**
 
-**Tanya (over the video):** Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That's `{soils}` doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That's the whole workflow for a field agent.
+**Tanya (over the video):** Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That's `{soils}` doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That's the whole workflow for a the person supporting the farmers.
 
 The important thing isn't that this is a Shiny app. It's that the person using it never has to know there's a package, a template, or Quarto underneath. They open the bag and eat the cookie.
 
@@ -130,7 +130,7 @@ Real users showed us what worked, and what didn't.
 
 **The positive signal** was pretty clear - organizations were adapting the app for their own projects. They were saving real time and effort by using our app to automate their reports.
 
-**But there was also a negative signal** - once people started using it for different projects, they started pushing beyond the assumptions we'd built around the original workflow. We needed more robust data validation and flexibility.
+**But there was also a negative signal** - once people started using it for different projects, they started pushing beyond the assumptions we'd built around the original workflow. We needed more robust data validation and flexibility. Sometimes this meant sending them to the {soils} R package for more customization of the analyses.
 :::
 
 . . .

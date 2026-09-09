@@ -58,7 +58,7 @@ Meeting Users Where They’re At
 :::
 
 ```{=html}
-<p class="thesis">Impact stops where access stops.</p>
+<p class="thesis">The right tool is the one that gets the insight into the right hands.</p>
 
 <div class="footer-split">
   <div class="who who--rings">
@@ -77,9 +77,9 @@ Meeting Users Where They’re At
 ::: {.notes}
 *⏱ 0:45 · Jadey → Tanya*
 
-**Jadey:** For us, it was growers. They used to wait on me. Now they get their answers the week the samples come back, and I get to spend that time making the reports better instead of running them.
+**Jadey:** For us, it was the farmers. While cooperators have the expertise to help farmers interpret their soil data, they don't always have the time to manually turn lab results into clear, interpretive reports. These tools help automate that process and lower the barrier to getting farmers more actionable insights to understand and manage their soil.
 
-**Tanya:** Answer that question first. Then build for them. Thank you.
+**Tanya:** So answer that question first: who is this for? Then build the layer that makes it possible to get the right insight into their hands. Thank you.
 
 *Point to the QR - for repo with links to the slides and tools. Open Q&A.*
 :::
