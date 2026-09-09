@@ -40,11 +40,8 @@ Meeting users where they’re at.
 :::
 
 ::: {.notes}
-*⏱ 0:45 · Tanya*
 
-**Tanya:** There's no one layer to rule them all. Most of us start at the first: we build something to make our own lives easier. Some of us go to the second, because someone on the team asked for it. Some of us go all the way to the third, because the person who needs the answer is never going to open an IDE.
-
-Each of those is the right layer for someone. What decides which one you need isn't the tool, or the team, or how far you can take the code. It's one question, asked before you build: who is this for?
+**Jadey:** For us, it was the farmers. While cooperators have the expertise to help farmers interpret their soil data, they don't always have the time to manually turn lab results into clear, interpretive reports. These tools help automate that process and lower the barrier to getting farmers more actionable insights to understand and manage their soil.
 :::
 
 <!-- SLIDE 16 · Close. Answers the hook: the talk opens on Nestlé putting cookies on a shelf; this
@@ -75,11 +72,11 @@ Meeting Users Where They’re At
 ```
 
 ::: {.notes}
-*⏱ 0:45 · Jadey → Tanya*
+**Tanya:** There's no one layer to rule them all. Most of us start at the first: we build something to make our own lives easier. Some of us go to the second, because someone on the team asked for it. Some of us go all the way to the third, because the person who needs the answer is never going to open an IDE.
 
-**Jadey:** For us, it was the farmers. While cooperators have the expertise to help farmers interpret their soil data, they don't always have the time to manually turn lab results into clear, interpretive reports. These tools help automate that process and lower the barrier to getting farmers more actionable insights to understand and manage their soil.
+Each of those is the right layer for someone. What decides which one you need isn't the tool, or the team, or how far you can take the code. It's one question, asked before you build: who is this for?
 
-**Tanya:** So answer that question first: who is this for? Then build the layer that makes it possible to get the right insight into their hands. Thank you.
+Then build the layer that makes it possible to get the right insight into their hands. Thank you.
 
 *Point to the QR - for repo with links to the slides and tools. Open Q&A.*
 :::

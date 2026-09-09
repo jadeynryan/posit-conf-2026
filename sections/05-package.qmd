@@ -46,10 +46,12 @@
 ::: {.notes}
 *⏱ 1:00 · Jadey*
 
-**Jadey:** We pulled everything that wasn't Washington-specific out of the template and into an R package: `{soils}`. The validation, the calculations, the styling, the Quarto pieces every report shares. Then we took our data out, put placeholder examples and guidance in, and published it, with WSU, for anyone running a soil survey.
+**Jadey:** 
+So the cookbook wasn't for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers. 
 
-So the cookbook wasn't for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers. Anyone comfortable in R could create a `{soils}` project, drop in their data, edit the content, and generate reports for every participant in their survey.
+We pulled everything that wasn't Washington-specific out of the template and into an R package: `{soils}`. The validation, the calculations, the styling, the Quarto pieces every report shares. Then we took our data out, put placeholder examples and guidance in, and published it, with WSU, for anyone running a soil survey.
 
+Let's get a little into how it works.
 :::
 
 <!-- SLIDE 9 · Layer 2: what a developer actually runs (Jadey to build; see the note below).
@@ -110,12 +112,14 @@ report_df |>
 ::: {.notes}
 *⏱ 1:00 · Jadey*
 
-**Jadey:** This is what a user actually types. One call, a data frame, an output path. They don't write a helper function. They don't copy a script from my repo and change the file paths. They install the cookbook and follow the recipe.
+**Jadey:** 
+
+This is what a user actually types. One call, a data frame, an output path. They don't write a helper function. They don't copy a script from my repo and change the file paths. They install the cookbook and follow the recipe.
 
 **[click]**
 Now we're reaching anyone comfortable in R. But not everyone who would like to run these reports is.
 
-For anyone with R, this was the unlock. For the technical assistance providers and extension staff who don't code, the people who are actually in the field with farmers, nothing had changed. They still had to find someone like me.
+Anyone comfortable in R could create a `{soils}` project, drop in their data, edit the content, and generate reports for every participant in their survey.
 
 **[hand-off: "they still had to find someone like me" → Tanya, "this is where I come in"]**
 :::

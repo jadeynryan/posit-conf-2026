@@ -240,7 +240,7 @@
 <p><em>⏱ 0:30 · Tanya → Jadey → Tanya</em></p>
 <p><strong>Tanya:</strong> I’m Tanya.</p>
 <p><strong>Jadey:</strong> and I’m Jadey, and this is a talk about a Quarto pipeline that worked perfectly for generating hundreds of soil health reports… but only I could use it.</p>
-<p><strong>Tanya:</strong> We’re going to show you how it went from one person’s laptop to a web app that field staff run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.</p>
+<p><strong>Tanya:</strong> We’re going to show you how it went from one person’s laptop to a web app that anyone can run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -411,7 +411,7 @@
 <section id="three-levels" class="slide level2 slide-dark" data-background-color="#1A1D20" data-transition="fade" data-transition-speed="fast" data-background-transition="fade">
 <h2>Layering Access: From Recipe to Shelf</h2>
 <div class="lede">
-<p>Each layer trades flexibility for expanded access.</p>
+<p>Expanding access by matching the tool to the user.</p>
 </div>
 <div class="rings-layout">
   <div class="rings-diagram">
@@ -506,9 +506,9 @@
 <aside class="notes">
 <p><em>⏱ 2:00 · Jadey</em></p>
 <p><strong>Jadey:</strong> Some of you might remember me from the very last session of posit::conf 2023. Quick version: I went from scooping water samples out of streams to building 86 custom farmer reports in one week, and that skills test got me a data science job at WSDA.</p>
-<p>By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every one of the farmers in it, more than 300 since 2020, got their own report. Interactive HTML with maps and plots. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.</p>
+<p>By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every participating farmer, more than 350 since 2020, got their own report to help them understand their soil. Interactive HTML to click around their data. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.</p>
 <p>One farmer said, <em>“I was able to see a direct connection between my soil management decisions and the health of the soil I manage.”</em></p>
-<p>The mechanism was parameterized Quarto: treat the report as a function, shape your data so it’s subsettable, make it interpretable, make it accessible. The 2023 slides are still up if you want the code.</p>
+<p>The mechanism was a parameterized Quarto template. The 2023 slides with a technical tutorial are still up if you want the code.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -537,8 +537,8 @@
 </div>
 <aside class="notes">
 <p><em>⏱ 0:30 · Jadey</em></p>
-<p><strong>Jadey:</strong> That was the recipe. And like Ruth’s cookie, it lived in exactly one kitchen. One Quarto project, one laptop, my head. Every new year of data, every new partner, every colleague who wanted a report meant <em>me</em> running the pipeline.</p>
-<p>The template solved the reports problem. It did not solve the people problem. So the next step was getting the recipe out of my kitchen.</p>
+<p><strong>Jadey:</strong> That was the recipe that lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, it wasn’t easily reusable or adaptable to other people and projects.</p>
+<p>So how do we take a template that works for us and make it reusable by other people?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -741,7 +741,7 @@
 <aside class="notes">
 <p><em>⏱ 1:30–2:00 · Tanya, narrating over the recording</em></p>
 <p><strong>[press space or click the video to play; the deck’s arrow keys still work while it plays. Cut: upload → parameters → render → download.]</strong></p>
-<p><strong>Tanya (over the video):</strong> Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That’s <code>{soils}</code> doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That’s the whole workflow for a field agent.</p>
+<p><strong>Tanya (over the video):</strong> Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That’s <code>{soils}</code> doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That’s the whole workflow for a the person supporting the farmers.</p>
 <p>The important thing isn’t that this is a Shiny app. It’s that the person using it never has to know there’s a package, a template, or Quarto underneath. They open the bag and eat the cookie.</p>
 <p><strong>[hand-off to Jadey on the next slide]</strong></p>
 <style type="text/css">
@@ -782,7 +782,7 @@
 <p><em>⏱ 0:45 · Jadey</em></p>
 <p><strong>Jadey:</strong> We started getting some really useful signals from the people actually using the app.</p>
 <p><strong>The positive signal</strong> was pretty clear - organizations were adapting the app for their own projects. They were saving real time and effort by using our app to automate their reports.</p>
-<p><strong>But there was also a negative signal</strong> - once people started using it for different projects, they started pushing beyond the assumptions we’d built around the original workflow. We needed more robust data validation and flexibility.</p>
+<p><strong>But there was also a negative signal</strong> - once people started using it for different projects, they started pushing beyond the assumptions we’d built around the original workflow. We needed more robust data validation and flexibility. Sometimes this meant sending them to the {soils} R package for more customization of the analyses.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -908,7 +908,7 @@
     <p class="c0"><span class="emphasis">Three layers.</span> We assumed they'd line up.</p>
     <p class="c1"><span class="emphasis">Expectation.</span> A neat, linear build: template, then package, then app.</p>
     <p class="c2"><span class="emphasis">Reality.</span> Real-world use exposed workarounds in the app, signaling what the lower layers needed.</p>
-    <p class="c3"><span class="emphasis">Refactoring for independence.</span> The hacks move down into <code>{soils}</code>; every tier stands on its own.</p>
+    <p class="c3"><span class="emphasis">Refactoring for independence.</span> The workarounds move down into <code>{soils}</code>; every tier stands on its own.</p>
   </div>
 </div>
 <aside class="notes">
@@ -919,7 +919,7 @@
 <p><strong>Tanya, reality (0:45). [click: the tangle]</strong> This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of <code>{soils}</code>, and every time the package didn’t have what I needed, I patched around it in the app.</p>
 <p>Those workarounds weren’t failures. They were loud signals about what the package was missing. And you can’t see them from inside the package.</p>
 <p><strong>Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]</strong> That was the real lesson for me as the maintainer: you do not know what abstractions your package needs until someone tries to build a UI on top of it. Building layer three forced us to rethink layers one and two.</p>
-<p>So we went back to the workbench. We pulled the hacks out of Tanya’s app and engineered them into <code>{soils}</code> as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a farm advisor can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that’s fine. That’s the point.</p>
+<p>So we went back to the workbench. We pulled the workarounds out of Tanya’s app and engineered them into <code>{soils}</code> as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a farm advisor can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that’s fine. That’s the point.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

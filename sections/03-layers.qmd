@@ -6,7 +6,7 @@
 ## Layering Access: From Recipe to Shelf {#three-levels .slide-dark background-color="#1A1D20" transition="fade" transition-speed="fast" background-transition="fade"}
 
 ::: {.lede}
-Each layer trades flexibility for expanded access.
+Expanding access by matching the tool to the user.
 :::
 
 ```{=html}
@@ -62,11 +62,11 @@ Each layer trades flexibility for expanded access.
 ::: {.notes}
 *⏱ 1:15 · Jadey, one Tanya interjection*
 
-**Jadey:** Well, we have a similar evolution story around expanding access. But instead of cookies, we made it easier for cooperators to generate soil health reports for farmers to better understand their data.  
+**Jadey:** Well, we have a similar evolution story around expanding access to soil health reports to help farmers better understand their data. But instead of cookies, we made it easier for farm advisors to generate soil health reports for farmers to better understand their data.  
 
-**[click: Layer 1, the center figure]** At the center is the recipe that lives in on a notepad in your kitchen. Only you have access to it. That's the template. **[click: Layer 2, ring 2]** But if you want other bakers to use it, you need to publish the recipe in a cookbook. In our case, we created an R package to allow experienced coders to reuse and adapt the recipe. **[click: Layer 3, ring 3]** The shelf is different. You don't need to know the recipe or even how to bake. With our Shiny app, you can make soil health reports without the template or knowing R.
+**[click: Layer 1, the center figure]** It started off as a recipe that lives in a notepad in your kitchen, only you have access to it. In my case, it was a laptop with a Quarto template. **[click: Layer 2, ring 2]** To get this recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template. **[click: Layer 3, ring 3]** And lastly, we needed to figure out how to get it on the store shelf for broader distribution. That was the impetus behind our shiny app, a no code solution that allows farm advisers without technical expertise to make soil health reports.
 
-In our story, I'm Ruth. I made the recipe and published it in a cookbook.
+In our story, I'm kinda like Ruth. I made the recipe and published it in a cookbook.
 
 **Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together, we brought Jadey's reports to the shelf with a Shiny app.
 
