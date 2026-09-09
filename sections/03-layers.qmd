@@ -3,10 +3,10 @@
      Logic: assets/rings.js · styles: assets/rings.css
      Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
 
-## The Report Generation Playbook {#three-levels .slide-dark background-color="#1A1D20" transition="fade" transition-speed="fast" background-transition="fade"}
+## Layering Access: From Recipe to Shelf {#three-levels .slide-dark background-color="#1A1D20" transition="fade" transition-speed="fast" background-transition="fade"}
 
 ::: {.lede}
-Expanding access by matching the tool to the user.
+Each layer trades flexibility for expanded access.
 :::
 
 ```{=html}
@@ -34,7 +34,7 @@ Expanding access by matching the tool to the user.
     <!-- the takeaway sits under the three layers, so the diagram keeps the full height -->
     <div class="quote rings-quote">
       <span class="mark">&ldquo;</span>
-      <p>Impact stops where access stops.</p>
+      <p>Build the right layer for the right user.</p>
     </div>
   </div>
 </div>
@@ -62,13 +62,13 @@ Expanding access by matching the tool to the user.
 ::: {.notes}
 *⏱ 1:15 · Jadey, one Tanya interjection*
 
-**Jadey:** It turns out that's exactly the shape of our project.
+**Jadey:** Well, we have a similar evolution story around expanding access. But instead of cookies, we made it easier for cooperators to generate soil health reports for farmers to better understand their data.  
 
-**[click: Layer 1, the center figure]** Every piece of analysis starts in one kitchen. One person, one laptop, total control. That's the template. **[click: Layer 2, ring 2]** If you're diligent, it becomes a cookbook, a package, and other people who know how to bake can use it. **[click: Layer 3, ring 3]** And if you actually want it to reach the people who make decisions, it has to end up on a shelf. That's the app.
+**[click: Layer 1, the center figure]** At the center is the recipe that lives in on a notepad in your kitchen. Only you have access to it. That's the template. **[click: Layer 2, ring 2]** But if you want other bakers to use it, you need to publish the recipe in a cookbook. In our case, we created an R package to allow experienced coders to reuse and adapt the recipe. **[click: Layer 3, ring 3]** The shelf is different. You don't need to know the recipe or even how to bake. With our Shiny app, you can make soil health reports without the template or knowing R.
 
-In our story, I'm Ruth. I made the recipe, I wrote the cookbook.
+In our story, I'm Ruth. I made the recipe and published it in a cookbook.
 
-**Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together we brought Jadey's reports to the shelf with a Shiny app.
+**Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together, we brought Jadey's reports to the shelf with a Shiny app.
 
-**Jadey:** Here's the line we keep coming back to: impact stops where access stops. Every layer removes friction for a specific person who couldn't get to the insight before. That's the whole talk. So let's start in the kitchen.
+**Jadey:** Our main takeaway is that there's no single tool for everyone. Build the layer that meets the user where they are. So let's start at the beginning.
 :::

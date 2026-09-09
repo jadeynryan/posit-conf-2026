@@ -10,7 +10,7 @@ format: revealjs
 
 {{< include sections/02-hook.qmd >}}
 
-{{< include sections/03-playbook.qmd >}}
+{{< include sections/03-layers.qmd >}}
 
 {{< include sections/04-template.qmd >}}
 

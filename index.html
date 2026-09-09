@@ -409,9 +409,9 @@
      Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
 </section>
 <section id="three-levels" class="slide level2 slide-dark" data-background-color="#1A1D20" data-transition="fade" data-transition-speed="fast" data-background-transition="fade">
-<h2>The Report Generation Playbook</h2>
+<h2>Layering Access: From Recipe to Shelf</h2>
 <div class="lede">
-<p>Expanding access by matching the tool to the user.</p>
+<p>Each layer trades flexibility for expanded access.</p>
 </div>
 <div class="rings-layout">
   <div class="rings-diagram">
@@ -437,7 +437,7 @@
     <!-- the takeaway sits under the three layers, so the diagram keeps the full height -->
     <div class="quote rings-quote">
       <span class="mark">“</span>
-      <p>Impact stops where access stops.</p>
+      <p>Build the right layer for the right user.</p>
     </div>
   </div>
 </div>
@@ -462,11 +462,11 @@
 </template>
 <aside class="notes">
 <p><em>⏱ 1:15 · Jadey, one Tanya interjection</em></p>
-<p><strong>Jadey:</strong> It turns out that’s exactly the shape of our project.</p>
-<p><strong>[click: Layer 1, the center figure]</strong> Every piece of analysis starts in one kitchen. One person, one laptop, total control. That’s the template. <strong>[click: Layer 2, ring 2]</strong> If you’re diligent, it becomes a cookbook, a package, and other people who know how to bake can use it. <strong>[click: Layer 3, ring 3]</strong> And if you actually want it to reach the people who make decisions, it has to end up on a shelf. That’s the app.</p>
-<p>In our story, I’m Ruth. I made the recipe, I wrote the cookbook.</p>
-<p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together we brought Jadey’s reports to the shelf with a Shiny app.</p>
-<p><strong>Jadey:</strong> Here’s the line we keep coming back to: impact stops where access stops. Every layer removes friction for a specific person who couldn’t get to the insight before. That’s the whole talk. So let’s start in the kitchen.</p>
+<p><strong>Jadey:</strong> Well, we have a similar evolution story around expanding access. But instead of cookies, we made it easier for cooperators to generate soil health reports for farmers to better understand their data.</p>
+<p><strong>[click: Layer 1, the center figure]</strong> At the center is the recipe that lives in on a notepad in your kitchen. Only you have access to it. That’s the template. <strong>[click: Layer 2, ring 2]</strong> But if you want other bakers to use it, you need to publish the recipe in a cookbook. In our case, we created an R package to allow experienced coders to reuse and adapt the recipe. <strong>[click: Layer 3, ring 3]</strong> The shelf is different. You don’t need to know the recipe or even how to bake. With our Shiny app, you can make soil health reports without the template or knowing R.</p>
+<p>In our story, I’m Ruth. I made the recipe and published it in a cookbook.</p>
+<p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together, we brought Jadey’s reports to the shelf with a Shiny app.</p>
+<p><strong>Jadey:</strong> Our main takeaway is that there’s no single tool for everyone. Build the layer that meets the user where they are. So let’s start at the beginning.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -915,11 +915,11 @@
 <p><em>⏱ 2:20 · Tanya 1:35 (11–13) / Jadey 0:45 (14)</em></p>
 <p><strong>Tanya, three layers (0:20, on arrival: three dots).</strong> So here’s the part we didn’t plan. When you draw this on a whiteboard it’s three tidy boxes.</p>
 <p><strong>Tanya, expectation (0:30). [click: the pipeline draws]</strong> The expectation was a neat, linear build. Template, then package, then app. Each layer finished before the next one starts.</p>
-<p>We had a deadline. Field staff needed the app before the season. So we shipped fast, and shipping fast meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn’t do yet. Formatting the template should have owned.</p>
+<p>But once people started using the app in their own projects, they surfaced gaps. When these needs came up, the app became the place where we worked around what the package couldn’t do yet. This meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn’t do yet. Formatting the template should have owned.</p>
 <p><strong>Tanya, reality (0:45). [click: the tangle]</strong> This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of <code>{soils}</code>, and every time the package didn’t have what I needed, I patched around it in the app.</p>
 <p>Those workarounds weren’t failures. They were loud signals about what the package was missing. And you can’t see them from inside the package.</p>
 <p><strong>Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]</strong> That was the real lesson for me as the maintainer: you do not know what abstractions your package needs until someone tries to build a UI on top of it. Building layer three forced us to rethink layers one and two.</p>
-<p>So we went back to the workbench. We pulled the hacks out of Tanya’s app and engineered them into <code>{soils}</code> as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a field agent can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that’s fine. That’s the point.</p>
+<p>So we went back to the workbench. We pulled the hacks out of Tanya’s app and engineered them into <code>{soils}</code> as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a farm advisor can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that’s fine. That’s the point.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1015,7 +1015,7 @@ no code at all</td>
 <div class="lede">
 <p>Meeting Users Where They’re At</p>
 </div>
-<p class="thesis">Impact stops where access stops.</p>
+<p class="thesis">The right tool is the one that gets the insight into the right hands.</p>
 
 <div class="footer-split">
   <div class="who who--rings">
@@ -1031,8 +1031,8 @@ no code at all</td>
 <p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi
 </p><aside class="notes">
 <p><em>⏱ 0:45 · Jadey → Tanya</em></p>
-<p><strong>Jadey:</strong> For us, it was growers. They used to wait on me. Now they get their answers the week the samples come back, and I get to spend that time making the reports better instead of running them.</p>
-<p><strong>Tanya:</strong> Answer that question first. Then build for them. Thank you.</p>
+<p><strong>Jadey:</strong> For us, it was the farmers. While cooperators have the expertise to help farmers interpret their soil data, they don’t always have the time to manually turn lab results into clear, interpretive reports. These tools help automate that process and lower the barrier to getting farmers more actionable insights to understand and manage their soil.</p>
+<p><strong>Tanya:</strong> So answer that question first: who is this for? Then build the layer that makes it possible to get the right insight into their hands. Thank you.</p>
 <p><em>Point to the QR - for repo with links to the slides and tools. Open Q&amp;A.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
