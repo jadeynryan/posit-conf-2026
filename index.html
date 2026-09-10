@@ -6,16 +6,19 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-0626ff4d7a71b55c8707dcae1d04a9b6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.39">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
-  <title>Template › Package › App</title>
+  <title>Template → Package → App</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -28,8 +31,9 @@
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -40,7 +44,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -93,7 +97,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-54e272ff0df207b3698a2480cf5ee2ac.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-ecaa6c6e46dfb42209123e57393393b1.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -186,11 +190,17 @@
     }
   </style>
   <!-- Inter from Google Fonts. To self-host instead, put woff2 files in fonts/ and replace this with @font-face rules in theme/brand.scss. -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/rings.css">
+
   <link rel="stylesheet" href="assets/timeline.css">
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -205,7 +215,7 @@
      The heading text names the slide in navigators; it is visually hidden (.cover > h2 in brand.scss). -->
 <div class="title-block">
   <div class="event">posit::conf(2026)</div>
-  <h1 class="hero"><span class="l1">Template</span><span class="chev chev--12">›</span><span class="l2">Package</span><span class="chev chev--23">›</span><span class="l3">App</span></h1>
+  <h1 class="hero"><span class="l1">Template</span><span class="chev chev--12">→</span><span class="l2">Package</span><span class="chev chev--23">→</span><span class="l3">App</span></h1>
   <p class="subtitle">Meeting Users Where They’re At</p>
   <div class="speakers">
     <!-- ring colours tease ownership: Jadey = template + package, Tanya = app -->
@@ -230,7 +240,7 @@
 <p><em>⏱ 0:30 · Tanya → Jadey → Tanya</em></p>
 <p><strong>Tanya:</strong> I’m Tanya.</p>
 <p><strong>Jadey:</strong> and I’m Jadey, and this is a talk about a Quarto pipeline that worked perfectly for generating hundreds of soil health reports… but only I could use it.</p>
-<p><strong>Tanya:</strong> We’re going to show you how it went from one person’s laptop to a web app that field staff run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.</p>
+<p><strong>Tanya:</strong> We’re going to show you how it went from one person’s laptop to a web app that anyone can run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -399,7 +409,7 @@
      Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
 </section>
 <section id="three-levels" class="slide level2 slide-dark" data-background-color="#1A1D20" data-transition="fade" data-transition-speed="fast" data-background-transition="fade">
-<h2>The Report Generation Playbook</h2>
+<h2>Layering Access: From Recipe to Shelf</h2>
 <div class="lede">
 <p>Expanding access by matching the tool to the user.</p>
 </div>
@@ -425,9 +435,9 @@
     </div>
 
     <!-- the takeaway sits under the three layers, so the diagram keeps the full height -->
-    <div class="quote rings-quote fragment" data-fragment-index="3">
+    <div class="quote rings-quote">
       <span class="mark">“</span>
-      <p>Impact stops where access stops.</p>
+      <p>Build the right layer for the right user.</p>
     </div>
   </div>
 </div>
@@ -452,11 +462,11 @@
 </template>
 <aside class="notes">
 <p><em>⏱ 1:15 · Jadey, one Tanya interjection</em></p>
-<p><strong>Jadey:</strong> It turns out that’s exactly the shape of our project.</p>
-<p><strong>[click: Layer 1, the center figure]</strong> Every piece of analysis starts in one kitchen. One person, one laptop, total control. That’s the template. <strong>[click: Layer 2, ring 2]</strong> If you’re diligent, it becomes a cookbook, a package, and other people who know how to bake can use it. <strong>[click: Layer 3, ring 3]</strong> And if you actually want it to reach the people who make decisions, it has to end up on a shelf. That’s the app.</p>
-<p>In our story, I’m Ruth. I made the recipe, I wrote the cookbook.</p>
-<p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together we brought Jadey’s reports to the shelf with a Shiny app.</p>
-<p><strong>Jadey:</strong> Here’s the line we keep coming back to: impact stops where access stops. Every layer removes friction for a specific person who couldn’t get to the insight before. That’s the whole talk. So let’s start in the kitchen.</p>
+<p><strong>Jadey:</strong> Well, we have a similar evolution story around expanding access. But instead of cookies, we made it easier for cooperators to generate soil health reports for farmers to better understand their data.</p>
+<p><strong>[click: Layer 1, the center figure]</strong> At the center is the recipe that lives in on a notepad in your kitchen. Only you have access to it. That’s the template. <strong>[click: Layer 2, ring 2]</strong> But if you want other bakers to use it, you need to publish the recipe in a cookbook. In our case, we created an R package to allow experienced coders to reuse and adapt the recipe. <strong>[click: Layer 3, ring 3]</strong> The shelf is different. You don’t need to know the recipe or even how to bake. With our Shiny app, you can make soil health reports without the template or knowing R.</p>
+<p>In our story, I’m Ruth. I made the recipe and published it in a cookbook.</p>
+<p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together, we brought Jadey’s reports to the shelf with a Shiny app.</p>
+<p><strong>Jadey:</strong> Our main takeaway is that there’s no single tool for everyone. Build the layer that meets the user where they are. So let’s start at the beginning.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -496,9 +506,9 @@
 <aside class="notes">
 <p><em>⏱ 2:00 · Jadey</em></p>
 <p><strong>Jadey:</strong> Some of you might remember me from the very last session of posit::conf 2023. Quick version: I went from scooping water samples out of streams to building 86 custom farmer reports in one week, and that skills test got me a data science job at WSDA.</p>
-<p>By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every one of the farmers in it, more than 300 since 2020, got their own report. Interactive HTML with maps and plots. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.</p>
+<p>By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every participating farmer, more than 350 since 2020, got their own report to help them understand their soil. Interactive HTML to click around their data. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.</p>
 <p>One farmer said, <em>“I was able to see a direct connection between my soil management decisions and the health of the soil I manage.”</em></p>
-<p>The mechanism was parameterized Quarto: treat the report as a function, shape your data so it’s subsettable, make it interpretable, make it accessible. The 2023 slides are still up if you want the code.</p>
+<p>The mechanism was a parameterized Quarto template. The 2023 slides with a technical tutorial are still up if you want the code.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -527,8 +537,8 @@
 </div>
 <aside class="notes">
 <p><em>⏱ 0:30 · Jadey</em></p>
-<p><strong>Jadey:</strong> That was the recipe. And like Ruth’s cookie, it lived in exactly one kitchen. One Quarto project, one laptop, my head. Every new year of data, every new partner, every colleague who wanted a report meant <em>me</em> running the pipeline.</p>
-<p>The template solved the reports problem. It did not solve the people problem. So the next step was getting the recipe out of my kitchen.</p>
+<p><strong>Jadey:</strong> That was the recipe that lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, it wasn’t easily reusable or adaptable to other people and projects.</p>
+<p>So how do we take a template that works for us and make it reusable by other people?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -556,19 +566,19 @@
   <div class="node card card--l2">
     <code>roxygen2 &amp; pkgdown</code>
     <p class="emphasis">Documentation</p>
-    <p class="muted">Learn how to use the functions and package</p>
-  </div>
-  <div class="arrow">+</div>
-  <div class="node card card--l2">
-    <code>.R</code>
-    <p class="emphasis"><br>Functions &amp; Scripts</p>
-    <p class="muted">Validate, process, and visualize data; render reports</p>
+    <p class="muted">Learn how to use the functions and package.</p>
   </div>
   <div class="arrow">+</div>
   <div class="node card card--l2">
     <code>.qmd</code>
     <p class="emphasis"><br>Modular Quarto files</p>
-    <p class="muted">Customize report content</p>
+    <p class="muted">Customize report content.</p>
+  </div>
+  <div class="arrow">+</div>
+  <div class="node card card--l2">
+    <code>.R</code>
+    <p class="emphasis"><br>Functions &amp; Scripts</p>
+    <p class="muted">Validate, process, and visualize data; render reports.</p>
   </div>
 </div>
 </div>
@@ -613,12 +623,12 @@
 <p class="body" style="margin-top:20px;"><span class="emphasis">After importing their data and customizing report content...</span></p>
 <div class="code-window">
 <div class="chrome"><span class="r"></span><span class="y"></span><span class="g"></span><span class="filename">render-reports.R</span></div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Render the reports</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Render the reports</span></span>
 <span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a>report_df <span class="sc">|&gt;</span> </span>
 <span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">pwalk</span>(</span>
 <span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a>    quarto<span class="sc">::</span>quarto_render,</span>
 <span id="cb1-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">input =</span> <span class="st">"farmer-report.qmd"</span></span>
-<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 <div class="fragment">
@@ -717,17 +727,21 @@
 <div class="browser browser--demo">
   <div class="chrome"><span></span><span></span><span></span><div class="url">dirt-data-reports · recorded demo</div></div>
   <div class="demo-frame">
-    <video class="demo-video" controls="" playsinline="" preload="metadata">
+    <video class="demo-video" controls="" playsinline="" preload="metadata" poster="images/dirt-data-reports-01.png">
       <source src="images/dirt-data-reports.mp4" type="video/mp4">
       <source src="images/dirt-data-reports.webm" type="video/webm">
     </video>
+    <div class="demo-placeholder placeholder">
+      <div class="placeholder__label">Placeholder · recorded demo</div>
+      <p>Drop the recording in as <code>images/dirt-data-reports.mp4</code> (or <code>.webm</code>) and this tag goes away. ≤ 2:00, cut to upload → parameters → render → download.</p>
+    </div>
   </div>
 </div>
 </div>
 <aside class="notes">
 <p><em>⏱ 1:30–2:00 · Tanya, narrating over the recording</em></p>
 <p><strong>[press space or click the video to play; the deck’s arrow keys still work while it plays. Cut: upload → parameters → render → download.]</strong></p>
-<p><strong>Tanya (over the video):</strong> Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That’s <code>{soils}</code> doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That’s the whole workflow for a field agent.</p>
+<p><strong>Tanya (over the video):</strong> Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That’s <code>{soils}</code> doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That’s the whole workflow for a the person supporting the farmers.</p>
 <p>The important thing isn’t that this is a Shiny app. It’s that the person using it never has to know there’s a package, a template, or Quarto underneath. They open the bag and eat the cookie.</p>
 <p><strong>[hand-off to Jadey on the next slide]</strong></p>
 <style type="text/css">
@@ -749,22 +763,43 @@
 <h2>What We Saw</h2>
 <svg class="rings rings--crumb" data-lit="3" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 3 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
 <div class="lede">
-<p>The store shelf, in the field.</p>
+<p>Real users showed us what worked, and what didn’t.</p>
 </div>
 <div class="fill fill--center">
-<div class="placeholder placeholder--wide">
-  <div class="placeholder__label">Placeholder · user quote / photo · ask Jadey</div>
-  <p>One real user quote, <em>or</em> a photo of an extension / technical-assistance user with the app, <em>or</em> a screenshot of a real session. One of the three, not all.</p>
-</div>
-<div class="body bridge" style="margin-top:72px;">
-<p><span class="emphasis">The app worked.</span> <span class="muted">It also showed us where the package was thin.</span></p>
+<div class="flow">
+  <div class="node card card--l3">
+    <p class="emphasis">+ Positive signal</p>
+    <p class="muted">People used the app for their own projects.</p>
+  </div>
+  <div class="arrow"> </div>
+  <div class="node card card--l3">
+    <p class="emphasis">− Negative signal</p>
+    <p class="muted">Different projects surfaced new needs.</p>
+  </div>
 </div>
 </div>
 <aside class="notes">
-<p><em>⏱ 1:00 · Jadey</em></p>
-<p><code>PLACEHOLDER · USER QUOTE / PHOTO</code>: one real user, one sentence, or a photo of an extension / technical-assistance user with the app.</p>
-<p><strong>Jadey:</strong> Watching people use the app for the first time was the most useful hour of the project. Not because it went smoothly. Because of where it didn’t. As the package maintainer, every place a user got stuck was a place <code>{soils}</code> had a gap I couldn’t see from inside my own kitchen.</p>
-<p><strong>Jadey (land on the line):</strong> The app worked. It also showed us exactly where the package was thin. <strong>[→ Lessons Learned]</strong></p>
+<p><em>⏱ 0:45 · Jadey</em></p>
+<p><strong>Jadey:</strong> We started getting some really useful signals from the people actually using the app.</p>
+<p><strong>The positive signal</strong> was pretty clear - organizations were adapting the app for their own projects. They were saving real time and effort by using our app to automate their reports.</p>
+<p><strong>But there was also a negative signal</strong> - once people started using it for different projects, they started pushing beyond the assumptions we’d built around the original workflow. We needed more robust data validation and flexibility. Sometimes this meant sending them to the {soils} R package for more customization of the analyses.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="fragment">
+<div class="body bridge" style="margin-top:72px;">
+<p><span class="emphasis">The app worked.</span> <span class="muted">It also showed us where the package was thin.</span></p>
+</div>
+<aside class="notes">
+<p><em>⏱ 0:15 · Jadey</em> <strong>Jadey (land on the line):</strong> The app worked. It also showed us exactly where the package was thin. <strong>[→ Lessons Learned]</strong></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -794,6 +829,7 @@
      Dots keep their level colours throughout (colour = level, everywhere in the deck).
      The rings crumb (top right) starts with only App lit and lights Template and Package on the
      refactor click (brand.scss, keyed to the third fragment with :has()). -->
+</div>
 </section>
 <section id="arc" class="slide level2 slide-dark" data-background-color="#1A1D20">
 <h2>Lessons Learned</h2>
@@ -871,19 +907,19 @@
   <div class="arc-captions">
     <p class="c0"><span class="emphasis">Three layers.</span> We assumed they'd line up.</p>
     <p class="c1"><span class="emphasis">Expectation.</span> A neat, linear build: template, then package, then app.</p>
-    <p class="c2"><span class="emphasis">Reality.</span> Shipping fast put workarounds in the app: loud signal about what the lower layers needed.</p>
-    <p class="c3"><span class="emphasis">Refactoring for independence.</span> The hacks move down into <code>{soils}</code>; every tier stands on its own.</p>
+    <p class="c2"><span class="emphasis">Reality.</span> Real-world use exposed workarounds in the app, signaling what the lower layers needed.</p>
+    <p class="c3"><span class="emphasis">Refactoring for independence.</span> The workarounds move down into <code>{soils}</code>; every tier stands on its own.</p>
   </div>
 </div>
 <aside class="notes">
 <p><em>⏱ 2:20 · Tanya 1:35 (11–13) / Jadey 0:45 (14)</em></p>
 <p><strong>Tanya, three layers (0:20, on arrival: three dots).</strong> So here’s the part we didn’t plan. When you draw this on a whiteboard it’s three tidy boxes.</p>
 <p><strong>Tanya, expectation (0:30). [click: the pipeline draws]</strong> The expectation was a neat, linear build. Template, then package, then app. Each layer finished before the next one starts.</p>
-<p>We had a deadline. Field staff needed the app before the season. So we shipped fast, and shipping fast meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn’t do yet. Formatting the template should have owned.</p>
-<p><strong>Tanya, reality (0:45). [click: the tangle]</strong> This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of <code>{soils}</code>, and every time the package didn’t have what I needed, I patched around it in the app, because the season wasn’t going to wait.</p>
+<p>But once people started using the app in their own projects, they surfaced gaps. When these needs came up, the app became the place where we worked around what the package couldn’t do yet. This meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn’t do yet. Formatting the template should have owned.</p>
+<p><strong>Tanya, reality (0:45). [click: the tangle]</strong> This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of <code>{soils}</code>, and every time the package didn’t have what I needed, I patched around it in the app.</p>
 <p>Those workarounds weren’t failures. They were loud signals about what the package was missing. And you can’t see them from inside the package.</p>
 <p><strong>Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]</strong> That was the real lesson for me as the maintainer: you do not know what abstractions your package needs until someone tries to build a UI on top of it. Building layer three forced us to rethink layers one and two.</p>
-<p>So we went back to the workbench. We pulled the hacks out of Tanya’s app and engineered them into <code>{soils}</code> as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a field agent can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that’s fine. That’s the point.</p>
+<p>So we went back to the workbench. We pulled the workarounds out of Tanya’s app and engineered them into <code>{soils}</code> as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a farm advisor can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that’s fine. That’s the point.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -906,7 +942,7 @@
 <p>Meeting users where they’re at.</p>
 </div>
 <div class="fill fill--center">
-<table class="matrix caption-top" data-quarto-postprocess="true">
+<table class="matrix caption-top">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -979,50 +1015,24 @@ no code at all</td>
 <div class="lede">
 <p>Meeting Users Where They’re At</p>
 </div>
-<!-- Top Right Model Rings -->
-<div class="closing-rings-header">
-  <svg class="rings" data-lit="3" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Three-layer model diagram">
-    <use href="#rings-l3" class="ring ring-3"></use>
-    <use href="#rings-l2" class="ring ring-2"></use>
-    <use href="#rings-l1" class="ring ring-1"></use>
-  </svg>
-</div>
-
-<p class="thesis">Impact stops where access stops.</p>
+<p class="thesis">The right tool is the one that gets the insight into the right hands.</p>
 
 <div class="footer-split">
-  <div class="who">
-    <b>Jadey Ryan</b>
-    <span>WA Dept of Agriculture</span>
+  <div class="who who--rings">
+    <svg class="rings" data-lit="3" viewbox="0 0 600 600" width="120" height="120" role="img" aria-label="All three layers, lit"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
+    <div><b>Jadey Ryan</b><span>WA Dept of Agriculture</span></div>
   </div>
-  
   <div class="qr">
     <img src="images/qr.png" alt="QR code">
     <div class="caption">Scan for the slides and tools</div>
   </div>
-  
-  <div class="who who--r">
-    <b>Tanya Shapiro</b>
-    <span>IndieVisual</span>
-  </div>
+  <div class="who who--r"><b>Tanya Shapiro</b><span>IndieVisual</span></div>
 </div>
-
-<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi</p>
-
-<!-- Partner Logos Lockup -->
-<div class="partner-logos">
-  <img src="images/logo-wsda.png" alt="Washington State Dept of Agriculture">
-  <span class="logos__sep"></span>
-  <img src="images/logo-wsu.png" alt="Washington State University">
-  <span class="logos__sep"></span>
-  <img src="images/logo-washi.png" alt="Washington Soil Health Initiative">
-  <span class="logos__sep"></span>
-  <img src="images/logo-indievisual.png" alt="IndieVisual">
-</div>
-<aside class="notes">
+<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi
+</p><aside class="notes">
 <p><em>⏱ 0:45 · Jadey → Tanya</em></p>
-<p><strong>Jadey:</strong> For us, it was growers. They used to wait on me. Now they get their answers the week the samples come back, and I get to spend that time making the reports better instead of running them.</p>
-<p><strong>Tanya:</strong> Answer that question first. Then build for them. Thank you.</p>
+<p><strong>Jadey:</strong> For us, it was the farmers. While cooperators have the expertise to help farmers interpret their soil data, they don’t always have the time to manually turn lab results into clear, interpretive reports. These tools help automate that process and lower the barrier to getting farmers more actionable insights to understand and manage their soil.</p>
+<p><strong>Tanya:</strong> So answer that question first: who is this for? Then build the layer that makes it possible to get the right insight into their hands. Thank you.</p>
 <p><em>Point to the QR - for repo with links to the slides and tools. Open Q&amp;A.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1231,7 +1241,7 @@ no code at all</td>
         maxScale: 2,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1258,252 +1268,297 @@ no code at all</td>
       });
     </script>
     <!-- The rings graphic, as reusable SVG symbols, one per layer, for the  shortcode
+
          (_extensions/rings/rings.lua). Generated. Three evenly spaced rings echoing the animated playbook diagram
+
          (assets/rings.js; r=80, 180, 280 in a 600 box); each person is a dot so it
+
          stays crisp at any size: centre 1, ring 2 12, ring 3 24. Colours come from the CSS `color` on
+
          each <use class="ring-N"> in assets/rings.css, via currentColor; unlit rings are grey there.
+
          Loaded once via include-after-body (_quarto.yml); <use href="#rings-lN"> works anywhere in the document. -->
+
     <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+
       <symbol id="rings-l1" viewbox="0 0 600 600">
+
         <circle cx="300" cy="300" r="80" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-opacity="0.8" stroke-width="10"></circle>
+
         <g fill="currentColor"><circle cx="300.0" cy="300.0" r="24"></circle></g>
+
       </symbol>
+
       <symbol id="rings-l2" viewbox="0 0 600 600">
+
         <circle cx="300" cy="300" r="180" fill="none" stroke="currentColor" stroke-opacity="0.8" stroke-width="10"></circle>
+
         <g fill="currentColor">
+
           <circle cx="300.0" cy="120.0" r="18"></circle>
+
           <circle cx="390.0" cy="144.1" r="18"></circle>
+
           <circle cx="455.9" cy="210.0" r="18"></circle>
+
           <circle cx="480.0" cy="300.0" r="18"></circle>
+
           <circle cx="455.9" cy="390.0" r="18"></circle>
+
           <circle cx="390.0" cy="455.9" r="18"></circle>
+
           <circle cx="300.0" cy="480.0" r="18"></circle>
+
           <circle cx="210.0" cy="455.9" r="18"></circle>
+
           <circle cx="144.1" cy="390.0" r="18"></circle>
+
           <circle cx="120.0" cy="300.0" r="18"></circle>
+
           <circle cx="144.1" cy="210.0" r="18"></circle>
+
           <circle cx="210.0" cy="144.1" r="18"></circle>
+
         </g>
+
       </symbol>
+
       <symbol id="rings-l3" viewbox="0 0 600 600">
+
         <circle cx="300" cy="300" r="280" fill="none" stroke="currentColor" stroke-opacity="0.8" stroke-width="10"></circle>
+
         <g fill="currentColor">
+
           <circle cx="336.5" cy="22.4" r="18"></circle>
+
           <circle cx="407.2" cy="41.3" r="18"></circle>
+
           <circle cx="470.5" cy="77.9" r="18"></circle>
+
           <circle cx="522.1" cy="129.5" r="18"></circle>
+
           <circle cx="558.7" cy="192.8" r="18"></circle>
+
           <circle cx="577.6" cy="263.5" r="18"></circle>
+
           <circle cx="577.6" cy="336.5" r="18"></circle>
+
           <circle cx="558.7" cy="407.2" r="18"></circle>
+
           <circle cx="522.1" cy="470.5" r="18"></circle>
+
           <circle cx="470.5" cy="522.1" r="18"></circle>
+
           <circle cx="407.2" cy="558.7" r="18"></circle>
+
           <circle cx="336.5" cy="577.6" r="18"></circle>
+
           <circle cx="263.5" cy="577.6" r="18"></circle>
+
           <circle cx="192.8" cy="558.7" r="18"></circle>
+
           <circle cx="129.5" cy="522.1" r="18"></circle>
+
           <circle cx="77.9" cy="470.5" r="18"></circle>
+
           <circle cx="41.3" cy="407.2" r="18"></circle>
+
           <circle cx="22.4" cy="336.5" r="18"></circle>
+
           <circle cx="22.4" cy="263.5" r="18"></circle>
+
           <circle cx="41.3" cy="192.8" r="18"></circle>
+
           <circle cx="77.9" cy="129.5" r="18"></circle>
+
           <circle cx="129.5" cy="77.9" r="18"></circle>
+
           <circle cx="192.8" cy="41.3" r="18"></circle>
+
           <circle cx="263.5" cy="22.4" r="18"></circle>
+
         </g>
+
       </symbol>
+
     </svg>
+
     <script src="assets/rings.js"></script>
+
     <script src="assets/timeline.js"></script>
+
     <script src="assets/deck-footer.js"></script>
+
     <script src="assets/demo-video.js"></script>
+
     <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
           }
+          return false;
         }
-        return false;
-      }
-      const onCopySuccess = function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
           }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
           for (const childEl of codeEl.children) {
             if (isCodeAnnotation(childEl)) {
               childEl.remove();
             }
           }
           return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
-      });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
             }
           }
-        }
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-        const config = {
-          allowHTML: true,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start',
-        };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
           }
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
           }
-        } else {
-          return undefined;
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
         }
-      };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
           });
         }
-      }
-    });
-    </script>
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
     
 
 </body></html>

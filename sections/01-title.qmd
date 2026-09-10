@@ -9,7 +9,7 @@
 ```{=html}
 <div class="title-block">
   <div class="event">posit::conf(2026)</div>
-  <h1 class="hero"><span class="l1">Template</span><span class="chev chev--12">›</span><span class="l2">Package</span><span class="chev chev--23">›</span><span class="l3">App</span></h1>
+  <h1 class="hero"><span class="l1">Template</span><span class="chev chev--12">→</span><span class="l2">Package</span><span class="chev chev--23">→</span><span class="l3">App</span></h1>
   <p class="subtitle">Meeting Users Where They’re At</p>
   <div class="speakers">
     <!-- ring colours tease ownership: Jadey = template + package, Tanya = app -->
@@ -39,5 +39,5 @@
 
 **Jadey:** and I’m Jadey, and this is a talk about a Quarto pipeline that worked perfectly for generating hundreds of soil health reports... but only I could use it.
 
-**Tanya:** We're going to show you how it went from one person's laptop to a web app that field staff run without ever opening R. But before we get to soil, we have to talk about cookies. Specifically, 1930.
+**Tanya:** We're going to show you how it went from one person's laptop to a web app that anyone can run without ever opening R. But before we get into the weeds, we have to talk about cookies. Specifically, specifically chocolate chip cookies.
 :::
