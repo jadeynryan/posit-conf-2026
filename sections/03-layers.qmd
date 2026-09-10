@@ -32,7 +32,7 @@ Expanding access by matching the tool to the user.
     </div>
 
     <!-- the takeaway sits under the three layers, so the diagram keeps the full height -->
-    <div class="quote rings-quote">
+    <div class="quote rings-quote fragment" data-fragment-index="3">
       <span class="mark">&ldquo;</span>
       <p>Build the right layer for the right user.</p>
     </div>

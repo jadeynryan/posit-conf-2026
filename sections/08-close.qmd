@@ -47,6 +47,7 @@ Meeting users where they’re at.
 <!-- SLIDE 16 · Close. Answers the hook: the talk opens on Nestlé putting cookies on a shelf; this
      slide says who took one off. Thesis line (same as slide 5) → result stat (optional; delete the
      .result block if there is no number) → names, rings, QR. The Q&A cue lives in the note. -->
+     
 
 ## Building the Bridge {#closing .slide-dark .closing background-color="#1A1D20"}
 
@@ -55,22 +56,47 @@ Meeting Users Where They’re At
 :::
 
 ```{=html}
+<!-- Top Right Model Rings -->
+<div class="closing-rings-header">
+  <svg class="rings" data-lit="3" viewBox="0 0 600 600" width="130" height="130" role="img" aria-label="Three-layer model diagram">
+    <use href="#rings-l3" class="ring ring-3"/>
+    <use href="#rings-l2" class="ring ring-2"/>
+    <use href="#rings-l1" class="ring ring-1"/>
+  </svg>
+</div>
+
 <p class="thesis">The right tool is the one that gets the insight into the right hands.</p>
 
 <div class="footer-split">
-  <div class="who who--rings">
-    <svg class="rings" data-lit="3" viewBox="0 0 600 600" width="120" height="120" role="img" aria-label="All three layers, lit"><use href="#rings-l3" class="ring ring-3"/><use href="#rings-l2" class="ring ring-2"/><use href="#rings-l1" class="ring ring-1"/></svg>
-    <div><b>Jadey Ryan</b><span>WA Dept of Agriculture</span></div>
+  <div class="who">
+    <b>Jadey Ryan</b>
+    <span>WA Dept of Agriculture</span>
   </div>
+  
   <div class="qr">
     <img src="images/qr.png" alt="QR code">
     <div class="caption">Scan for the slides and tools</div>
   </div>
-  <div class="who who--r"><b>Tanya Shapiro</b><span>IndieVisual</span></div>
+  
+  <div class="who who--r">
+    <b>Tanya Shapiro</b>
+    <span>IndieVisual</span>
+  </div>
 </div>
-<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi
-```
 
+<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi</p>
+
+<!-- Partner Logos Lockup -->
+<div class="partner-logos">
+  <img src="images/logo-wsda.png" alt="Washington State Dept of Agriculture">
+  <span class="logos__sep"></span>
+  <img src="images/logo-wsu.png" alt="Washington State University">
+  <span class="logos__sep"></span>
+  <img src="images/logo-washi.png" alt="Washington Soil Health Initiative">
+  <span class="logos__sep"></span>
+  <img src="images/logo-indievisual.png" alt="IndieVisual">
+</div>
+```
 ::: {.notes}
 **Tanya:** There's no one layer to rule them all. Most of us start at the first: we build something to make our own lives easier. Some of us go to the second, because someone on the team asked for it. Some of us go all the way to the third, because the person who needs the answer is never going to open an IDE.
 
