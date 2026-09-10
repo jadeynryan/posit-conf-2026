@@ -84,7 +84,7 @@ Upload → pick parameters → render → download.
 
 **[press space or click the video to play; the deck's arrow keys still work while it plays. Cut: upload → parameters → render → download.]**
 
-**Tanya (over the video):** Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That's `{soils}` doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That's the whole workflow for a the person supporting the farmers.
+**Tanya (over the video):** Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That's `{soils}` doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That's the whole workflow for a field agent.
 
 The important thing isn't that this is a Shiny app. It's that the person using it never has to know there's a package, a template, or Quarto underneath. They open the bag and eat the cookie.
 
@@ -100,42 +100,28 @@ The important thing isn't that this is a Shiny app. It's that the person using i
 {{< rings lit=3 class="rings--crumb" >}}
 
 ::: {.lede}
-Real users showed us what worked, and what didn't.
+The store shelf, in the field.
 :::
 
 ::: {.fill .fill--center}
 ```{=html}
-<div class="flow">
-  <div class="node card card--l3">
-    <p class="emphasis">&plus; Positive signal</p>
-    <p class="muted">People used the app for their own projects.</p>
-  </div>
-  <div class="arrow"> </div>
-  <div class="node card card--l3">
-    <p class="emphasis">&minus; Negative signal</p>
-    <p class="muted">Different projects surfaced new needs.</p>
-  </div>
+<div class="placeholder placeholder--wide">
+  <div class="placeholder__label">Placeholder · user quote / photo · ask Jadey</div>
+  <p>One real user quote, <em>or</em> a photo of an extension / technical-assistance user with the app, <em>or</em> a screenshot of a real session. One of the three, not all.</p>
 </div>
 ```
-:::
-
-::: {.notes}
-*⏱ 0:45 · Jadey*
-
-**Jadey:** We started getting some really useful signals from the people actually using the app. 
-
-**The positive signal** was pretty clear - organizations were adapting the app for their own projects. They were saving real time and effort by using our app to automate their reports.
-
-**But there was also a negative signal** - once people started using it for different projects, they started pushing beyond the assumptions we'd built around the original workflow. We needed more robust data validation and flexibility. Sometimes this meant sending them to the {soils} R package for more customization of the analyses.
-:::
-
-. . .
 
 ::: {.body .bridge style="margin-top:72px;"}
 [The app worked.]{.emphasis} [It also showed us where the package was thin.]{.muted}
 :::
+:::
 
 ::: {.notes}
-*⏱ 0:15 · Jadey*
+*⏱ 1:00 · Jadey*
+
+`PLACEHOLDER · USER QUOTE / PHOTO`: one real user, one sentence, or a photo of an extension / technical-assistance user with the app.
+
+**Jadey:** Watching people use the app for the first time was the most useful hour of the project. Not because it went smoothly. Because of where it didn't. As the package maintainer, every place a user got stuck was a place `{soils}` had a gap I couldn't see from inside my own kitchen.
+
 **Jadey (land on the line):** The app worked. It also showed us exactly where the package was thin. **[→ Lessons Learned]**
 :::
