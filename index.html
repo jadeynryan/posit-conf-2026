@@ -236,8 +236,8 @@
 <aside class="notes">
 <p><em>⏱ 0:30 · Tanya → Jadey → Tanya</em></p>
 <p><strong>Tanya:</strong> I’m Tanya.</p>
-<p><strong>Jadey:</strong> and I’m Jadey, and this is a talk about a Quarto pipeline that worked perfectly for generating hundreds of soil health reports… but only I could use it.</p>
-<p><strong>Tanya:</strong> We’re going to show you how it went from one person’s laptop to a web app that anyone can run without ever opening R. But before we get into the weeds, we have to talk about cookies. Specifically, specifically chocolate chip cookies.</p>
+<p><strong>Jadey:</strong> and I’m Jadey. Our talk today is about how we took a parameterized Quarto template for soil health reports and built layers on top of it to deliver insights to more people.</p>
+<p><strong>Tanya:</strong> We’ll walk you through our journey on how we took this template from one person’s laptop to a fully “baked” web app, but before we get into the weeds, we have to talk about cookies. Specifically, the origin story of the chocolate chip cookie.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -406,7 +406,7 @@
      Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
 </section>
 <section id="three-levels" class="slide level2 slide-dark" data-background-color="#1A1D20" data-transition="fade" data-transition-speed="fast" data-background-transition="fade">
-<h2>Layering Access: From Recipe to Shelf</h2>
+<h2>Layering Access: From Recipe to Store Shelf</h2>
 <div class="lede">
 <p>Expanding access by matching the tool to the user.</p>
 </div>
@@ -419,15 +419,15 @@
 
   <div class="levels">
     <div class="level" id="level-1">
-      <div class="eyebrow eyebrow--l1">Layer 1 <span class="sub">Template · the recipe</span></div>
+      <div class="eyebrow eyebrow--l1">Layer 1 <span class="sub">Template · The Recipe</span></div>
       <div class="heading">You <span class="detail">parameterized Quarto template</span></div>
     </div>
     <div class="level" id="level-2">
-      <div class="eyebrow eyebrow--l2">Layer 2 <span class="sub">Package · the cookbook</span></div>
+      <div class="eyebrow eyebrow--l2">Layer 2 <span class="sub">Package · The Cookbook</span></div>
       <div class="heading">Anyone who codes <span class="detail">{soils} R package</span></div>
     </div>
     <div class="level" id="level-3">
-      <div class="eyebrow eyebrow--l3">Layer 3 <span class="sub">App · the store shelf</span></div>
+      <div class="eyebrow eyebrow--l3">Layer 3 <span class="sub">App · The Store Shelf</span></div>
       <div class="heading">Everyone <span class="detail">Shiny web app</span></div>
     </div>
 
@@ -459,11 +459,12 @@
 </template>
 <aside class="notes">
 <p><em>⏱ 1:15 · Jadey, one Tanya interjection</em></p>
-<p><strong>Jadey:</strong> Well, we have a similar evolution story around expanding access to soil health reports to help farmers better understand their data. But instead of cookies, we made it easier for farm advisors to generate soil health reports for farmers to better understand their data.</p>
-<p><strong>[click: Layer 1, the center figure]</strong> It started off as a recipe that lives in a notepad in your kitchen, only you have access to it. In my case, it was a laptop with a Quarto template. <strong>[click: Layer 2, ring 2]</strong> To get this recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template. <strong>[click: Layer 3, ring 3]</strong> And lastly, we needed to figure out how to get it on the store shelf for broader distribution. That was the impetus behind our shiny app, a no code solution that allows farm advisers without technical expertise to make soil health reports.</p>
-<p>In our story, I’m kinda like Ruth. I made the recipe and published it in a cookbook.</p>
-<p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together, we brought Jadey’s reports to the shelf with a Shiny app.</p>
-<p><strong>Jadey:</strong> Our main takeaway is that there’s no single tool for everyone. Build the layer that meets the user where they are. So let’s start at the beginning.</p>
+<p><strong>Jadey:</strong> Well, we have a similar evolution story around expanding access. But instead of cookies, we made it easier for farm advisers to generate soil health reports for farmers to better understand their data and make informed management decisions.</p>
+<p><strong>[click: Layer 1, the center figure]</strong> Imagine you’re starting off with a recipe that lives on a notepad in your kitchen: only you have access to it. In my case, it was a laptop with a Quarto template. <strong>[click: Layer 2, ring 2]</strong> To get this recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template. <strong>[click: Layer 3, ring 3]</strong> And lastly, if you want broader distribution of cookies, you need get them on the store shelf. That was the why we built our shiny app, a no code solution that allows farm advisers without technical expertise to make soil health reports.</p>
+<p>In our story, I’m kinda like Ruth. I helped make the original recipe and published it in a cookbook.</p>
+<p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together, we brought Jadey’s reports to the shelf and into the hands of farmers with a Shiny app.</p>
+<p><strong>[click: takeaway quote]</strong></p>
+<p><strong>Jadey:</strong> Our main takeaway is that there’s no single tool for everyone. Build the layer that meets the user where they are. So let’s start at the beginning with the template.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -502,10 +503,11 @@
 </div>
 <aside class="notes">
 <p><em>⏱ 2:00 · Jadey</em></p>
-<p><strong>Jadey:</strong> Some of you might remember me from the very last session of posit::conf 2023. Quick version: I went from scooping water samples out of streams to building 86 custom farmer reports in one week, and that skills test got me a data science job at WSDA.</p>
-<p>By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every participating farmer, more than 350 since 2020, got their own report to help them understand their soil. Interactive HTML to click around their data. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.</p>
+<p><strong>Jadey:</strong> This story began about 3 years ago when I gave my very first presentation at posit::conf in 2023.</p>
+<p>During that talk, I showed the audience how we used a parameterized Quarto template to magically render hundreds of soil health reports for each farmer who participated in our project.</p>
+<p>Each of the 350+ farmers got 2 versions of the report: one interactive HTML file that lets them click around their plots and one printable PDF for those who wanted paper. They provided background information on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared against similar crops and regions. The reports were a decision-support tool, not a data dump.</p>
 <p>One farmer said, <em>“I was able to see a direct connection between my soil management decisions and the health of the soil I manage.”</em></p>
-<p>The mechanism was a parameterized Quarto template. The 2023 slides with a technical tutorial are still up if you want the code.</p>
+<p>So what was the problem?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -534,7 +536,7 @@
 </div>
 <aside class="notes">
 <p><em>⏱ 0:30 · Jadey</em></p>
-<p><strong>Jadey:</strong> That was the recipe that lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, it wasn’t easily reusable or adaptable to other people and projects.</p>
+<p><strong>Jadey:</strong> Well, that was the recipe that lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, it wasn’t easily adaptable to other people and projects.</p>
 <p>So how do we take a template that works for us and make it reusable by other people?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -556,7 +558,7 @@
 <h2>Layer 2: Package <span class="h2-sub">· The Cookbook</span></h2>
 <svg class="rings rings--crumb" data-lit="2" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 2 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
 <div class="lede">
-<p><code>{soils}</code>: An R package for anyone running a soil sampling project.</p>
+<p><code>{soils}</code>: An R package for coders to adapt the template and generate reports.</p>
 </div>
 <div class="fill fill--center">
 <div class="flow">
@@ -579,14 +581,28 @@
   </div>
 </div>
 </div>
+<aside class="notes">
+<p><em>⏱ 1:00 · Jadey</em></p>
+<p><strong>Jadey:</strong> So the cookbook wasn’t for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers.</p>
+<p>We pulled everything that wasn’t Washington-specific out of the template and into an R package: <code>{soils}</code>. The validation, the calculations, the styling, the Quarto pieces every report shares.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div class="fragment">
 <div class="body bridge">
 <p><span class="emphasis">Everything you need to adapt the workflow to your own data.</span></p>
 </div>
 <aside class="notes">
 <p><em>⏱ 1:00 · Jadey</em></p>
-<p><strong>Jadey:</strong> So the cookbook wasn’t for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers.</p>
-<p>We pulled everything that wasn’t Washington-specific out of the template and into an R package: <code>{soils}</code>. The validation, the calculations, the styling, the Quarto pieces every report shares. Then we took our data out, put placeholder examples and guidance in, and published it, with WSU, for anyone running a soil survey.</p>
+<p><strong>Jadey:</strong> Now any farm advisor who is comfortable with R can adapt the template for their own project.</p>
 <p>Let’s get a little into how it works.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -932,7 +948,7 @@
      Friction is the hue-free meter so the two never argue. -->
 </section>
 <section id="matrix" class="slide level2" data-background-color="#FFFFFF">
-<h2>Three Layers, Three Audiences</h2>
+<h2>Building the Bridge</h2>
 <div class="lede">
 <p>Meeting users where they’re at.</p>
 </div>
