@@ -37,7 +37,7 @@
 
 **Tanya:** I'm Tanya.
 
-**Jadey:** and I’m Jadey, and this is a talk about a Quarto pipeline that worked perfectly for generating hundreds of soil health reports... but only I could use it.
+**Jadey:** and I’m Jadey. Our talk today is about how we took a parameterized Quarto template for soil health reports and built layers on top of it to deliver insights to more people.
 
-**Tanya:** We're going to show you how it went from one person's laptop to a web app that anyone can run without ever opening R. But before we get into the weeds, we have to talk about cookies. Specifically, specifically chocolate chip cookies.
+**Tanya:** We’ll walk you through our journey on how we took this template from one person’s laptop to a fully “baked” web app, but before we get into the weeds, we have to talk about cookies. Specifically, the origin story of the chocolate chip cookie.
 :::
