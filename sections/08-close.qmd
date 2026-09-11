@@ -3,7 +3,7 @@
      layer's lit state (same markup the {{< rings >}} shortcode emits; inline here because the table is raw HTML).
      Friction is the hue-free meter so the two never argue. -->
 
-## Three Layers, Three Audiences {#matrix background-color="#FFFFFF"}
+## Building the Bridge {#matrix background-color="#FFFFFF"}
 
 ::: {.lede}
 Meeting users where they’re at.

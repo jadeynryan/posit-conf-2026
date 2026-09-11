@@ -8,7 +8,7 @@
 {{< rings lit=2 class="rings--crumb" >}}
 
 ::: {.lede}
-`{soils}`: An R package for anyone running a soil sampling project.
+`{soils}`: An R package for coders to adapt the template and generate reports.
 :::
 
 ::: {.fill .fill--center}
@@ -37,6 +37,15 @@
 
 :::
 
+::: {.notes}
+*⏱ 1:00 · Jadey*
+
+**Jadey:** 
+So the cookbook wasn't for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers. 
+
+We pulled everything that wasn't Washington-specific out of the template and into an R package: `{soils}`. The validation, the calculations, the styling, the Quarto pieces every report shares. 
+:::
+
 . . .
 
 ::: {.body .bridge}
@@ -47,9 +56,7 @@
 *⏱ 1:00 · Jadey*
 
 **Jadey:** 
-So the cookbook wasn't for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers. 
-
-We pulled everything that wasn't Washington-specific out of the template and into an R package: `{soils}`. The validation, the calculations, the styling, the Quarto pieces every report shares. Then we took our data out, put placeholder examples and guidance in, and published it, with WSU, for anyone running a soil survey.
+Now any farm advisor who is comfortable with R can adapt the template for their own project.
 
 Let's get a little into how it works.
 :::

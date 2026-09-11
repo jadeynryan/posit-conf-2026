@@ -34,13 +34,16 @@ One report for every farmer in the survey.
 ::: {.notes}
 *⏱ 2:00 · Jadey*
 
-**Jadey:** Some of you might remember me from the very last session of posit::conf 2023. Quick version: I went from scooping water samples out of streams to building 86 custom farmer reports in one week, and that skills test got me a data science job at WSDA.
+**Jadey:** 
+This story began about 3 years ago when I gave my very first presentation at posit::conf in 2023. 
 
-By the time I gave that talk, our soil health program had sampled hundreds of fields across Washington, and every participating farmer, more than 350 since 2020, got their own report to help them understand their soil. Interactive HTML to click around their data. A printable PDF for the folks who wanted paper. And plots designed so a farmer could see their fields against similar crops and the rest of the state. Not a data dump, a decision support tool.
+During that talk, I showed the audience how we used a parameterized Quarto template to magically render hundreds of soil health reports for each farmer who participated in our project. 
+
+Each of the 350+ farmers got 2 versions of the report: one interactive HTML file that lets them click around their plots and one printable PDF for those who wanted paper. They provided background information on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared against similar crops and regions. The reports were a decision-support tool, not a data dump. 
 
 One farmer said, *"I was able to see a direct connection between my soil management decisions and the health of the soil I manage."*
 
-The mechanism was a parameterized Quarto template. The 2023 slides with a technical tutorial are still up if you want the code.
+So what was the problem?
 :::
 
 <!-- SLIDE 7 · Layer 1: the BOUNDARY beat (Jadey). The rings, large, with only the centre lit,
@@ -65,7 +68,7 @@ One Quarto project. One laptop. One person.
 ::: {.notes}
 *⏱ 0:30 · Jadey*
 
-**Jadey:** That was the recipe that lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, it wasn't easily reusable or adaptable to other people and projects.
+**Jadey:** Well, that was the recipe that lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, it wasn't easily adaptable to other people and projects.
 
 So how do we take a template that works for us and make it reusable by other people?
 :::

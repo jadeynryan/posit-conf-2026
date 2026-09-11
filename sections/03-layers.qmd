@@ -3,7 +3,7 @@
      Logic: assets/rings.js · styles: assets/rings.css
      Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
 
-## Layering Access: From Recipe to Shelf {#three-levels .slide-dark background-color="#1A1D20" transition="fade" transition-speed="fast" background-transition="fade"}
+## Layering Access: From Recipe to Store Shelf {#three-levels .slide-dark background-color="#1A1D20" transition="fade" transition-speed="fast" background-transition="fade"}
 
 ::: {.lede}
 Expanding access by matching the tool to the user.
@@ -19,15 +19,15 @@ Expanding access by matching the tool to the user.
 
   <div class="levels">
     <div class="level" id="level-1">
-      <div class="eyebrow eyebrow--l1">Layer 1 <span class="sub">Template · the recipe</span></div>
+      <div class="eyebrow eyebrow--l1">Layer 1 <span class="sub">Template · The Recipe</span></div>
       <div class="heading">You <span class="detail">parameterized Quarto template</span></div>
     </div>
     <div class="level" id="level-2">
-      <div class="eyebrow eyebrow--l2">Layer 2 <span class="sub">Package · the cookbook</span></div>
+      <div class="eyebrow eyebrow--l2">Layer 2 <span class="sub">Package · The Cookbook</span></div>
       <div class="heading">Anyone who codes <span class="detail">{soils} R package</span></div>
     </div>
     <div class="level" id="level-3">
-      <div class="eyebrow eyebrow--l3">Layer 3 <span class="sub">App · the store shelf</span></div>
+      <div class="eyebrow eyebrow--l3">Layer 3 <span class="sub">App · The Store Shelf</span></div>
       <div class="heading">Everyone <span class="detail">Shiny web app</span></div>
     </div>
 
@@ -62,13 +62,15 @@ Expanding access by matching the tool to the user.
 ::: {.notes}
 *⏱ 1:15 · Jadey, one Tanya interjection*
 
-**Jadey:** Well, we have a similar evolution story around expanding access to soil health reports to help farmers better understand their data. But instead of cookies, we made it easier for farm advisors to generate soil health reports for farmers to better understand their data.  
+**Jadey:** Well, we have a similar evolution story around expanding access. But instead of cookies, we made it easier for farm advisers to generate soil health reports for farmers to better understand their data and make informed management decisions.  
 
-**[click: Layer 1, the center figure]** It started off as a recipe that lives in a notepad in your kitchen, only you have access to it. In my case, it was a laptop with a Quarto template. **[click: Layer 2, ring 2]** To get this recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template. **[click: Layer 3, ring 3]** And lastly, we needed to figure out how to get it on the store shelf for broader distribution. That was the impetus behind our shiny app, a no code solution that allows farm advisers without technical expertise to make soil health reports.
+**[click: Layer 1, the center figure]** Imagine you're starting off with a recipe that lives on a notepad in your kitchen: only you have access to it. In my case, it was a laptop with a Quarto template. **[click: Layer 2, ring 2]** To get this recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template. **[click: Layer 3, ring 3]** And lastly, if you want broader distribution of cookies, you need get them on the store shelf. That was the why we built our shiny app, a no code solution that allows farm advisers without technical expertise to make soil health reports.
 
-In our story, I'm kinda like Ruth. I made the recipe and published it in a cookbook.
+In our story, I'm kinda like Ruth. I helped make the original recipe and published it in a cookbook.
 
-**Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together, we brought Jadey's reports to the shelf with a Shiny app.
+**Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together, we brought Jadey's reports to the shelf and into the hands of farmers with a Shiny app.
 
-**Jadey:** Our main takeaway is that there's no single tool for everyone. Build the layer that meets the user where they are. So let's start at the beginning.
+**[click: takeaway quote]**
+
+**Jadey:** Our main takeaway is that there's no single tool for everyone. Build the layer that meets the user where they are. So let's start at the beginning with the template.
 :::
