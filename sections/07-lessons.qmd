@@ -97,25 +97,30 @@ Expectation vs. reality, and the feedback loop between them.
     <p class="c0"><span class="emphasis">Three layers.</span> We assumed they'd line up.</p>
     <p class="c1"><span class="emphasis">Expectation.</span> A neat, linear build: template, then package, then app.</p>
     <p class="c2"><span class="emphasis">Reality.</span> Real-world use exposed workarounds in the app, signaling what the lower layers needed.</p>
-    <p class="c3"><span class="emphasis">Refactoring for independence.</span> The workarounds move down into <code>{soils}</code>; every tier stands on its own.</p>
+    <p class="c3"><span class="emphasis">Refactoring for independence.</span> Moving the workarounds into <code>{soils}</code> and the Quarto template.</p>
   </div>
 </div>
 ```
 
 ::: {.notes}
-*⏱ 2:20 · Tanya 1:35 (11–13) / Jadey 0:45 (14)*
+*⏱ 2:20 · Tanya 1:35 (11–13) / Jadey 0:45 (14)* 
 
-**Tanya, three layers (0:20, on arrival: three dots).** So here's the part we didn't plan. When you draw this on a whiteboard it's three tidy boxes.
+ADD PUMPKIN SPICE COOKIE VARIATION AS EXAMPLE
 
-**Tanya, expectation (0:30). [click: the pipeline draws]** The expectation was a neat, linear build. Template, then package, then app. Each layer finished before the next one starts.
+**Tanya, three layers (0:20, on arrival: three dots).** Now, for a quick lesson in expectation vs. reality. When we started this project, the building blocks were obvious: Template, Package, and App. We expected a neat linear build, each feeding into the next.
 
-But once people started using the app in their own projects, they surfaced gaps. When these needs came up, the app became the place where we worked around what the package couldn't do yet. This meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn't do yet. Formatting the template should have owned.
+But once we started patching gaps - data validation, new report customization functions - we rushed to make these fixes in the Shiny app and didn’t consider how the feedback should flow back to the supporting building blocks. A data validation function that lived in the app would be best served in the package, and modifications to template would flow back to the original recipe.
+
+This [point to diagram] is where we started. On paper, when you draw it out, it should look something like this: 3 tidy boxes. We expected a neat, linear build. Template, package, and then app.
+
+**Tanya, expectation (0:30). [click: the pipeline draws]** 
+But, expectation often falls short of reality. 
+
+Once people started using the app in their own projects, they surfaced gaps. When these needs came up, the app became the place where we worked around what the package couldn't do yet. This meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn't do yet. Formatting the template should have owned.
 
 **Tanya, reality (0:45). [click: the tangle]** This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of `{soils}`, and every time the package didn't have what I needed, I patched around it in the app.
 
 Those workarounds weren't failures. They were loud signals about what the package was missing. And you can't see them from inside the package.
 
-**Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]** That was the real lesson for me as the maintainer: you do not know what abstractions your package needs until someone tries to build a UI on top of it. Building layer three forced us to rethink layers one and two.
-
-So we went back to the workbench. We pulled the workarounds out of Tanya's app and engineered them into `{soils}` as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a farm advisor can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that's fine. That's the point.
+**Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]** That was the real lesson for me as the maintainer: I didn't know what abstractions the package needed until someone built a UI on top of it. Building layer three showed us where layers one and two needed to grow. So now we're taking those lessons back into the package and template.
 :::

@@ -13,9 +13,9 @@ local function str(v, default)
 end
 
 local BARS = {
-  { key = 'app',      level = 3, label = 'Dirt Data Reports', kind = 'Shiny',     desc = 'Upload, choose, download. No R.' },
-  { key = 'package',  level = 2, label = '{soils}',           kind = 'R package', desc = 'Validation, calculations, templates, styling.' },
-  { key = 'template', level = 1, label = 'Quarto template',   kind = '',          desc = 'The report itself.' },
+  { key = 'app',      level = 3, label = 'Dirt Data Reports', kind = 'Shiny App', desc = 'Upload data, configure reports, render. No R.' },
+  { key = 'package',  level = 2, label = '{soils}',           kind = 'R Package', desc = 'Functions for validation, processing, and visualization.' },
+  { key = 'template', level = 1, label = 'Parameterized Quarto', kind = 'Template', desc = 'Dynamically define report content for each farmer.' },
 }
 
 return {

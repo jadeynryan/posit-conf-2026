@@ -39,9 +39,24 @@ Meeting users where they’re at.
 ```
 :::
 
+. . .
+
+```{=html}
+<p class="quote" style="margin-top:40px;background:#2c5e3b"><span class="mark" style="color:#d8dfd7">&ldquo;</span>The right tool is the one that gets the insight into the right hands.</p>
+```
+
 ::: {.notes}
 
-**Jadey:** For us, it was the farmers. While cooperators have the expertise to help farmers interpret their soil data, they don't always have the time to manually turn lab results into clear, interpretive reports. These tools help automate that process and lower the barrier to getting farmers more actionable insights to understand and manage their soil.
+**Jadey:** All this comes back to knowing you who're building for. There's no one layer to rule them all. Most of us start at the first: we build something to make our own work easier. 
+
+**Tanya:** Some of us move to the second when others on our team want to be able to use and adapt it.
+
+**Jadey:** And some of us go all the way to the third layer because the people who need the answer are never going to open an IDE.
+
+**Tanya:** Each layer is the right layer for someone. What determines which one you need isn't the tool or the team. It's one question to ask before you build: who is this for?
+
+**[Click: quote]** Then build the layer that makes it possible to get the right insight into their hands. 
+
 :::
 
 <!-- SLIDE 16 · Close. Answers the hook: the talk opens on Nestlé putting cookies on a shelf; this
@@ -49,10 +64,9 @@ Meeting users where they’re at.
      .result block if there is no number) → names, rings, QR. The Q&A cue lives in the note. -->
      
 
-## Building the Bridge {#closing .slide-dark .closing background-color="#1A1D20"}
+## Thank You {#closing .slide-dark .closing background-color="#1A1D20"}
 
 ::: {.lede}
-Meeting Users Where They’re At
 :::
 
 ```{=html}
@@ -64,8 +78,6 @@ Meeting Users Where They’re At
     <use href="#rings-l1" class="ring ring-1"/>
   </svg>
 </div>
-
-<p class="thesis">The right tool is the one that gets the insight into the right hands.</p>
 
 <div class="footer-split">
   <div class="who">
@@ -97,12 +109,9 @@ Meeting Users Where They’re At
   <img src="images/logo-indievisual.png" alt="IndieVisual">
 </div>
 ```
+
 ::: {.notes}
-**Tanya:** There's no one layer to rule them all. Most of us start at the first: we build something to make our own lives easier. Some of us go to the second, because someone on the team asked for it. Some of us go all the way to the third, because the person who needs the answer is never going to open an IDE.
+**Jadey**: Thank you all for attending our session, Posit for hosting this conf and providing speaker coaching by MeadowLark, and all the people behind the tools we shared today from the Washington State Department of Agriculture, Washington State University, and Washington Soil Health Initiative. 
 
-Each of those is the right layer for someone. What decides which one you need isn't the tool, or the team, or how far you can take the code. It's one question, asked before you build: who is this for?
-
-Then build the layer that makes it possible to get the right insight into their hands. Thank you.
-
-*Point to the QR - for repo with links to the slides and tools. Open Q&A.*
+**Tanya**: Check out the QR code to access the repo with these published slides, as well as links to {soils} and Dirt Data Reports and Jadey's posit::conf(2023) talk. We're happy to take questions if there's time.
 :::

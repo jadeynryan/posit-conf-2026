@@ -97,7 +97,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-ecaa6c6e46dfb42209123e57393393b1.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-66044ee1bdafe98e02e8357a71385d1d.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -435,7 +435,7 @@
     </div>
 
     <!-- the takeaway sits under the three layers, so the diagram keeps the full height -->
-    <div class="quote rings-quote">
+    <div class="quote rings-quote fragment" data-fragment-index="3">
       <span class="mark">“</span>
       <p>Build the right layer for the right user.</p>
     </div>
@@ -462,10 +462,10 @@
 </template>
 <aside class="notes">
 <p><em>⏱ 1:15 · Jadey, one Tanya interjection</em></p>
-<p><strong>Jadey:</strong> Well, we have a similar evolution story around expanding access. But instead of cookies, we made it easier for farm advisers to generate soil health reports for farmers to better understand their data and make informed management decisions.</p>
-<p><strong>[click: Layer 1, the center figure]</strong> Imagine you’re starting off with a recipe that lives on a notepad in your kitchen: only you have access to it. In my case, it was a laptop with a Quarto template. <strong>[click: Layer 2, ring 2]</strong> To get this recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template. <strong>[click: Layer 3, ring 3]</strong> And lastly, if you want broader distribution of cookies, you need get them on the store shelf. That was the why we built our shiny app, a no code solution that allows farm advisers without technical expertise to make soil health reports.</p>
+<p><strong>Jadey:</strong> Ruth’s story has strong parallels with our own evolution story. But instead of chocolate chip cookies, our story centers around soil health reports, which offer farmers a new way of understanding their data.</p>
+<p><strong>[click: Layer 1, the center figure]</strong> Imagine you’re starting off with a recipe that lives on a notepad in your kitchen: only you have access to it. In my case, it was a laptop with a Quarto template to make reports. <strong>[click: Layer 2, ring 2]</strong> To get your recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template and get those reports out to the farmers they work with. <strong>[click: Layer 3, ring 3]</strong> And lastly, if you want even broader distribution of cookies, you need get them on the store shelf for anyone to access, even without baking experience. That was the why we built our shiny app, a no code solution that used our package as the engine to allow farm advisers without technical expertise to make soil health reports.</p>
 <p>In our story, I’m kinda like Ruth. I helped make the original recipe and published it in a cookbook.</p>
-<p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together, we brought Jadey’s reports to the shelf and into the hands of farmers with a Shiny app.</p>
+<p><strong>Tanya:</strong> And if she’s Ruth, I guess that makes me Nestlé. Together, we brought Jadey’s reports to the shelf and into the hands of more farmers with a Shiny app.</p>
 <p><strong>[click: takeaway quote]</strong></p>
 <p><strong>Jadey:</strong> Our main takeaway is that there’s no single tool for everyone. Build the layer that meets the user where they are. So let’s start at the beginning with the template.</p>
 <style type="text/css">
@@ -507,8 +507,8 @@
 <aside class="notes">
 <p><em>⏱ 2:00 · Jadey</em></p>
 <p><strong>Jadey:</strong> This story began about 3 years ago when I gave my very first presentation at posit::conf in 2023.</p>
-<p>During that talk, I showed the audience how we used a parameterized Quarto template to magically render hundreds of soil health reports for each farmer who participated in our project.</p>
-<p>Each of the 350+ farmers got 2 versions of the report: one interactive HTML file that lets them click around their plots and one printable PDF for those who wanted paper. They provided background information on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared against similar crops and regions. The reports were a decision-support tool, not a data dump.</p>
+<p>During that talk, I showed the audience how we used a parameterized Quarto template to magically render hundreds of soil health reports for each farmer who participated in our project in Washington State.</p>
+<p>Each of the 350+ farmers got 2 versions of the report: one interactive HTML file that lets them click around their plots and one printable PDF for those who wanted paper. These reports included background information on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared against similar crops and regions. The reports were meant to be a decision-support tool, not a data dump.</p>
 <p>One farmer said, <em>“I was able to see a direct connection between my soil management decisions and the health of the soil I manage.”</em></p>
 <p>So what was the problem?</p>
 <style type="text/css">
@@ -534,13 +534,14 @@
 <div class="fill fill--row boundary">
 <svg class="rings " data-lit="1" viewbox="0 0 600 600" width="520" height="520" role="img" aria-label="One person at the centre; no one else lit"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
 <div class="boundary__line">
-<p><span class="emphasis">The template solved the reports problem.</span> <span class="muted">It did not solve the people problem.</span></p>
+<p><span class="emphasis">The template solved our reports problem.</span> <span class="muted">But only ours.</span></p>
 </div>
 </div>
 <aside class="notes">
 <p><em>⏱ 0:30 · Jadey</em></p>
-<p><strong>Jadey:</strong> Well, that was the recipe that lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, it wasn’t easily adaptable to other people and projects.</p>
-<p>So how do we take a template that works for us and make it reusable by other people?</p>
+<p><strong>Jadey:</strong> Well, that recipe lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, there was a growing need to give people outside of our project access to this workflow. We had a University in California, an adviser in Idaho, and conservation district staff from Oregon who all wanted to run reports for their own data for their own farmers.</p>
+<p>At the time, the template was too bespoke to our project in WA and not easy for these users to adapt for their own projects.</p>
+<p>So how did we take this template and make it easy for them to use?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -566,12 +567,6 @@
 <div class="fill fill--center">
 <div class="flow">
   <div class="node card card--l2">
-    <code>roxygen2 &amp; pkgdown</code>
-    <p class="emphasis">Documentation</p>
-    <p class="muted">Learn how to use the functions and package.</p>
-  </div>
-  <div class="arrow">+</div>
-  <div class="node card card--l2">
     <code>.qmd</code>
     <p class="emphasis"><br>Modular Quarto files</p>
     <p class="muted">Customize report content.</p>
@@ -582,12 +577,20 @@
     <p class="emphasis"><br>Functions &amp; Scripts</p>
     <p class="muted">Validate, process, and visualize data; render reports.</p>
   </div>
+    <div class="arrow">+</div>
+    <div class="node card card--l2">
+    <code>roxygen2 &amp; pkgdown</code>
+    <p class="emphasis">Documentation</p>
+    <p class="muted">Document functions and guide package use.</p>
+  </div>
 </div>
 </div>
 <aside class="notes">
 <p><em>⏱ 1:00 · Jadey</em></p>
-<p><strong>Jadey:</strong> So the cookbook wasn’t for my team. It was for a conservation district in Oregon, a university lab, an extension office that had its own samples and its own farmers.</p>
-<p>We pulled everything that wasn’t Washington-specific out of the template and into an R package: <code>{soils}</code>. The validation, the calculations, the styling, the Quarto pieces every report shares.</p>
+<p><strong>Jadey:</strong> Developing an R package to support these teams felt like a natural progression. For people with the right technical expertise, we wanted to give them flexibility to adapt the template to their projects and build their own soil health reports.</p>
+<p>We broke up our one big report template into smaller, modular Quarto files and replaced all the Washington-specific components with placeholders for users to swap in information applicable to their own project.</p>
+<p>Then we pulled a lot of the R code out of the original Quarto template and turned that code into reusable functions that handle the core work like validating, processing, and visualizing the data. We also created an R script that renders all the reports at once.</p>
+<p>The last piece was documentation. Once the Quarto files were modularized and the code became reusable, we wanted to make sure people could understand what was available and how to use this reporting workflow. We used {roxygen2} to document all functions and {pkgdown} to create a website with tutorials.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -604,9 +607,9 @@
 <p><span class="emphasis">Everything you need to adapt the workflow to your own data.</span></p>
 </div>
 <aside class="notes">
-<p><em>⏱ 1:00 · Jadey</em></p>
-<p><strong>Jadey:</strong> Now any farm advisor who is comfortable with R can adapt the template for their own project.</p>
-<p>Let’s get a little into how it works.</p>
+<p><em>⏱ 0:30 · Jadey</em></p>
+<p><strong>Jadey:</strong> So the shift was from a reporting workflow built specifically for a Washington State project to a reusable toolkit that any R user could adapt for their own soil sampling project.</p>
+<p>Let’s take a look at how it works.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -627,7 +630,7 @@
 <h2>Layer 2: Package <span class="h2-sub">· The Cookbook</span></h2>
 <svg class="rings rings--crumb" data-lit="2" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 2 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
 <div class="lede">
-<p>How technical assistance providers unlock access to the reports.</p>
+<p>How farm advisers, who can code, unlock access to the reporting workflow.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -648,18 +651,28 @@
 <span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
+<aside class="notes">
+<p><em>⏱ 0:30 · Jadey</em></p>
+<p><strong>Jadey:</strong> On the left is a screenshot of the tutorial on the {pkgdown} website that shows how to use the RStudio project wizard to create a project, which sets up the {soils} directory with the modular .qmd files, example data, and R scripts. Users then continue through the other tutorials to import their data, customize the content and branding of the reports, and then use the <code>render-reports.R</code> script to generate all of their reports once.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div class="fragment">
 <!-- the bridge to Layer 3, not a takeaway (the "decouple before Shiny" lesson belongs to Lessons Learned) -->
 <div class="body bridge" style="margin-top:72px;">
 <p><span class="emphasis">Anyone comfortable in R can run their own soil survey reports.</span> <span class="muted">Not everyone is.</span></p>
 </div>
 <aside class="notes">
-<p><em>⏱ 1:00 · Jadey</em></p>
-<p><strong>Jadey:</strong></p>
-<p>This is what a user actually types. One call, a data frame, an output path. They don’t write a helper function. They don’t copy a script from my repo and change the file paths. They install the cookbook and follow the recipe.</p>
-<p><strong>[click]</strong> Now we’re reaching anyone comfortable in R. But not everyone who would like to run these reports is.</p>
-<p>Anyone comfortable in R could create a <code>{soils}</code> project, drop in their data, edit the content, and generate reports for every participant in their survey.</p>
-<p><strong>[hand-off: “they still had to find someone like me” → Tanya, “this is where I come in”]</strong></p>
+<p><em>⏱ 0:30 · Jadey</em></p>
+<p><strong>Jadey:</strong> Now we’re reaching anyone comfortable in R. But not everyone who would like to run these reports is. So how can we reach the farm advisers with zero code experience?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -685,36 +698,31 @@
 <h2>Layer 3: App <span class="h2-sub">· The Store Shelf</span></h2>
 <svg class="rings rings--crumb" data-lit="3" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 3 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
 <div class="lede">
-<p>What’s underneath.</p>
+<p>The app is the interface. <code>{soils}</code> and Quarto do the work.</p>
 </div>
 <div class="fill fill--row app-stack">
 <div class="app-stack__left">
 <div class="stack " data-highlight="all" data-arrows="down">
-<div class="stack__row stack__row--app"><div class="card card--l3 stack__bar"><div class="stack__head"><code class="stack__label">Dirt Data Reports</code><span class="stack__kind">Shiny</span></div><p class="stack__desc">Upload, choose, download. No R.</p></div></div>
+<div class="stack__row stack__row--app"><div class="card card--l3 stack__bar"><div class="stack__head"><code class="stack__label">Dirt Data Reports</code><span class="stack__kind">Shiny App</span></div><p class="stack__desc">Upload data, configure reports, render. No R.</p></div></div>
 <div class="stack__link" aria-hidden="true"><svg viewbox="0 0 24 40"><path d="M12 3v28"></path><path d="M4 24l8 10 8-10"></path></svg></div>
-<div class="stack__row stack__row--package"><div class="card card--l2 stack__bar"><div class="stack__head"><code class="stack__label">{soils}</code><span class="stack__kind">R package</span></div><p class="stack__desc">Validation, calculations, templates, styling.</p></div></div>
+<div class="stack__row stack__row--package"><div class="card card--l2 stack__bar"><div class="stack__head"><code class="stack__label">{soils}</code><span class="stack__kind">R Package</span></div><p class="stack__desc">Functions for validation, processing, and visualization.</p></div></div>
 <div class="stack__link" aria-hidden="true"><svg viewbox="0 0 24 40"><path d="M12 3v28"></path><path d="M4 24l8 10 8-10"></path></svg></div>
-<div class="stack__row stack__row--template"><div class="card card--l1 stack__bar"><div class="stack__head"><code class="stack__label">Quarto template</code></div><p class="stack__desc">The report itself.</p></div></div>
+<div class="stack__row stack__row--template"><div class="card card--l1 stack__bar"><div class="stack__head"><code class="stack__label">Parameterized Quarto</code><span class="stack__kind">Template</span></div><p class="stack__desc">Dynamically define report content for each farmer.</p></div></div>
 </div>
 </div>
 <div class="app-stack__right">
-<!-- CHECK WITH JADEY: do farmers use the app directly, or do extension / technical-assistance
-     staff generate reports for them? This card assumes the latter; add farmers back if not.
-     
-     This is correct! Farmers don't create the reports themselves. - Jadey -->
 <div class="card card--l3">
   <div class="eyebrow eyebrow--l3">For</div>
-  <p>Extension staff &amp; technical assistance providers who don't code</p>
+  <p>Farm advisors who <strong>don't</strong> code</p>
 </div>
 <p class="body emphasis app-stack__line">No R install. No command line. <span class="quiet">Zero friction.</span></p>
 </div>
 </div>
 <aside class="notes">
 <p><em>⏱ 0:45 · Tanya</em></p>
-<p><em>[Check with Jadey: farmers directly, or extension / TA staff on their behalf? The FOR card assumes the latter.]</em></p>
-<p><strong>Tanya:</strong> This is where I come in as Nestlé. I’m IndieVisual. It’s a one-person shop, so when I say IndieVisual built something, I mean I did.</p>
-<p>Jadey had a published package. What it didn’t have was a way for someone with no R install and no command line to get a report. So I built Dirt Data Reports: a Shiny app that sits on top of <code>{soils}</code>, takes a CSV and a few choices, and hands back a finished Quarto report.</p>
-<p>No R. No terminal. Zero friction. Here’s what it looks like.</p>
+<p><strong>Tanya:</strong> This is where I come in. In 2024, Jadey reached out to me for help on the next evolution of the project - building a Shiny app to deliver Quarto reports. We previously connected years before via the Twitterverse and R-Ladies community- I was ecstatic to get a chance to work with her.</p>
+<p>The pitch was straight forward, build an intuitive interface to let non technical people customize and run their own reports. Together we built the Shiny app, Dirt Data Reports, which sits on top of the {soils} package and the parameterized Quarto template. Users didn’t need to know Quarto let alone how to spell Quarto. All they had to do was drop in their data, enter their project-specific information, and click “Build Reports”.</p>
+<p>No R. No terminal. Let’s take a sneak peek at how it works.</p>
 <p><strong>[next slide: the recorded demo]</strong></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -739,20 +747,16 @@
 <h2>Layer 3: App <span class="h2-sub">· The Store Shelf</span></h2>
 <svg class="rings rings--crumb" data-lit="3" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Layer 3 of 3"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
 <div class="lede">
-<p>Upload → pick parameters → render → download.</p>
+<p>Upload data → pick parameters → render → download.</p>
 </div>
 <div class="fill fill--center">
 <div class="browser browser--demo">
   <div class="chrome"><span></span><span></span><span></span><div class="url">dirt-data-reports · recorded demo</div></div>
   <div class="demo-frame">
-    <video class="demo-video" controls="" playsinline="" preload="metadata" poster="images/dirt-data-reports-01.png">
+    <video class="demo-video" controls="" playsinline="" preload="metadata">
       <source src="images/dirt-data-reports.mp4" type="video/mp4">
       <source src="images/dirt-data-reports.webm" type="video/webm">
     </video>
-    <div class="demo-placeholder placeholder">
-      <div class="placeholder__label">Placeholder · recorded demo</div>
-      <p>Drop the recording in as <code>images/dirt-data-reports.mp4</code> (or <code>.webm</code>) and this tag goes away. ≤ 2:00, cut to upload → parameters → render → download.</p>
-    </div>
   </div>
 </div>
 </div>
@@ -787,7 +791,7 @@
 <div class="flow">
   <div class="node card card--l3">
     <p class="emphasis">+ Positive signal</p>
-    <p class="muted">People used the app for their own projects.</p>
+    <p class="muted">The app saved time and effort.</p>
   </div>
   <div class="arrow"> </div>
   <div class="node card card--l3">
@@ -798,9 +802,10 @@
 </div>
 <aside class="notes">
 <p><em>⏱ 0:45 · Jadey</em></p>
-<p><strong>Jadey:</strong> We started getting some really useful signals from the people actually using the app.</p>
-<p><strong>The positive signal</strong> was pretty clear - organizations were adapting the app for their own projects. They were saving real time and effort by using our app to automate their reports.</p>
-<p><strong>But there was also a negative signal</strong> - once people started using it for different projects, they started pushing beyond the assumptions we’d built around the original workflow. We needed more robust data validation and flexibility. Sometimes this meant sending them to the {soils} R package for more customization of the analyses.</p>
+<p><strong>Jadey:</strong> In September 2025, we released Dirt Data Reports into the universe, but our story doesn’t stop there. We took inventory on what worked and what didn’t and created a feedback loop with users.</p>
+<p>We started getting some really useful signals.</p>
+<p><strong>On the positive side</strong> - it was clear that organizations were using the app and saving real time and effort by automating their reports.</p>
+<p><strong>But there was also a negative signal</strong> - once people started using it for different projects, they started pushing beyond the original assumptions and scope we had designed for. They needed more customization in some areas and more guardrails in others. This meant baking in more features to match their needs.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -926,18 +931,20 @@
     <p class="c0"><span class="emphasis">Three layers.</span> We assumed they'd line up.</p>
     <p class="c1"><span class="emphasis">Expectation.</span> A neat, linear build: template, then package, then app.</p>
     <p class="c2"><span class="emphasis">Reality.</span> Real-world use exposed workarounds in the app, signaling what the lower layers needed.</p>
-    <p class="c3"><span class="emphasis">Refactoring for independence.</span> The workarounds move down into <code>{soils}</code>; every tier stands on its own.</p>
+    <p class="c3"><span class="emphasis">Refactoring for independence.</span> Moving the workarounds into <code>{soils}</code> and the Quarto template.</p>
   </div>
 </div>
 <aside class="notes">
 <p><em>⏱ 2:20 · Tanya 1:35 (11–13) / Jadey 0:45 (14)</em></p>
-<p><strong>Tanya, three layers (0:20, on arrival: three dots).</strong> So here’s the part we didn’t plan. When you draw this on a whiteboard it’s three tidy boxes.</p>
-<p><strong>Tanya, expectation (0:30). [click: the pipeline draws]</strong> The expectation was a neat, linear build. Template, then package, then app. Each layer finished before the next one starts.</p>
-<p>But once people started using the app in their own projects, they surfaced gaps. When these needs came up, the app became the place where we worked around what the package couldn’t do yet. This meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn’t do yet. Formatting the template should have owned.</p>
+<p>ADD PUMPKIN SPICE COOKIE VARIATION AS EXAMPLE</p>
+<p><strong>Tanya, three layers (0:20, on arrival: three dots).</strong> Now, for a quick lesson in expectation vs.&nbsp;reality. When we started this project, the building blocks were obvious: Template, Package, and App. We expected a neat linear build, each feeding into the next.</p>
+<p>But once we started patching gaps - data validation, new report customization functions - we rushed to make these fixes in the Shiny app and didn’t consider how the feedback should flow back to the supporting building blocks. A data validation function that lived in the app would be best served in the package, and modifications to template would flow back to the original recipe.</p>
+<p>This [point to diagram] is where we started. On paper, when you draw it out, it should look something like this: 3 tidy boxes. We expected a neat, linear build. Template, package, and then app.</p>
+<p><strong>Tanya, expectation (0:30). [click: the pipeline draws]</strong> But, expectation often falls short of reality.</p>
+<p>Once people started using the app in their own projects, they surfaced gaps. When these needs came up, the app became the place where we worked around what the package couldn’t do yet. This meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn’t do yet. Formatting the template should have owned.</p>
 <p><strong>Tanya, reality (0:45). [click: the tangle]</strong> This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of <code>{soils}</code>, and every time the package didn’t have what I needed, I patched around it in the app.</p>
 <p>Those workarounds weren’t failures. They were loud signals about what the package was missing. And you can’t see them from inside the package.</p>
-<p><strong>Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]</strong> That was the real lesson for me as the maintainer: you do not know what abstractions your package needs until someone tries to build a UI on top of it. Building layer three forced us to rethink layers one and two.</p>
-<p>So we went back to the workbench. We pulled the workarounds out of Tanya’s app and engineered them into <code>{soils}</code> as proper functions, with tests, with docs. And the whole stack got better. Now every layer stands on its own. An analyst can use the template, a coder can use the package, a farm advisor can click through the app, all on the same clean foundation. The feedback loop runs backwards through the stack, and that’s fine. That’s the point.</p>
+<p><strong>Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]</strong> That was the real lesson for me as the maintainer: I didn’t know what abstractions the package needed until someone built a UI on top of it. Building layer three showed us where layers one and two needed to grow. So now we’re taking those lessons back into the package and template.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1009,8 +1016,14 @@ no code at all</td>
 </tbody>
 </table>
 </div>
+<div class="fragment">
+<p class="quote" style="margin-top:40px;background:#2c5e3b"><span class="mark" style="color:#d8dfd7">“</span>The right tool is the one that gets the insight into the right hands.</p>
 <aside class="notes">
-<p><strong>Jadey:</strong> For us, it was the farmers. While cooperators have the expertise to help farmers interpret their soil data, they don’t always have the time to manually turn lab results into clear, interpretive reports. These tools help automate that process and lower the barrier to getting farmers more actionable insights to understand and manage their soil.</p>
+<p><strong>Jadey:</strong> All this comes back to knowing you who’re building for. There’s no one layer to rule them all. Most of us start at the first: we build something to make our own work easier.</p>
+<p><strong>Tanya:</strong> Some of us move to the second when others on our team want to be able to use and adapt it.</p>
+<p><strong>Jadey:</strong> And some of us go all the way to the third layer because the people who need the answer are never going to open an IDE.</p>
+<p><strong>Tanya:</strong> Each layer is the right layer for someone. What determines which one you need isn’t the tool or the team. It’s one question to ask before you build: who is this for?</p>
+<p><strong>[Click: quote]</strong> Then build the layer that makes it possible to get the right insight into their hands.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1025,31 +1038,54 @@ no code at all</td>
 <!-- SLIDE 16 · Close. Answers the hook: the talk opens on Nestlé putting cookies on a shelf; this
      slide says who took one off. Thesis line (same as slide 5) → result stat (optional; delete the
      .result block if there is no number) → names, rings, QR. The Q&A cue lives in the note. -->
+</div>
 </section>
 <section id="closing" class="slide level2 slide-dark closing" data-background-color="#1A1D20">
-<h2>Building the Bridge</h2>
+<h2>Thank You</h2>
 <div class="lede">
-<p>Meeting Users Where They’re At</p>
+
 </div>
-<p class="thesis">The right tool is the one that gets the insight into the right hands.</p>
+<!-- Top Right Model Rings -->
+<div class="closing-rings-header">
+  <svg class="rings" data-lit="3" viewbox="0 0 600 600" width="130" height="130" role="img" aria-label="Three-layer model diagram">
+    <use href="#rings-l3" class="ring ring-3"></use>
+    <use href="#rings-l2" class="ring ring-2"></use>
+    <use href="#rings-l1" class="ring ring-1"></use>
+  </svg>
+</div>
 
 <div class="footer-split">
-  <div class="who who--rings">
-    <svg class="rings" data-lit="3" viewbox="0 0 600 600" width="120" height="120" role="img" aria-label="All three layers, lit"><use href="#rings-l3" class="ring ring-3"></use><use href="#rings-l2" class="ring ring-2"></use><use href="#rings-l1" class="ring ring-1"></use></svg>
-    <div><b>Jadey Ryan</b><span>WA Dept of Agriculture</span></div>
+  <div class="who">
+    <b>Jadey Ryan</b>
+    <span>WA Dept of Agriculture</span>
   </div>
+  
   <div class="qr">
     <img src="images/qr.png" alt="QR code">
     <div class="caption">Scan for the slides and tools</div>
   </div>
-  <div class="who who--r"><b>Tanya Shapiro</b><span>IndieVisual</span></div>
+  
+  <div class="who who--r">
+    <b>Tanya Shapiro</b>
+    <span>IndieVisual</span>
+  </div>
 </div>
-<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi
-</p><aside class="notes">
-<p><strong>Tanya:</strong> There’s no one layer to rule them all. Most of us start at the first: we build something to make our own lives easier. Some of us go to the second, because someone on the team asked for it. Some of us go all the way to the third, because the person who needs the answer is never going to open an IDE.</p>
-<p>Each of those is the right layer for someone. What decides which one you need isn’t the tool, or the team, or how far you can take the code. It’s one question, asked before you build: who is this for?</p>
-<p>Then build the layer that makes it possible to get the right insight into their hands. Thank you.</p>
-<p><em>Point to the QR - for repo with links to the slides and tools. Open Q&amp;A.</em></p>
+
+<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi</p>
+
+<!-- Partner Logos Lockup -->
+<div class="partner-logos">
+  <img src="images/logo-wsda.png" alt="Washington State Dept of Agriculture">
+  <span class="logos__sep"></span>
+  <img src="images/logo-wsu.png" alt="Washington State University">
+  <span class="logos__sep"></span>
+  <img src="images/logo-washi.png" alt="Washington Soil Health Initiative">
+  <span class="logos__sep"></span>
+  <img src="images/logo-indievisual.png" alt="IndieVisual">
+</div>
+<aside class="notes">
+<p><strong>Jadey</strong>: Thank you all for attending our session, Posit for hosting this conf and providing speaker coaching by MeadowLark, and all the people behind the tools we shared today from the Washington State Department of Agriculture, Washington State University, and Washington Soil Health Initiative.</p>
+<p><strong>Tanya</strong>: Check out the QR code to access the repo with these published slides, as well as links to {soils} and Dirt Data Reports and Jadey’s posit::conf(2023) talk. We’re happy to take questions if there’s time.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

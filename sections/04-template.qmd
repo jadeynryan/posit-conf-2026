@@ -37,9 +37,9 @@ One report for every farmer in the survey.
 **Jadey:** 
 This story began about 3 years ago when I gave my very first presentation at posit::conf in 2023. 
 
-During that talk, I showed the audience how we used a parameterized Quarto template to magically render hundreds of soil health reports for each farmer who participated in our project. 
+During that talk, I showed the audience how we used a parameterized Quarto template to magically render hundreds of soil health reports for each farmer who participated in our project in Washington State. 
 
-Each of the 350+ farmers got 2 versions of the report: one interactive HTML file that lets them click around their plots and one printable PDF for those who wanted paper. They provided background information on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared against similar crops and regions. The reports were a decision-support tool, not a data dump. 
+Each of the 350+ farmers got 2 versions of the report: one interactive HTML file that lets them click around their plots and one printable PDF for those who wanted paper. These reports included background information on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared against similar crops and regions. The reports were meant to be a decision-support tool, not a data dump. 
 
 One farmer said, *"I was able to see a direct connection between my soil management decisions and the health of the soil I manage."*
 
@@ -60,15 +60,17 @@ One Quarto project. One laptop. One person.
 {{< rings lit=1 size=520 label="One person at the centre; no one else lit" >}}
 
 ::: {.boundary__line}
-[The template solved the reports problem.]{.emphasis}
-[It did not solve the people problem.]{.muted}
+[The template solved our reports problem.]{.emphasis}
+[But only ours.]{.muted}
 :::
 :::
 
 ::: {.notes}
 *⏱ 0:30 · Jadey*
 
-**Jadey:** Well, that was the recipe that lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, it wasn't easily adaptable to other people and projects.
+**Jadey:** Well, that recipe lived in exactly one kitchen. The template solved the reports problem for our specific project in Washington State. But, there was a growing need to give people outside of our project access to this workflow. We had a University in California, an adviser in Idaho, and conservation district staff from Oregon who all wanted to run reports for their own data for their own farmers.
 
-So how do we take a template that works for us and make it reusable by other people?
+At the time, the template was too bespoke to our project in WA and not easy for these users to adapt for their own projects.
+
+So how did we take this template and make it easy for them to use?
 :::

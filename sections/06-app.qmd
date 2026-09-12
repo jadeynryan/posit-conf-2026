@@ -12,7 +12,7 @@
 {{< rings lit=3 class="rings--crumb" >}}
 
 ::: {.lede}
-What's underneath.
+The app is the interface. `{soils}` and Quarto do the work.
 :::
 
 ::: {.fill .fill--row .app-stack}
@@ -22,13 +22,9 @@ What's underneath.
 
 ::: {.app-stack__right}
 ```{=html}
-<!-- CHECK WITH JADEY: do farmers use the app directly, or do extension / technical-assistance
-     staff generate reports for them? This card assumes the latter; add farmers back if not.
-     
-     This is correct! Farmers don't create the reports themselves. - Jadey -->
 <div class="card card--l3">
   <div class="eyebrow eyebrow--l3">For</div>
-  <p>Extension staff &amp; technical assistance providers who don't code</p>
+  <p>Farm advisors who <strong>don't</strong> code</p>
 </div>
 <p class="body emphasis app-stack__line">No R install. No command line. <span class="quiet">Zero friction.</span></p>
 ```
@@ -38,13 +34,11 @@ What's underneath.
 ::: {.notes}
 *⏱ 0:45 · Tanya*
 
-*[Check with Jadey: farmers directly, or extension / TA staff on their behalf? The FOR card assumes the latter.]*
+**Tanya:** This is where I come in. In 2024, Jadey reached out to me for help on the next evolution of the project - building a Shiny app to deliver Quarto reports. We previously connected years before via the Twitterverse and R-Ladies community- I was ecstatic to get a chance to work with her.
 
-**Tanya:** This is where I come in as Nestlé. I'm IndieVisual. It's a one-person shop, so when I say IndieVisual built something, I mean I did.
+The pitch was straight forward, build an intuitive interface to let non technical people customize and run their own reports. Together we built the Shiny app, Dirt Data Reports, which sits on top of the {soils} package and the parameterized Quarto template. Users didn’t need to know Quarto let alone how to spell Quarto. All they had to do was drop in their data, enter their project-specific information, and click “Build Reports”.
 
-Jadey had a published package. What it didn't have was a way for someone with no R install and no command line to get a report. So I built Dirt Data Reports: a Shiny app that sits on top of `{soils}`, takes a CSV and a few choices, and hands back a finished Quarto report.
-
-No R. No terminal. Zero friction. Here's what it looks like.
+No R. No terminal. Let’s take a sneak peek at how it works.
 
 **[next slide: the recorded demo]**
 :::
@@ -62,7 +56,7 @@ No R. No terminal. Zero friction. Here's what it looks like.
 {{< rings lit=3 class="rings--crumb" >}}
 
 ::: {.lede}
-Upload → pick parameters → render → download.
+Upload data → pick parameters → render → download.
 :::
 
 ::: {.fill .fill--center}
@@ -108,7 +102,7 @@ Real users showed us what worked, and what didn't.
 <div class="flow">
   <div class="node card card--l3">
     <p class="emphasis">&plus; Positive signal</p>
-    <p class="muted">People used the app for their own projects.</p>
+    <p class="muted">The app saved time and effort.</p>
   </div>
   <div class="arrow"> </div>
   <div class="node card card--l3">
@@ -122,11 +116,13 @@ Real users showed us what worked, and what didn't.
 ::: {.notes}
 *⏱ 0:45 · Jadey*
 
-**Jadey:** We started getting some really useful signals from the people actually using the app. 
+**Jadey:** In September 2025, we released Dirt Data Reports into the universe, but our story doesn’t stop there. We took inventory on what worked and what didn’t and created a feedback loop with users.
 
-**The positive signal** was pretty clear - organizations were adapting the app for their own projects. They were saving real time and effort by using our app to automate their reports.
+We started getting some really useful signals. 
 
-**But there was also a negative signal** - once people started using it for different projects, they started pushing beyond the assumptions we'd built around the original workflow. We needed more robust data validation and flexibility. Sometimes this meant sending them to the {soils} R package for more customization of the analyses.
+**On the positive side** - it was clear that organizations were using the app and saving real time and effort by automating their reports.
+
+**But there was also a negative signal** - once people started using it for different projects, they started pushing beyond the original assumptions and scope we had designed for. They needed more customization in some areas and more guardrails in others. This meant baking in more features to match their needs.
 :::
 
 . . .

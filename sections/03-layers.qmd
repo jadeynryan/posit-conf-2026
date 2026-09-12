@@ -62,13 +62,13 @@ Expanding access by matching the tool to the user.
 ::: {.notes}
 *⏱ 1:15 · Jadey, one Tanya interjection*
 
-**Jadey:** Well, we have a similar evolution story around expanding access. But instead of cookies, we made it easier for farm advisers to generate soil health reports for farmers to better understand their data and make informed management decisions.  
+**Jadey:** Ruth's story has strong parallels with our own evolution story. But instead of chocolate chip cookies, our story centers around soil health reports, which offer farmers a new way of understanding their data. 
 
-**[click: Layer 1, the center figure]** Imagine you're starting off with a recipe that lives on a notepad in your kitchen: only you have access to it. In my case, it was a laptop with a Quarto template. **[click: Layer 2, ring 2]** To get this recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template. **[click: Layer 3, ring 3]** And lastly, if you want broader distribution of cookies, you need get them on the store shelf. That was the why we built our shiny app, a no code solution that allows farm advisers without technical expertise to make soil health reports.
+**[click: Layer 1, the center figure]** Imagine you're starting off with a recipe that lives on a notepad in your kitchen: only you have access to it. In my case, it was a laptop with a Quarto template to make reports. **[click: Layer 2, ring 2]** To get your recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template and get those reports out to the farmers they work with. **[click: Layer 3, ring 3]** And lastly, if you want even broader distribution of cookies, you need get them on the store shelf for anyone to access, even without baking experience. That was the why we built our shiny app, a no code solution that used our package as the engine to allow farm advisers without technical expertise to make soil health reports.
 
 In our story, I'm kinda like Ruth. I helped make the original recipe and published it in a cookbook.
 
-**Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together, we brought Jadey's reports to the shelf and into the hands of farmers with a Shiny app.
+**Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together, we brought Jadey's reports to the shelf and into the hands of more farmers with a Shiny app.
 
 **[click: takeaway quote]**
 
