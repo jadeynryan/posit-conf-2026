@@ -1,14 +1,34 @@
-/* Demo slide (sections/06-app.qmd): the placeholder tag over the poster goes away once the
- * <video> has a source it can actually load. Nothing to configure; drop the recording in images/. */
+/* Demo slide (sections/06-app.qmd #app-demo): clicker-driven playback.
+ * The slide arrives on the recording's first frame. The next press reveals the .demo-play fragment,
+ * which starts the video; pressing back hides the fragment and pauses it; leaving the slide stops it.
+ * Nothing to configure. */
 (function () {
+  function videoFor(fragment) {
+    var section = fragment.closest('section');
+    return section && section.querySelector('video.demo-video');
+  }
   function boot() {
-    document.querySelectorAll('.browser--demo').forEach(function (frame) {
-      var video = frame.querySelector('video');
-      if (!video) return;
-      var mark = function () { frame.classList.add('has-video'); };
-      if (video.readyState >= 1) mark();
-      video.addEventListener('loadedmetadata', mark, { once: true });
+    Reveal.on('fragmentshown', function (e) {
+      if (!e.fragment.classList.contains('demo-play')) return;
+      var v = videoFor(e.fragment);
+      if (!v) return;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});   // a blocked autoplay is not an error worth surfacing
+    });
+    Reveal.on('fragmenthidden', function (e) {
+      if (!e.fragment.classList.contains('demo-play')) return;
+      var v = videoFor(e.fragment);
+      if (v) v.pause();
+    });
+    Reveal.on('slidechanged', function (e) {
+      if (!e.previousSlide) return;
+      e.previousSlide.querySelectorAll('video.demo-video').forEach(function (v) { v.pause(); v.currentTime = 0; });
     });
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  function whenReady(fn) {
+    if (window.Reveal && Reveal.isReady && Reveal.isReady()) fn();
+    else if (window.Reveal && Reveal.on) Reveal.on('ready', fn);
+    else window.addEventListener('load', function () { whenReady(fn); });
+  }
+  whenReady(boot);
 })();

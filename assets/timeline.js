@@ -4,7 +4,7 @@
  * laid out in 1920×1080 slide px, and it persists while the three slides
  * change underneath it. A fixed cursor sits at the centre; a calendar strip
  * scrolls under it to whichever stop the current slide names in
- * data-milestone ("1930-08" for a month stop, "1953" for a year stop). While the strip is moving, a speed-driven
+ * data-milestone ("1930-08" for a month stop, "1955" for a year stop). While the strip is moving, a speed-driven
  * fisheye bulges the labels near the cursor; at rest it relaxes to linear.
  *
  *   arriving from another hook slide  →  scroll there, hold the slide's
@@ -28,7 +28,7 @@
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const months = (y) => Array.from({ length: 12 }, (_, i) => ({ year: y, month: i + 1 }));
   // months in the years that carry a month-level milestone, bare years everywhere else.
-  // 1930→1938 crosses 21 stops; 1938→1953 crosses 17, so the long gap reads as years
+  // 1930→1938 crosses 21 stops; 1938→1955 crosses 19, so the long gap reads as years
   // flicking past rather than a longer wait (the ease is exponential, so travel time
   // barely depends on distance)
   const years = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => ({ year: a + i }));
@@ -36,7 +36,7 @@
     ...months(1930),
     ...years(1931, 1937),
     ...months(1938),
-    ...years(1939, 1953),
+    ...years(1939, 1955),
   ];
   const keyOf = (s) => (s.month ? `${s.year}-${String(s.month).padStart(2, '0')}` : `${s.year}`);
 

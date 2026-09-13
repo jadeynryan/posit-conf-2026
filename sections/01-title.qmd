@@ -1,6 +1,6 @@
 ## Title {#title .slide-dark .cover background-color="#1A1D20"}
 
-<!-- BEAT: Title (0:30). Warm, no tech; cookies before soil. · OWNER: T -->
+<!-- BEAT: Title. Warm, no tech; cookies before soil. · OWNER: T -->
 
 <!-- SLIDE 1 · Title. Hand-built (no `title:` in index.qmd) so the layout and logos are ours.
      Keep this comment below the header: anything above the first `##` becomes its own (blank) slide.
@@ -33,11 +33,9 @@
 ```
 
 ::: {.notes}
-*⏱ 0:30 · Tanya → Jadey → Tanya* 
-
 **Tanya:** I'm Tanya.
 
-**Jadey:** and I’m Jadey. Our talk today is about how we took a parameterized Quarto template for soil health reports and built layers on top of it to deliver insights to more people.
+**Jadey:** And I'm Jadey. Our talk today is about how we took a parameterized Quarto template for soil health reports and built layers on top of it to deliver insights to more people.
 
-**Tanya:** We’ll walk you through our journey on how we took this template from one person’s laptop to a fully “baked” web app, but before we get into the weeds, we have to talk about cookies. Specifically, the origin story of the chocolate chip cookie.
+**Tanya:** We'll walk you through how we took this template from one person's laptop to a fully "baked" web app. But before we get into the weeds, we have to talk about cookies. Specifically, the origin story of the chocolate chip cookie.
 :::

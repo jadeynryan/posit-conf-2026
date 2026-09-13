@@ -1,4 +1,4 @@
-<!-- BEAT: Layer 3 · App · The Store Shelf (4:00). The payoff: zero friction. Stack intro, recorded demo, then the honest turn on What We Saw. · OWNER: T -->
+<!-- BEAT: Layer 3 · App · The Store Shelf. The payoff: zero friction. Stack intro, recorded demo, then the honest turn on What We Saw. · OWNER: T -->
 <!-- SLIDE 10 · Layer 3: the app as the top of a stack, not a UI. The audience leaves knowing the
      app is a thin layer over {soils}, so the demo's "that's the package doing the work" and the
      Lessons feedback loop both land. No screenshot of the app here on purpose: the video on 10b
@@ -32,57 +32,57 @@ The app is the interface. `{soils}` and Quarto do the work.
 :::
 
 ::: {.notes}
-*⏱ 0:45 · Tanya*
+**Tanya:** This is where I come in. In 2024, Jadey reached out for help on the next evolution of the project: a Shiny app to deliver Quarto reports. We'd connected years earlier through Twitter and the R-Ladies community, and I was ecstatic to get to work with her.
 
-**Tanya:** This is where I come in. In 2024, Jadey reached out to me for help on the next evolution of the project - building a Shiny app to deliver Quarto reports. We previously connected years before via the Twitterverse and R-Ladies community- I was ecstatic to get a chance to work with her.
+The pitch was straightforward: build an intuitive interface that lets non-technical people customize and run their own reports. Together we built Dirt Data Reports, which sits on top of the {soils} package and the parameterized Quarto template. Users don't need to know Quarto. They don't need to know how to spell Quarto. They drop in their data, enter their project information, and click "Build Reports."
 
-The pitch was straight forward, build an intuitive interface to let non technical people customize and run their own reports. Together we built the Shiny app, Dirt Data Reports, which sits on top of the {soils} package and the parameterized Quarto template. Users didn’t need to know Quarto let alone how to spell Quarto. All they had to do was drop in their data, enter their project-specific information, and click “Build Reports”.
-
-No R. No terminal. Let’s take a sneak peek at how it works.
+No R. No terminal. Let's take a look.
 
 **[next slide: the recorded demo]**
 :::
 
-<!-- SLIDE 10b · Layer 3: the recorded demo. One video, with controls, in the deck's browser frame,
-     narrated live by Tanya. The file is not recorded yet: until images/dirt-data-reports.webm
-     (or .mp4) exists the poster shows with a placeholder tag. Drop the recording in and the tag
-     disappears (assets/demo-video.js hides it once the video has a source it can play).
-     ≤ 2:00, ideally ~1:30. Cut to: upload → pick parameters → render → download.
-     Full-bleed alternative: replace the frame with `background-video="images/dirt-data-reports.mp4"`
-     on the header line. -->
+<!-- SLIDE 10b · Layer 3: the recorded demo in the deck's browser frame, sized to the slide (1700 wide:
+     the URL bar on top, the 16:9 recording below, a slim margin around). The heading is kept for
+     navigators but visually hidden (.demo > h2 in brand.scss); the rings crumb and deck footer stay
+     off this slide. Playback is driven by the clicker: the slide arrives on the first frame, the next
+     press (the .demo-play fragment) starts the video, pressing back pauses it, leaving the slide stops
+     it (assets/demo-video.js). Muted on purpose: Tanya narrates live. -->
 
-## Layer 3: App [· The Store Shelf]{.h2-sub} {#app-demo}
+## Layer 3: App [· The Store Shelf]{.h2-sub} {#app-demo .demo}
 
-{{< rings lit=3 class="rings--crumb" >}}
-
-::: {.lede}
-Upload data → pick parameters → render → download.
-:::
-
-::: {.fill .fill--center}
 ```{=html}
 <div class="browser browser--demo">
   <div class="chrome"><span></span><span></span><span></span><div class="url">dirt-data-reports · recorded demo</div></div>
   <div class="demo-frame">
-    <video class="demo-video" controls playsinline preload="metadata">
+    <video class="demo-video" muted playsinline preload="auto">
       <source src="images/dirt-data-reports.mp4" type="video/mp4">
       <source src="images/dirt-data-reports.webm" type="video/webm">
     </video>
   </div>
 </div>
+<span class="fragment demo-play" data-fragment-index="0" aria-hidden="true"></span>
 ```
-:::
 
 ::: {.notes}
-*⏱ 1:30–2:00 · Tanya, narrating over the recording*
+**[The slide arrives on the first frame. The next clicker press starts the recording; back pauses it; arrow keys still work while it plays. Cut: landing page → Build Reports → Download Template → Upload Data → Project Info → Build Reports → HTML output.]**
 
-**[press space or click the video to play; the deck's arrow keys still work while it plays. Cut: upload → parameters → render → download.]**
+*Narration is still in draft. The beats below follow the cut; fill each in your own words to the segment lengths.*
 
-**Tanya (over the video):** Drag in the sample data. Pick the farmer, pick the year, pick the format. Hit render. That's `{soils}` doing the work underneath, the same functions Jadey showed you. Preview on the right. Download the PDF. That's the whole workflow for a the person supporting the farmers.
+**Tanya, landing page (~0:15):** *[Open the app. The landing page explains what {soils} is, in plain language, for someone who will never install it. One click on "Build Reports" starts the process.]*
 
-The important thing isn't that this is a Shiny app. It's that the person using it never has to know there's a package, a template, or Quarto underneath. They open the bag and eat the cookie.
+**Tanya, the spine (~0:10):** *[Form page with four sections in order: Download Template, Upload Data, Project Info, Build Reports. Name them once; the audience will track the rest visually.]*
 
-**[hand-off to Jadey on the next slide]**
+**Tanya, Download Template (~0:25):** *[English or Spanish. Show what the template looks like: this is how advisers structure their farmers' data and choose which elements to measure. The template is the contract between the adviser's spreadsheet and the report.]*
+
+**Tanya, Upload Data (~0:25):** *[Drop the file in. Behind the scenes, several validation checks run to catch the kinds of errors that come with hand-entered data. Say "validation checks" out loud and leave it there; slide 13 will explain that these lived in the app when they belonged in the package.]*
+
+**Tanya, Project Info (~0:20):** *[Text fields, markdown allowed, for the project-specific content: these are the placeholders Jadey pulled out of the template. What used to be edits to a .qmd is now a form.]*
+
+**Tanya, Build Reports (~0:25):** *[Pick the year, pick the producers, pick HTML or docx. Click. It renders. That's the package doing the work underneath, the same functions Jadey showed you.]*
+
+**Tanya, HTML output (~0:10):** *[The interactive report. Point at one thing a farmer would click on.]*
+
+**Tanya, land it (~0:20):** The important thing isn't that this is a Shiny app. It's that the person using it never has to know there's a package, a template, or Quarto underneath.
 :::
 
 <!-- SLIDE 10c · Post-demo · "What we saw". Jadey's 1:00 reaction beat between the demo and Lessons
@@ -114,24 +114,21 @@ Real users showed us what worked, and what didn't.
 :::
 
 ::: {.notes}
-*⏱ 0:45 · Jadey*
+**Tanya:** In September 2025 we released Dirt Data Reports into the universe. But the story doesn't stop there. We took inventory of what worked and what didn't, and set up a feedback loop with users.
 
-**Jadey:** In September 2025, we released Dirt Data Reports into the universe, but our story doesn’t stop there. We took inventory on what worked and what didn’t and created a feedback loop with users.
+And we started getting some really useful signals.
 
-We started getting some really useful signals. 
+**On the positive side:** organizations were using the app and saving real time and effort by automating their reports.
 
-**On the positive side** - it was clear that organizations were using the app and saving real time and effort by automating their reports.
+**But there was a negative signal too:** once people used it for different projects, they pushed beyond the assumptions and scope we'd designed for. They needed more customization in some places and more guardrails in others. That meant baking more features into the app to match their needs.
 
-**But there was also a negative signal** - once people started using it for different projects, they started pushing beyond the original assumptions and scope we had designed for. They needed more customization in some areas and more guardrails in others. This meant baking in more features to match their needs.
+**[click: bridge]**
+
+**Jadey:** The app worked. It also showed us exactly where the package was thin.
 :::
 
 . . .
 
 ::: {.body .bridge style="margin-top:72px;"}
 [The app worked.]{.emphasis} [It also showed us where the package was thin.]{.muted}
-:::
-
-::: {.notes}
-*⏱ 0:15 · Jadey*
-**Jadey (land on the line):** The app worked. It also showed us exactly where the package was thin. **[→ Lessons Learned]**
 :::

@@ -1,4 +1,4 @@
-<!-- BEAT: Hook (1:30). 1930 / 1938 / 1953: warm, narrative, no tech; photo + one line; the pivot is on the last slide. · OWNER: T -->
+<!-- BEAT: Hook. 1930 / 1938 / 1955: warm, narrative, no tech; photo + one line; the pivot is on the last slide. · OWNER: T -->
 <!-- SLIDES 2–4 · The hook: Ruth, the cookbook, the grocery store.
      A calendar tape scrolls under a fixed cursor at the foot of all three
      slides (assets/timeline.js, one overlay that persists across slides).
@@ -48,14 +48,12 @@
   <div class="tl-static__labels">
     <span style="left:6%;  color:var(--text);">Aug 1930</span>
     <span style="left:50%; color:var(--text-faint);">Late 1938</span>
-    <span style="left:94%; color:var(--text-faint);">1953</span>
+    <span style="left:94%; color:var(--text-faint);">1955</span>
   </div>
 </div>
 ```
 
 ::: {.notes}
-*⏱ 0:30 · Tanya*
-
 **Tanya:** Ruth Wakefield ran an inn in Whitman, Massachusetts. **[click: the Inn]** She was a dietitian, she had a kitchen, and one day she had an idea: chop up a chocolate bar and put it in the cookie dough.
 
 **[click: the cookie]** Guests loved it. It was a hit. And it existed in exactly one place: her kitchen. If you wanted the cookie, you drove to the inn.
@@ -85,20 +83,18 @@
   <div class="tl-static__labels">
     <span style="left:6%;  color:var(--text-faint);">Aug 1930</span>
     <span style="left:50%; color:var(--text);">Late 1938</span>
-    <span style="left:94%; color:var(--text-faint);">1953</span>
+    <span style="left:94%; color:var(--text-faint);">1955</span>
   </div>
 </div>
 ```
 
 ::: {.notes}
-*⏱ 0:30 · Tanya*
-
 **Tanya:** Eight years later she published the recipe. **[click: the consequence]** Now anyone could make it. Anyone who owned an oven, had flour and butter in the house, and knew what "cream the sugar" meant.
 
 Which is a lot of people. It's also not everyone.
 :::
 
-## The Store Shelf {#grocery .hook data-milestone="1953" transition="fade" transition-speed="fast"}
+## The Store Shelf {#grocery .hook data-milestone="1955" transition="fade" transition-speed="fast"}
 
 ```{=html}
 <div class="fill fill--center tl-content">
@@ -122,15 +118,13 @@ Which is a lot of people. It's also not everyone.
   <div class="tl-static__labels">
     <span style="left:6%;  color:var(--text-faint);">Aug 1930</span>
     <span style="left:50%; color:var(--text-faint);">Late 1938</span>
-    <span style="left:94%; color:var(--text);">1953</span>
+    <span style="left:94%; color:var(--text);">1955</span>
   </div>
 </div>
 ```
 
 ::: {.notes}
-*⏱ 0:30 · Tanya → Jadey*
+**Tanya:** Then Nestlé put it in the grocery store. **[click: the consequence]** Ready-to-bake dough. No recipe, no measuring, no mixing. Slice it, pop it in the oven, and eat it.
 
-**Tanya:** Then Nestlé put it on a shelf. **[click: the consequence]** Open the bag, eat the cookie. No oven, no skill, no recipe. Universal access.
-
-**Jadey (the pivot):** So. What does a cookie have to do with a technical talk at posit::conf?
+**Jadey:** So. What does a cookie have to do with a technical talk at posit::conf?
 :::

@@ -1,4 +1,4 @@
-<!-- BEAT: Lessons Learned (2:30–3:00). One slide, four beats on three clicks. The diagram is the argument; one line per fragment. · OWNER: T/J -->
+<!-- BEAT: Lessons Learned. One slide, four beats on three clicks. The diagram is the argument; one line per fragment. · OWNER: T/J -->
 <!-- SLIDE 9 · Lessons learned (the architecture arc). One slide, four states, three clicks, no JS.
      Three invisible fragment spans precede the SVG; theme/brand.scss uses sibling selectors
      (.arc-trigger:nth-of-type(n).visible ~ …) to drive the drawing:
@@ -103,24 +103,15 @@ Expectation vs. reality, and the feedback loop between them.
 ```
 
 ::: {.notes}
-*⏱ 2:20 · Tanya 1:35 (11–13) / Jadey 0:45 (14)* 
+**Tanya, three dots (0:20, on arrival):** Now, a quick lesson in expectation versus reality. When we started, the building blocks were obvious: template, package, app. **[point to diagram]** On paper it looks like this. Three tidy boxes. We expected a neat, linear build.
 
-ADD PUMPKIN SPICE COOKIE VARIATION AS EXAMPLE
+**Tanya, expectation (0:20). [click: the pipeline draws]** But expectation often falls short of reality. Once people started using the app in their own projects, they surfaced gaps. And when those needs came up, the app became the place where we worked around what the package couldn't do yet.
 
-**Tanya, three layers (0:20, on arrival: three dots).** Now, for a quick lesson in expectation vs. reality. When we started this project, the building blocks were obvious: Template, Package, and App. We expected a neat linear build, each feeding into the next.
+**Tanya, reality (0:55). [click: the tangle]** This is what it actually looked like. **[pause, let them read it]** Every one of these arrows is a fix we rushed into the Shiny app without thinking about how it should flow back to the building blocks underneath. A data validation function that lived in the app belonged in the package. Formatting we patched in the app belonged in the template. I was the first person to build a UI on top of {soils}, and every time the package didn't have what I needed, I patched around it.
 
-But once we started patching gaps - data validation, new report customization functions - we rushed to make these fixes in the Shiny app and didn’t consider how the feedback should flow back to the supporting building blocks. A data validation function that lived in the app would be best served in the package, and modifications to template would flow back to the original recipe.
-
-This [point to diagram] is where we started. On paper, when you draw it out, it should look something like this: 3 tidy boxes. We expected a neat, linear build. Template, package, and then app.
-
-**Tanya, expectation (0:30). [click: the pipeline draws]** 
-But, expectation often falls short of reality. 
-
-Once people started using the app in their own projects, they surfaced gaps. When these needs came up, the app became the place where we worked around what the package couldn't do yet. This meant a handful of workarounds living inside the Shiny app instead of the package. Hardcoded lookups. A validation step the package didn't do yet. Formatting the template should have owned.
-
-**Tanya, reality (0:45). [click: the tangle]** This is what it actually looked like. Every arrow is something the app was doing that a lower layer should have owned. I was the first person to build a UI on top of `{soils}`, and every time the package didn't have what I needed, I patched around it in the app.
+It's like a customer walking into the store and asking for an oatmeal raisin cookie. You can improvise one batch at the counter. But if that's what people want, the recipe has to change.
 
 Those workarounds weren't failures. They were loud signals about what the package was missing. And you can't see them from inside the package.
 
-**Jadey, refactoring (0:45). [click: retract and redraw; the rings top right light up fully]** That was the real lesson for me as the maintainer: I didn't know what abstractions the package needed until someone built a UI on top of it. Building layer three showed us where layers one and two needed to grow. So now we're taking those lessons back into the package and template.
+**Jadey, refactoring (0:45). [click: retract and redraw; rings top right light up fully]** That was the real lesson for me as the maintainer. I didn't know what abstractions the package needed until someone built a UI on top of it. Building layer three showed us where layers one and two needed to grow. So now we're taking those lessons back into the package and the template.
 :::
