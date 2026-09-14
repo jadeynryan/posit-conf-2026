@@ -47,16 +47,18 @@ Then we pulled a lot of the R code out of the original template and turned it in
 The last piece was documentation. Once the Quarto files were modular and the code was reusable, we wanted people to understand what was available and how to use it. We used {roxygen2} to document every function and {pkgdown} to build a website with tutorials.
 
 **[click: bridge line]**
-
-So the shift was from a reporting workflow built for one Washington State project to a reusable toolkit that any R user could adapt for their own soil sampling project.
-
-Let's take a look at how it works.
 :::
 
 . . .
 
 ::: {.body .bridge}
 [Everything you need to adapt the workflow to your own data.]{.emphasis}
+:::
+
+::: {.notes}
+**Jadey:** So the shift was from a reporting workflow built for one Washington State project to a reusable toolkit that any R user could adapt for their own soil sampling project.
+
+Let's take a look at how it works.
 :::
 
 <!-- SLIDE 9 · Layer 2: what a developer actually runs (Jadey to build; see the note below).

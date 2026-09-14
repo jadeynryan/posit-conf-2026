@@ -586,8 +586,6 @@
 <p>Then we pulled a lot of the R code out of the original template and turned it into reusable functions that handle the core work: validating, processing, and visualizing the data. We also wrote an R script that renders all the reports at once.</p>
 <p>The last piece was documentation. Once the Quarto files were modular and the code was reusable, we wanted people to understand what was available and how to use it. We used {roxygen2} to document every function and {pkgdown} to build a website with tutorials.</p>
 <p><strong>[click: bridge line]</strong></p>
-<p>So the shift was from a reporting workflow built for one Washington State project to a reusable toolkit that any R user could adapt for their own soil sampling project.</p>
-<p>Let’s take a look at how it works.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -603,6 +601,21 @@
 <div class="body bridge">
 <p><span class="emphasis">Everything you need to adapt the workflow to your own data.</span></p>
 </div>
+<aside class="notes">
+<p><strong>Jadey:</strong></p>
+<p>So the shift was from a reporting workflow built for one Washington State project to a reusable toolkit that any R user could adapt for their own soil sampling project.</p>
+<p>Let’s take a look at how it works.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- SLIDE 9 · Layer 2: what a developer actually runs (Jadey to build; see the note below).
      Target: `library(soils)` plus the one call a user makes (real API still open), optionally a
      pkgdown screenshot beside it. Not the folder tree; that is slide 8. -->
