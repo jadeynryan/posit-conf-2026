@@ -20,15 +20,15 @@ Expanding access by matching the tool to the user.
   <div class="levels">
     <div class="level" id="level-1">
       <div class="eyebrow eyebrow--l1">Layer 1 <span class="sub">Template · The Recipe</span></div>
-      <div class="heading">You <span class="detail">parameterized Quarto template</span></div>
+      <div class="heading">You <span class="detail">Parameterized Quarto Template</span></div>
     </div>
     <div class="level" id="level-2">
       <div class="eyebrow eyebrow--l2">Layer 2 <span class="sub">Package · The Cookbook</span></div>
-      <div class="heading">Anyone who codes <span class="detail">{soils} R package</span></div>
+      <div class="heading">Anyone who codes <span class="detail">{soils}: R package</span></div>
     </div>
     <div class="level" id="level-3">
       <div class="eyebrow eyebrow--l3">Layer 3 <span class="sub">App · The Store Shelf</span></div>
-      <div class="heading">Everyone <span class="detail">Shiny web app</span></div>
+      <div class="heading">Everyone <span class="detail">Dirt Data Reports: Shiny App</span></div>
     </div>
 
     <!-- the takeaway sits under the three layers, so the diagram keeps the full height -->
@@ -64,9 +64,9 @@ Expanding access by matching the tool to the user.
 
 **[click: Layer 1, the center figure]** In the beginning, it started off as a recipe. Or in my case, a parameterized Quarto template. It was easy to run and reproduce, but it only lived on my laptop.
 
-**[click: Layer 2, ring 2]** So when other soil scientists started reaching out to ask me for the report, I knew it was time to publish our own cookbook: {soils}, an R package that made it easy for other bakers to run these Quarto reports.
+**[click: Layer 2, ring 2]** So when other people started reaching out to ask how they could build these reports for their own projects, I knew it was time to publish our own cookbook: {soils}, an R package that made it easy for other bakers to make their own reports.
 
-**[click: Layer 3, ring 3]** But not everyone in the agriculture world knows how to code in R. We needed to get these reports onto the store shelf. That was the impetus behind our Shiny app, Dirt Data Reports, a no-code solution that uses our package as the engine, so farm advisors without technical expertise can run their own reports.
+**[click: Layer 3, ring 3]** But not everyone who wanted to make these reports knew how to code in R. We needed to get these reports onto the store shelf. That was the why we built our Shiny app, Dirt Data Reports, a no-code solution that uses our package as the engine, so farm advisers without technical expertise can run their own reports.
 
 In our story, I'm kind of like Ruth. I helped make the original recipe and published it in a cookbook.
 

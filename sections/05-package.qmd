@@ -38,7 +38,7 @@
 :::
 
 ::: {.notes}
-**Jadey:** Developing an R package felt like the natural next step. For people with the right technical expertise, we wanted to give them the flexibility to adapt the template to their projects and build their own soil health reports.
+**Jadey:** We packaged everything up into a cookbook! Developing the {soils} R package felt like the natural next step. For people with the right technical expertise, we wanted to give them the flexibility to adapt the template to their projects and build their own soil health reports.
 
 We broke our one big report template into smaller, modular Quarto files, and replaced all the Washington-specific pieces with placeholders that users swap in for their own project.
 

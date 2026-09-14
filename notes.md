@@ -69,10 +69,9 @@ Which is a lot of people. It's also not everyone.
 
 **[click: Layer 1, the center figure]** In the beginning, it started off as a recipe. Or in my case, a parameterized Quarto template. It was easy to run and reproduce, but it only lived on my laptop.
 
-**[click: Layer 2, ring 2]** So when other soil scientists started reaching out to ask me for the report, I knew it was time to publish our own cookbook: {soils}, an R package that made it easy for other bakers to run these Quarto reports.
+**[click: Layer 2, ring 2]** **[click: Layer 2, ring 2]** So when other people started reaching out to ask how they could build these reports for their own projects, I knew it was time to publish our own cookbook: {soils}, an R package that made it easy for other bakers to make their own reports.
 
-**[click: Layer 3, ring 3]** But not everyone in the agriculture world knows how to code in R. We needed to get these reports onto the store shelf. That was the impetus behind our Shiny app, Dirt Data Reports, a no-code solution that uses our package as the engine, so farm advisors without technical expertise can run their own reports.
-
+**[click: Layer 3, ring 3]** But not everyone who wanted to make these reports knew how to code in R. We needed to get these reports onto the store shelf. That was the why we built our Shiny app, Dirt Data Reports, a no-code solution that uses our package as the engine, so farm advisers without technical expertise can run their own reports.
 In our story, I'm kind of like Ruth. I helped make the original recipe and published it in a cookbook.
 
 **Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together, we brought Jadey's reports to the shelf, and into the hands of more farmers, with a Shiny app.
@@ -112,7 +111,7 @@ So how did we make it easy for them to use?
 ## 8. Layer 2: Package · The Cookbook
 *⏱ 1:30 · Jadey*
 
-**Jadey:** Developing an R package felt like the natural next step. For people with the right technical expertise, we wanted to give them the flexibility to adapt the template to their projects and build their own soil health reports.
+**Jadey:** We packaged everything up into a cookbook! Developing the {soils} R package felt like the natural next step. For people with the right technical expertise, we wanted to give them the flexibility to adapt the template to their projects and build their own soil health reports.
 
 We broke our one big report template into smaller, modular Quarto files, and replaced all the Washington-specific pieces with placeholders that users swap in for their own project.
 
@@ -173,7 +172,7 @@ No R. No terminal. Let's take a look.
 
 **Tanya, Project Info (~0:20):** *[Text fields, markdown allowed, for the project-specific content: these are the placeholders Jadey pulled out of the template. What used to be edits to a .qmd is now a form.]*
 
-**Tanya, Build Reports (~0:25):** *[Pick the year, pick the producers, pick HTML or docx. Click. It renders. That's the package doing the work underneath, the same functions Jadey showed you.]*
+**Tanya, Build Reports (~0:25):** *[Pick the year, pick the producers, pick HTML or docx. Click. It renders. That's the package doing the work underneath, the same functions Jadey talked about.]*
 
 **Tanya, HTML output (~0:10):** *[The interactive report. Point at one thing a farmer would click on.]*
 
@@ -184,7 +183,7 @@ No R. No terminal. Let's take a look.
 ## 12. What We Saw
 *⏱ 1:00 · Tanya 0:45 / Jadey 0:15*
 
-**Tanya:** In September 2025 we released Dirt Data Reports into the universe. But the story doesn't stop there. We took inventory of what worked and what didn't, and set up a feedback loop with users.
+**Tanya:** In September 2025. we released Dirt Data Reports into the universe. But the story doesn't stop there. We took inventory of what worked and what didn't, and set up a feedback loop with users.
 
 And we started getting some really useful signals.
 

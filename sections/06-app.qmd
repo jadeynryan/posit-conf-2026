@@ -78,7 +78,7 @@ No R. No terminal. Let's take a look.
 
 **Tanya, Project Info (~0:20):** *[Text fields, markdown allowed, for the project-specific content: these are the placeholders Jadey pulled out of the template. What used to be edits to a .qmd is now a form.]*
 
-**Tanya, Build Reports (~0:25):** *[Pick the year, pick the producers, pick HTML or docx. Click. It renders. That's the package doing the work underneath, the same functions Jadey showed you.]*
+**Tanya, Build Reports (~0:25):** *[Pick the year, pick the producers, pick HTML or docx. Click. It renders. That's the package doing the work underneath, the same functions Jadey talked about.]*
 
 **Tanya, HTML output (~0:10):** *[The interactive report. Point at one thing a farmer would click on.]*
 
@@ -114,7 +114,7 @@ Real users showed us what worked, and what didn't.
 :::
 
 ::: {.notes}
-**Tanya:** In September 2025 we released Dirt Data Reports into the universe. But the story doesn't stop there. We took inventory of what worked and what didn't, and set up a feedback loop with users.
+**Tanya:** In September 2025, we released Dirt Data Reports into the universe. But the story doesn't stop there. We took inventory of what worked and what didn't, and set up a feedback loop with users.
 
 And we started getting some really useful signals.
 
