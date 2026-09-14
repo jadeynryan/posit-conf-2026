@@ -20,14 +20,14 @@
     <p class="emphasis"><br>Modular Quarto files</p>
     <p class="muted">Customize report content.</p>
   </div>
-  <div class="arrow">&plus;</div>
-  <div class="node card card--l2">
+  <div class="arrow fragment" data-fragment-index="1">&plus;</div>
+  <div class="node card card--l2 fragment" data-fragment-index="1">
     <code>.R</code>
     <p class="emphasis"><br>Functions & Scripts</p>
     <p class="muted">Validate, process, and visualize data; render reports.</p>
   </div>
-    <div class="arrow">&plus;</div>
-    <div class="node card card--l2">
+    <div class="arrow fragment" data-fragment-index="2">&plus;</div>
+    <div class="node card card--l2 fragment" data-fragment-index="2">
     <code>roxygen2 & pkgdown</code>
     <p class="emphasis">Documentation</p>
     <p class="muted">Document functions and guide package use.</p>
@@ -40,11 +40,11 @@
 ::: {.notes}
 **Jadey:** We packaged everything up into a cookbook! Developing the {soils} R package felt like the natural next step. For people with the right technical expertise, we wanted to give them the flexibility to adapt the template to their projects and build their own soil health reports.
 
-We broke our one big report template into smaller, modular Quarto files, and replaced all the Washington-specific pieces with placeholders that users swap in for their own project.
+**[click: qmd]** We broke our one big report template into smaller, modular Quarto files, and replaced all the Washington-specific pieces with placeholders that users swap in for their own project.
 
-Then we pulled a lot of the R code out of the original template and turned it into reusable functions that handle the core work: validating, processing, and visualizing the data. We also wrote an R script that renders all the reports at once.
+**[click: .R]** Then we pulled a lot of the R code out of the original template and turned it into reusable functions that handle the core work: validating, processing, and visualizing the data. We also wrote an R script that renders all the reports at once.
 
-The last piece was documentation. Once the Quarto files were modular and the code was reusable, we wanted people to understand what was available and how to use it. We used {roxygen2} to document every function and {pkgdown} to build a website with tutorials.
+**[click: docs]** The last piece was documentation. Once the Quarto files were modular and the code was reusable, we wanted people to understand what was available and how to use it. We used {roxygen2} to document every function and {pkgdown} to build a website with tutorials.
 
 **[click: bridge line]**
 :::
@@ -85,7 +85,8 @@ How farm advisers, who can code, unlock access to the reporting workflow.
 ::: {.column width="5%"}
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
+
 ```{=html}
 <p class="body" style="margin-top:20px;"><span class="emphasis">After importing their data and customizing report content...</span></p>
 ```
@@ -110,7 +111,9 @@ report_df |>
 ::::
 
 ::: {.notes}
-**Jadey:** On the left is a screenshot from the {pkgdown} tutorial that shows how to use the RStudio project wizard to create a project. That sets up the {soils} directory with the modular .qmd files, example data, and R scripts. Users then work through the other tutorials to import their data, customize the content and branding of their reports, and use the `render-reports.R` script to generate all of them at once.
+**Jadey:** Here is a screenshot from the {pkgdown} tutorial that shows how to use the RStudio project wizard to create a project. That sets up the {soils} directory with the modular .qmd files, example data, and R scripts. 
+
+**[click: tutorials]** Users then work through the other tutorials to import their data, customize the content and branding of their reports, and use the `render-reports.R` script to generate all of them at once.
 
 **[click: bridge]**
 

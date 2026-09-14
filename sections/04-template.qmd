@@ -23,10 +23,12 @@ One report for every farmer in the survey.
 
 ::: {.output-aside style="flex:1 1 0; min-width:0;"}
 ```{=html}
+<div class="fragment" data-fragment-index="1">
 <div class="stat stat--l1">350<span class="stat__plus">+</span></div>
 <p class="stat__caption">farmers with their own report</p>
 <p class="body" style="margin-top:40px;"><span class="emphasis">Interactive HTML</span> <span class="muted"><br>for increased engagement.</span><br><span class="emphasis">Printable PDF</span> <span class="muted"><br>for the folks who wanted paper.</span></p>
-<p class="quote" style="margin-top:40px;background:#2c5e3b"><span class="mark" style="color:#d8dfd7">&ldquo;</span>I was able to see a direct connection between my soil management decisions and the health of the soil I manage.</p>
+</div>
+<p class="quote fragment" data-fragment-index="2" style="margin-top:40px;background:#2c5e3b"><span class="mark" style="color:#d8dfd7">&ldquo;</span>I was able to see a direct connection between my soil management decisions and the health of the soil I manage.</p>
 ```
 :::
 :::
@@ -36,9 +38,9 @@ One report for every farmer in the survey.
 
 During that talk, I showed how we used a parameterized Quarto template to magically render hundreds of soil health reports, one for each farmer who participated in our project in Washington State.
 
-Each of the 350-plus farmers got two versions: an interactive HTML file that lets them click around their plots, and a printable PDF for those who wanted paper. The reports included background on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared to similar crops and regions. They were meant to be a decision-support tool, not a data dump.
+**[click: reports]:** Each of the 350-plus farmers got two versions: an interactive HTML file that lets them click around their plots, and a printable PDF for those who wanted paper. The reports included background on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared to similar crops and regions. They were meant to be a decision-support tool, not a data dump.
 
-One farmer told us: *"I was able to see a direct connection between my soil management decisions and the health of the soil I manage."*
+**[click: quote]:** One farmer told us: *"I was able to see a direct connection between my soil management decisions and the health of the soil I manage."*
 
 So what was the problem?
 :::

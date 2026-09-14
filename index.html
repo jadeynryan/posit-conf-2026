@@ -495,17 +495,19 @@
   </figcaption>
 </div>
 <div class="output-aside" style="flex:1 1 0; min-width:0;">
+<div class="fragment" data-fragment-index="1">
 <div class="stat stat--l1">350<span class="stat__plus">+</span></div>
 <p class="stat__caption">farmers with their own report</p>
 <p class="body" style="margin-top:40px;"><span class="emphasis">Interactive HTML</span> <span class="muted"><br>for increased engagement.</span><br><span class="emphasis">Printable PDF</span> <span class="muted"><br>for the folks who wanted paper.</span></p>
-<p class="quote" style="margin-top:40px;background:#2c5e3b"><span class="mark" style="color:#d8dfd7">“</span>I was able to see a direct connection between my soil management decisions and the health of the soil I manage.</p>
+</div>
+<p class="quote fragment" data-fragment-index="2" style="margin-top:40px;background:#2c5e3b"><span class="mark" style="color:#d8dfd7">“</span>I was able to see a direct connection between my soil management decisions and the health of the soil I manage.</p>
 </div>
 </div>
 <aside class="notes">
 <p><strong>Jadey:</strong> This story began about three years ago, when I gave my very first presentation at posit::conf in 2023.</p>
 <p>During that talk, I showed how we used a parameterized Quarto template to magically render hundreds of soil health reports, one for each farmer who participated in our project in Washington State.</p>
-<p>Each of the 350-plus farmers got two versions: an interactive HTML file that lets them click around their plots, and a printable PDF for those who wanted paper. The reports included background on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared to similar crops and regions. They were meant to be a decision-support tool, not a data dump.</p>
-<p>One farmer told us: <em>“I was able to see a direct connection between my soil management decisions and the health of the soil I manage.”</em></p>
+<p><strong>[click: reports]:</strong> Each of the 350-plus farmers got two versions: an interactive HTML file that lets them click around their plots, and a printable PDF for those who wanted paper. The reports included background on all the soil health measurements, plus plots and tables designed so a farmer could see how their fields compared to similar crops and regions. They were meant to be a decision-support tool, not a data dump.</p>
+<p><strong>[click: quote]:</strong> One farmer told us: <em>“I was able to see a direct connection between my soil management decisions and the health of the soil I manage.”</em></p>
 <p>So what was the problem?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -566,14 +568,14 @@
     <p class="emphasis"><br>Modular Quarto files</p>
     <p class="muted">Customize report content.</p>
   </div>
-  <div class="arrow">+</div>
-  <div class="node card card--l2">
+  <div class="arrow fragment" data-fragment-index="1">+</div>
+  <div class="node card card--l2 fragment" data-fragment-index="1">
     <code>.R</code>
     <p class="emphasis"><br>Functions &amp; Scripts</p>
     <p class="muted">Validate, process, and visualize data; render reports.</p>
   </div>
-    <div class="arrow">+</div>
-    <div class="node card card--l2">
+    <div class="arrow fragment" data-fragment-index="2">+</div>
+    <div class="node card card--l2 fragment" data-fragment-index="2">
     <code>roxygen2 &amp; pkgdown</code>
     <p class="emphasis">Documentation</p>
     <p class="muted">Document functions and guide package use.</p>
@@ -582,9 +584,9 @@
 </div>
 <aside class="notes">
 <p><strong>Jadey:</strong> We packaged everything up into a cookbook! Developing the {soils} R package felt like the natural next step. For people with the right technical expertise, we wanted to give them the flexibility to adapt the template to their projects and build their own soil health reports.</p>
-<p>We broke our one big report template into smaller, modular Quarto files, and replaced all the Washington-specific pieces with placeholders that users swap in for their own project.</p>
-<p>Then we pulled a lot of the R code out of the original template and turned it into reusable functions that handle the core work: validating, processing, and visualizing the data. We also wrote an R script that renders all the reports at once.</p>
-<p>The last piece was documentation. Once the Quarto files were modular and the code was reusable, we wanted people to understand what was available and how to use it. We used {roxygen2} to document every function and {pkgdown} to build a website with tutorials.</p>
+<p><strong>[click: qmd]</strong> We broke our one big report template into smaller, modular Quarto files, and replaced all the Washington-specific pieces with placeholders that users swap in for their own project.</p>
+<p><strong>[click: .R]</strong> Then we pulled a lot of the R code out of the original template and turned it into reusable functions that handle the core work: validating, processing, and visualizing the data. We also wrote an R script that renders all the reports at once.</p>
+<p><strong>[click: docs]</strong> The last piece was documentation. Once the Quarto files were modular and the code was reusable, we wanted people to understand what was available and how to use it. We used {roxygen2} to document every function and {pkgdown} to build a website with tutorials.</p>
 <p><strong>[click: bridge line]</strong></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -602,8 +604,7 @@
 <p><span class="emphasis">Everything you need to adapt the workflow to your own data.</span></p>
 </div>
 <aside class="notes">
-<p><strong>Jadey:</strong></p>
-<p>So the shift was from a reporting workflow built for one Washington State project to a reusable toolkit that any R user could adapt for their own soil sampling project.</p>
+<p><strong>Jadey:</strong> So the shift was from a reporting workflow built for one Washington State project to a reusable toolkit that any R user could adapt for their own soil sampling project.</p>
 <p>Let’s take a look at how it works.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -634,7 +635,7 @@
 </figure>
 </div><div class="column" style="width:5%;">
 
-</div><div class="column" style="width:50%;">
+</div><div class="column fragment" style="width:50%;">
 <p class="body" style="margin-top:20px;"><span class="emphasis">After importing their data and customizing report content...</span></p>
 <div class="code-window">
 <div class="chrome"><span class="r"></span><span class="y"></span><span class="g"></span><span class="filename">render-reports.R</span></div>
@@ -647,7 +648,8 @@
 </div>
 </div></div>
 <aside class="notes">
-<p><strong>Jadey:</strong> On the left is a screenshot from the {pkgdown} tutorial that shows how to use the RStudio project wizard to create a project. That sets up the {soils} directory with the modular .qmd files, example data, and R scripts. Users then work through the other tutorials to import their data, customize the content and branding of their reports, and use the <code>render-reports.R</code> script to generate all of them at once.</p>
+<p><strong>Jadey:</strong> Here is a screenshot from the {pkgdown} tutorial that shows how to use the RStudio project wizard to create a project. That sets up the {soils} directory with the modular .qmd files, example data, and R scripts.</p>
+<p><strong>[click: tutorials]</strong> Users then work through the other tutorials to import their data, customize the content and branding of their reports, and use the <code>render-reports.R</code> script to generate all of them at once.</p>
 <p><strong>[click: bridge]</strong></p>
 <p>Now we’re reaching anyone comfortable in R.</p>
 <p><strong>Tanya:</strong> Not everyone who’d like to run these reports is.</p>
