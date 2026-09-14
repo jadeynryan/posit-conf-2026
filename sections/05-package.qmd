@@ -70,7 +70,7 @@ Let's take a look at how it works.
 {{< rings lit=2 class="rings--crumb" >}}
 
 ::: {.lede}
-How farm advisers, who can code, unlock access to the reporting workflow.
+How farm advisers who know R unlock access to the reporting workflow.
 :::
 
 :::: {.columns}
