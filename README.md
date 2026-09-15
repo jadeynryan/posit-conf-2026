@@ -1,4 +1,4 @@
-# Template → Package → App: Meeting Users Where They're At
+## Template → Package → App: Meeting Users Where They're At
 
 [![Title slide reading "Template → Package → App: Meeting Users Where They're At"](images/title-slide.png)](https://jadeynryan.github.io/posit-conf-2026/#/title)
 
