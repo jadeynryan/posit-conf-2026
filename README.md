@@ -2,6 +2,8 @@
 
 [![Title slide reading "Template → Package → App: Meeting Users Where They're At"](images/title-slide.png)](https://jadeynryan.github.io/posit-conf-2026/#/title)
 
+### Links
+
 📺 [**Slide Deck**](https://jadeynryan.github.io/posit-conf-2026/#/title)
 
 📦 [**{soils}: R Package**](https://wa-department-of-agriculture.github.io/soils/)
@@ -10,13 +12,19 @@
 
 🌿 [**Jadey's posit::conf(2023) talk on parameterized Quarto templates**](https://jadeyryan.com/talks/2023-09-25_posit_parameterized-quarto/)
 
-Tue, September 15, 2026 | Houston, TX
+### Logistics
 
 [posit::conf(2026)](https://conf.posit.co/2026/sessions/)
 
-**Jadey Ryan**: Data Scientist, Washington State Dept of Agriculture
+Tue, September 15, 2026 | 3:40 - 4:00 PM CT
 
-**Tanya Shapiro**: Founder & Consultant, IndieVisual
+Houston, TX | Hilton Americas | Ballroom H & K
+
+### Speakers
+
+**Jadey Ryan**: Data Scientist, Washington State Dept of Agriculture | [jadeyryan.com](https://jadeyryan.com)
+
+**Tanya Shapiro**: Founder & Consultant, [IndieVisual](https://indievisual.tech/)
 
 ## Abstract
 
