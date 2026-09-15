@@ -6,7 +6,7 @@
 
 🖥️ [**Dirt Data Reports: Shiny App**](https://wsda.shinyapps.io/dirt-data-reports/)
 
-🌿 [**Jadey's posit::conf(2023) talk**](https://jadeyryan.com/talks/2023-09-25_posit_parameterized-quarto/)
+🌿 [**Jadey's posit::conf(2023) talk on parameterized Quarto templates**](https://jadeyryan.com/talks/2023-09-25_posit_parameterized-quarto/)
 
 Tue, September 15, 2026 | Houston, TX
 
