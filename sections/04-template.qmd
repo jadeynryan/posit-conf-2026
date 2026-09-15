@@ -15,7 +15,7 @@ One report for every farmer in the survey.
 ::: {.fill .fill--row}
 ```{=html}
 <div class="then-card report-card" style="flex:1.4 1 0; min-width:0;">
-  <img src="images/report-html.png" alt="Example HTML report">
+  <img src="images/report-html.png" alt="Jadey Ryan presenting a slide titled "Everyone gets a custom decision-support tool!" showing a sample HTML report for a Washington soil health assessment at posit::conf(2023).">
   <figcaption><span class="then-card__tag">posit::conf(2023)</span> where the template was first shown
   </figcaption>
 </div>
