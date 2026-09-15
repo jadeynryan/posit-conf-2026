@@ -1,18 +1,20 @@
 # Template → Package → App: Meeting Users Where They're At
 
-[**Slide Deck**](https://jadeynryan.github.io/posit-conf-2026/#/title)
+📺 [**Slide Deck**](https://jadeynryan.github.io/posit-conf-2026/#/title)
 
-[**{soils}: R Package**](https://wa-department-of-agriculture.github.io/soils/)
+📦 [**{soils}: R Package**](https://wa-department-of-agriculture.github.io/soils/)
 
-[**Dirt Data Reports: Shiny App**](https://wsda.shinyapps.io/dirt-data-reports/)
+🖥️ [**Dirt Data Reports: Shiny App**](https://wsda.shinyapps.io/dirt-data-reports/)
+
+🌿 [**Jadey's posit::conf(2023) talk**](https://jadeyryan.com/talks/2023-09-25_posit_parameterized-quarto/)
 
 Tue, September 15, 2026 | Houston, TX
 
 [posit::conf(2026)](https://conf.posit.co/2026/sessions/)
 
-**Jadey Ryan**, Data Scientist, WA Dept. of Agriculture
+**Jadey Ryan**: Data Scientist, Washington State Dept of Agriculture
 
-**Tanya Shapiro**, Founder & Consultant, IndieVisual
+**Tanya Shapiro**: Founder & Consultant, IndieVisual
 
 ## Abstract
 

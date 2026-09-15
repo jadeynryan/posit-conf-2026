@@ -1,4 +1,4 @@
-<!-- BEAT: Layer 2 · Package · The Cookbook (2:00). Plain, practical. A published cookbook for anyone with R; end on 'not everyone is'. · OWNER: J -->
+<!-- BEAT: Layer 2 · Package · The Cookbook. Plain, practical. A published cookbook for anyone with R; end on 'not everyone is'. · OWNER: J -->
 <!-- SLIDE 8 · Layer 2: the {soils} package. Published by WSDA + WSU for the public (WA data swapped
      for placeholders), not for an internal team. The WSU credit is text for now; confirm with Jadey,
      swap in a logo if she has one. -->
@@ -20,14 +20,14 @@
     <p class="emphasis"><br>Modular Quarto files</p>
     <p class="muted">Customize report content.</p>
   </div>
-  <div class="arrow">&plus;</div>
-  <div class="node card card--l2">
+  <div class="arrow fragment" data-fragment-index="1">&plus;</div>
+  <div class="node card card--l2 fragment" data-fragment-index="1">
     <code>.R</code>
     <p class="emphasis"><br>Functions & Scripts</p>
     <p class="muted">Validate, process, and visualize data; render reports.</p>
   </div>
-    <div class="arrow">&plus;</div>
-    <div class="node card card--l2">
+    <div class="arrow fragment" data-fragment-index="2">&plus;</div>
+    <div class="node card card--l2 fragment" data-fragment-index="2">
     <code>roxygen2 & pkgdown</code>
     <p class="emphasis">Documentation</p>
     <p class="muted">Document functions and guide package use.</p>
@@ -38,16 +38,15 @@
 :::
 
 ::: {.notes}
-*⏱ 1:00 · Jadey*
+**Jadey:** We packaged everything up into a cookbook! Developing the {soils} R package felt like the natural next step. For people with the right technical expertise, we wanted to give them the flexibility to adapt the template to their projects and build their own soil health reports.
 
-**Jadey:** 
-Developing an R package to support these teams felt like a natural progression. For people with the right technical expertise, we wanted to give them flexibility to adapt the template to their projects and build their own soil health reports. 
+**[click: qmd]** We broke our one big report template into smaller, modular Quarto files, and replaced all the Washington-specific pieces with placeholders that users swap in for their own project.
 
-We broke up our one big report template into smaller, modular Quarto files and replaced all the Washington-specific components with placeholders for users to swap in information applicable to their own project. 
+**[click: .R]** Then we pulled a lot of the R code out of the original template and turned it into reusable functions that handle the core work: validating, processing, and visualizing the data. We also wrote an R script that renders all the reports at once.
 
-Then we pulled a lot of the R code out of the original Quarto template and turned that code into reusable functions that handle the core work like validating, processing, and visualizing the data. We also created an R script that renders all the reports at once.
+**[click: docs]** The last piece was documentation. Once the Quarto files were modular and the code was reusable, we wanted people to understand what was available and how to use it. We used {roxygen2} to document every function and {pkgdown} to build a website with tutorials.
 
-The last piece was documentation. Once the Quarto files were modularized and the code became reusable, we wanted to make sure people could understand what was available and how to use this reporting workflow. We used {roxygen2} to document all functions and {pkgdown} to create a website with tutorials.
+**[click: bridge line]**
 :::
 
 . . .
@@ -57,10 +56,7 @@ The last piece was documentation. Once the Quarto files were modularized and the
 :::
 
 ::: {.notes}
-*⏱ 0:30 · Jadey*
-
-**Jadey:** 
-So the shift was from a reporting workflow built specifically for a Washington State project to a reusable toolkit that any R user could adapt for their own soil sampling project.
+**Jadey:** So the shift was from a reporting workflow built for one Washington State project to a reusable toolkit that any R user could adapt for their own soil sampling project.
 
 Let's take a look at how it works.
 :::
@@ -74,7 +70,7 @@ Let's take a look at how it works.
 {{< rings lit=2 class="rings--crumb" >}}
 
 ::: {.lede}
-How farm advisers, who can code, unlock access to the reporting workflow.
+How farm advisers who know R unlock access to the reporting workflow.
 :::
 
 :::: {.columns}
@@ -89,7 +85,8 @@ How farm advisers, who can code, unlock access to the reporting workflow.
 ::: {.column width="5%"}
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
+
 ```{=html}
 <p class="body" style="margin-top:20px;"><span class="emphasis">After importing their data and customizing report content...</span></p>
 ```
@@ -114,9 +111,17 @@ report_df |>
 ::::
 
 ::: {.notes}
-*⏱ 0:30 · Jadey*
+**Jadey:** Here is a screenshot from the {pkgdown} tutorial that shows how to use the RStudio project wizard to create a project. That sets up the {soils} directory with the modular .qmd files, example data, and R scripts. 
 
-**Jadey:** On the left is a screenshot of the tutorial on the {pkgdown} website that shows how to use the RStudio project wizard to create a project, which sets up the {soils} directory with the modular .qmd files, example data, and R scripts. Users then continue through the other tutorials to import their data, customize the content and branding of the reports, and then use the `render-reports.R` script to generate all of their reports once. 
+**[click: tutorials]** Users then work through the other tutorials to import their data, customize the content and branding of their reports, and use the `render-reports.R` script to generate all of them at once.
+
+**[click: bridge]**
+
+Now we're reaching anyone comfortable in R.
+
+**Tanya:** Not everyone who'd like to run these reports is.
+
+**Jadey:** So how do we reach the farm advisers with zero code experience?
 :::
 
 . . .
@@ -124,10 +129,4 @@ report_df |>
 <!-- the bridge to Layer 3, not a takeaway (the "decouple before Shiny" lesson belongs to Lessons Learned) -->
 ::: {.body .bridge style="margin-top:72px;"}
 [Anyone comfortable in R can run their own soil survey reports.]{.emphasis} [Not everyone is.]{.muted}
-:::
-
-::: {.notes}
-*⏱ 0:30 · Jadey*
-
-**Jadey:** Now we're reaching anyone comfortable in R. But not everyone who would like to run these reports is. So how can we reach the farm advisers with zero code experience?
 :::

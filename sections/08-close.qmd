@@ -1,4 +1,4 @@
-<!-- BEAT: Three Layers, Three Audiences + Close (1:30). Plain-language recap, then the thesis and who took the cookie off the shelf. · OWNER: T -->
+<!-- BEAT: Three Layers, Three Audiences + Close. Plain-language recap, then the thesis and who took the cookie off the shelf. · OWNER: T -->
 <!-- SLIDE 15 · Three layers, three audiences. Row colour = level; the rings in the Who column show the
      layer's lit state (same markup the {{< rings >}} shortcode emits; inline here because the table is raw HTML).
      Friction is the hue-free meter so the two never argue. -->
@@ -26,7 +26,7 @@ Meeting users where they’re at.
       <td>Package</td>
       <td class="who"><svg class="rings rings--cell" data-lit="2" viewBox="0 0 600 600" width="88" height="88" role="img" aria-label="Layer 2: anyone who codes"><use href="#rings-l3" class="ring ring-3"/><use href="#rings-l2" class="ring ring-2"/><use href="#rings-l1" class="ring ring-1"/></svg><span class="who__label">Anyone who codes</span></td>
       <td>The same analysis, <br>on their data</td>
-      <td><span class="friction"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="word">Install, call a function</span></span></td>
+      <td><span class="friction"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="word">Install, run a script</span></span></td>
     </tr>
     <tr class="l3">
       <td>App</td>
@@ -39,6 +39,16 @@ Meeting users where they’re at.
 ```
 :::
 
+::: {.notes}
+**Jadey:** All of this comes back to knowing who you're building for. Every layer we built made the same reports available to someone who couldn't access it before. With each layer out, we lowered a barrier and made it easier for more people to get to the insights. First, it was just editing the main Quarto template, then installing the {soils} package and running a script, then finally, just clicking a button. Same analysis the whole way through. The only thing that changed was who could get to it.
+
+**Tanya:** Most of us are at the first layer. We built something to make our own work easier, and that's the right layer for a lot of people. Some of us are at the second, because others on our team want to use it and adapt it. And some of us are at the third, because the people who need the answer are never going to open an IDE.
+
+Each layer is the right layer for someone. What determines which one you need isn't the tool, and it isn't what you already know how to build. It's one question, before you build: who is this for?
+
+**[click: quote]**
+:::
+
 . . .
 
 ```{=html}
@@ -46,17 +56,7 @@ Meeting users where they’re at.
 ```
 
 ::: {.notes}
-
-**Jadey:** All this comes back to knowing you who're building for. There's no one layer to rule them all. Most of us start at the first: we build something to make our own work easier. 
-
-**Tanya:** Some of us move to the second when others on our team want to be able to use and adapt it.
-
-**Jadey:** And some of us go all the way to the third layer because the people who need the answer are never going to open an IDE.
-
-**Tanya:** Each layer is the right layer for someone. What determines which one you need isn't the tool or the team. It's one question to ask before you build: who is this for?
-
-**[Click: quote]** Then build the layer that makes it possible to get the right insight into their hands. 
-
+**Jadey:** Build the layer that gets the insight into their hands. Then let it show you where the other layers need to grow.
 :::
 
 <!-- SLIDE 16 · Close. Answers the hook: the talk opens on Nestlé putting cookies on a shelf; this
@@ -67,6 +67,7 @@ Meeting users where they’re at.
 ## Thank You {#closing .slide-dark .closing background-color="#1A1D20"}
 
 ::: {.lede}
+With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong & Dani Gelardi
 :::
 
 ```{=html}
@@ -79,39 +80,38 @@ Meeting users where they’re at.
   </svg>
 </div>
 
+<!-- Partner band: the middle of the slide. Four equal cells, logos flattened to white the same
+     way the deck footer lockup is on dark slides (brand.scss .partner-band). -->
+<div class="partner-band">
+  <div class="partner-band__eyebrow">In partnership with</div>
+  <div class="partner-tiles">
+    <div class="partner-tile"><img src="images/logo-wsda.png" alt="Washington State Department of Agriculture"></div>
+    <div class="partner-tile"><img src="images/logo-wsu.png" alt="Washington State University"></div>
+    <div class="partner-tile"><img src="images/logo-washi.png" alt="Washington Soil Health Initiative"></div>
+    <div class="partner-tile"><img src="images/logo-indievisual.png" alt="IndieVisual"></div>
+  </div>
+</div>
+
 <div class="footer-split">
   <div class="who">
     <b>Jadey Ryan</b>
     <span>WA Dept of Agriculture</span>
   </div>
-  
+
   <div class="qr">
     <img src="images/qr.png" alt="QR code">
     <div class="caption">Scan for the slides and tools</div>
   </div>
-  
+
   <div class="who who--r">
     <b>Tanya Shapiro</b>
     <span>IndieVisual</span>
   </div>
 </div>
-
-<p class="credit">With Molly McIlquham, Teal Potter, Deirdre Griffin LaHue, Leslie Michel, Kwabena Sarpong &amp; Dani Gelardi</p>
-
-<!-- Partner Logos Lockup -->
-<div class="partner-logos">
-  <img src="images/logo-wsda.png" alt="Washington State Dept of Agriculture">
-  <span class="logos__sep"></span>
-  <img src="images/logo-wsu.png" alt="Washington State University">
-  <span class="logos__sep"></span>
-  <img src="images/logo-washi.png" alt="Washington Soil Health Initiative">
-  <span class="logos__sep"></span>
-  <img src="images/logo-indievisual.png" alt="IndieVisual">
-</div>
 ```
 
 ::: {.notes}
-**Jadey**: Thank you all for attending our session, Posit for hosting this conf and providing speaker coaching by MeadowLark, and all the people behind the tools we shared today from the Washington State Department of Agriculture, Washington State University, and Washington Soil Health Initiative. 
+**Jadey:** Thank you all for coming to our session, to Posit for hosting and for the speaker coaching from MeadowLark, and to all the people behind the tools we shared today from the Washington State Department of Agriculture, Washington State University, and the Washington Soil Health Initiative.
 
-**Tanya**: Check out the QR code to access the repo with these published slides, as well as links to {soils} and Dirt Data Reports and Jadey's posit::conf(2023) talk. We're happy to take questions if there's time.
+**Tanya:** Scan the QR code for the repo with these slides, plus links to {soils}, Dirt Data Reports, and Jadey's posit::conf(2023) talk. We're happy to take questions if there's time.
 :::

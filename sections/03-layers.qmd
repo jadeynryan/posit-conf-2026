@@ -1,4 +1,4 @@
-<!-- BEAT: Playbook (1:00–1:30). The map. Thesis once: impact stops where access stops. Don't explain the layers here. · OWNER: J -->
+<!-- BEAT: Playbook. The map. Thesis once: impact stops where access stops. Don't explain the layers here. · OWNER: J -->
 <!-- SLIDE 5 · The playbook reveal. Concentric rings, built by fragments.
      Logic: assets/rings.js · styles: assets/rings.css
      Down/right arrow = next ring; left arrow = walk it back. Levels stay hidden until called. -->
@@ -20,15 +20,15 @@ Expanding access by matching the tool to the user.
   <div class="levels">
     <div class="level" id="level-1">
       <div class="eyebrow eyebrow--l1">Layer 1 <span class="sub">Template · The Recipe</span></div>
-      <div class="heading">You <span class="detail">parameterized Quarto template</span></div>
+      <div class="heading">You <span class="detail">Parameterized Quarto Template</span></div>
     </div>
     <div class="level" id="level-2">
       <div class="eyebrow eyebrow--l2">Layer 2 <span class="sub">Package · The Cookbook</span></div>
-      <div class="heading">Anyone who codes <span class="detail">{soils} R package</span></div>
+      <div class="heading">Anyone who codes <span class="detail">{soils}: R package</span></div>
     </div>
     <div class="level" id="level-3">
       <div class="eyebrow eyebrow--l3">Layer 3 <span class="sub">App · The Store Shelf</span></div>
-      <div class="heading">Everyone <span class="detail">Shiny web app</span></div>
+      <div class="heading">Everyone <span class="detail">Dirt Data Reports: Shiny App</span></div>
     </div>
 
     <!-- the takeaway sits under the three layers, so the diagram keeps the full height -->
@@ -60,17 +60,19 @@ Expanding access by matching the tool to the user.
 ```
 
 ::: {.notes}
-*⏱ 1:15 · Jadey, one Tanya interjection*
+**Jadey:** Ruth's story has strong parallels with our own. But instead of a chocolate chip cookie, our story centers around a soil health report, one that could offer farmers a new way of understanding their data.
 
-**Jadey:** Ruth's story has strong parallels with our own evolution story. But instead of chocolate chip cookies, our story centers around soil health reports, which offer farmers a new way of understanding their data. 
+**[click: Layer 1, the center figure]** In the beginning, it started off as a recipe. Or in my case, a parameterized Quarto template. It was easy to run and reproduce, but it only lived on my laptop.
 
-**[click: Layer 1, the center figure]** Imagine you're starting off with a recipe that lives on a notepad in your kitchen: only you have access to it. In my case, it was a laptop with a Quarto template to make reports. **[click: Layer 2, ring 2]** To get your recipe out to more bakers, you need to publish it in a cookbook. For us, we created an R package to allow coders - specifically, farm advisers, to adapt the template and get those reports out to the farmers they work with. **[click: Layer 3, ring 3]** And lastly, if you want even broader distribution of cookies, you need get them on the store shelf for anyone to access, even without baking experience. That was the why we built our shiny app, a no code solution that used our package as the engine to allow farm advisers without technical expertise to make soil health reports.
+**[click: Layer 2, ring 2]** So when other people started reaching out to ask how they could build these reports for their own projects, I knew it was time to publish our own cookbook: {soils}, an R package that made it easy for other bakers to make their own reports.
 
-In our story, I'm kinda like Ruth. I helped make the original recipe and published it in a cookbook.
+**[click: Layer 3, ring 3]** But not everyone who wanted to make these reports knew how to code in R. We needed to get these reports onto the store shelf. That was the why we built our Shiny app, Dirt Data Reports, a no-code solution that uses our package as the engine, so farm advisers without technical expertise can run their own reports.
 
-**Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together, we brought Jadey's reports to the shelf and into the hands of more farmers with a Shiny app.
+In our story, I'm kind of like Ruth. I helped make the original recipe and published it in a cookbook.
+
+**Tanya:** And if she's Ruth, I guess that makes me Nestlé. Together, we brought Jadey's reports to the shelf, and into the hands of more farmers, with a Shiny app.
 
 **[click: takeaway quote]**
 
-**Jadey:** Our main takeaway is that there's no single tool for everyone. Build the layer that meets the user where they are. So let's start at the beginning with the template.
+**Jadey:** Our main takeaway is that there's no single tool for everyone. Build the layer that meets the user where they are. So let's start at the beginning, with the template.
 :::
