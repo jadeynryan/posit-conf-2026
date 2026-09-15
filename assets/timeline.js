@@ -79,6 +79,7 @@
     let cur = 0, target = 0, intensity = 0;
     let holding = null;     // section whose content is waiting for the strip to land
     let running = false, lastT = null;
+    let raf = 0;            // handle of the queued frame, so a snap can cancel it
 
     function render() {
       for (const n of nodes) {
@@ -91,7 +92,7 @@
         const scale = Math.max(0.35, 1.25 - a * 0.15) * (1 - intensity) + Math.max(0.15, 2.2 / (1 + a * 0.5)) * intensity;
 
         n.el.style.opacity = opacity;
-        n.el.style.transform = `translate3d(${x}px,0,0)`;
+        n.el.style.transform = `translate(${x}px,0)`;
         n.dot.style.transform = `scale(${scale})`;
         n.wrap.style.transform = `scale(${scale})`;
         n.el.classList.toggle('is-center', a < 0.25);
@@ -103,7 +104,11 @@
     }
 
     function frame(t) {
+      raf = 0;
+      // a second frame landing on the same timestamp (two loops sharing one clock) would
+      // divide by zero and poison every value with NaN, freezing the strip for good
       const dt = lastT == null ? 1 / 60 : Math.min(0.05, (t - lastT) / 1000);
+      if (!(dt > 0)) { raf = requestAnimationFrame(frame); return; }
       lastT = t;
       const diff = target - cur;
       const step = diff * (1 - Math.exp(-EASE * dt));
@@ -118,11 +123,15 @@
         running = false; lastT = null;
         return;
       }
-      requestAnimationFrame(frame);
+      raf = requestAnimationFrame(frame);
     }
-    function run() { if (!running) { running = true; lastT = null; requestAnimationFrame(frame); } }
+    function run() { if (!running) { running = true; lastT = null; raf = requestAnimationFrame(frame); } }
 
-    function snapTo(idx) { target = cur = idx; intensity = 0; running = false; render(); }
+    // a snap must also drop any frame still queued, or the next run() starts a second loop
+    function snapTo(idx) {
+      if (raf) { cancelAnimationFrame(raf); raf = 0; }
+      target = cur = idx; intensity = 0; running = false; lastT = null; render();
+    }
 
     /* ---- drive from reveal ---- */
     function show(section, animate) {
@@ -149,6 +158,11 @@
       if (to && to.dataset.milestone) show(to, !!(from && from.dataset.milestone));
       else hide();
     });
+
+    // reveal rescales .slides on resize, fullscreen and leaving overview; rewriting the
+    // transforms then forces the browser to redraw the stops at the new scale
+    Reveal.on('resize', render);
+    Reveal.on('overviewhidden', render);
 
     const now = Reveal.getCurrentSlide();
     if (now && now.dataset.milestone) show(now, false);

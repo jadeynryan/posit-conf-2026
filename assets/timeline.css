@@ -29,17 +29,18 @@
 }
 
 /* a stop on the strip: the node is a zero-width anchor at the axis, translated by the
-   script; the dot and the label wrapper scale independently about that anchor */
+   script; the dot and the label wrapper scale independently about that anchor.
+   No will-change here: promoting ~150 elements to their own compositor layers under
+   reveal's scaled .slides let Chrome draw them at a stale scale now and then. */
 .tl-overlay .tl-node {
   position: absolute; left: 50%; top: 48px; width: 0; height: 0;
-  will-change: transform, opacity;
 }
 .tl-overlay .tl-dot {
   position: absolute; left: -3px; top: -3px; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--text-faint); opacity: 0.5; will-change: transform;
+  background: var(--text-faint); opacity: 0.5;
   transition: background 200ms ease, opacity 200ms ease;
 }
-.tl-overlay .tl-label-wrap { position: absolute; left: 0; top: 20px; transform-origin: 0 0; will-change: transform; }
+.tl-overlay .tl-label-wrap { position: absolute; left: 0; top: 20px; transform-origin: 0 0; }
 .tl-overlay .tl-label {
   display: block; transform: translateX(-50%);
   font-size: 26px; font-weight: 500; line-height: 1; white-space: nowrap; letter-spacing: 0.02em;
