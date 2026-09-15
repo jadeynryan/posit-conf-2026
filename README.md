@@ -1,5 +1,7 @@
 # Template → Package → App: Meeting Users Where They're At
 
+[![Title slide reading "Template → Package → App: Meeting Users Where They're At"](images/title-slide.png)](https://jadeynryan.github.io/posit-conf-2026/#/title)
+
 📺 [**Slide Deck**](https://jadeynryan.github.io/posit-conf-2026/#/title)
 
 📦 [**{soils}: R Package**](https://wa-department-of-agriculture.github.io/soils/)
